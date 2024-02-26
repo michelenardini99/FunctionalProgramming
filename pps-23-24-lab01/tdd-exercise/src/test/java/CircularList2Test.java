@@ -33,7 +33,7 @@ public class CircularList2Test {
 
     @Test 
     void testForwardIterator(){
-        Iterator circularIterator = circularList.forwardIterator();
+        Iterator<Integer> circularIterator = circularList.forwardIterator();
         circularIterator.next();
         circularIterator.next();
         circularIterator.next();
@@ -42,7 +42,7 @@ public class CircularList2Test {
 
     @Test 
     void testBackwardIterator(){
-        Iterator circularIterator = circularList.backwardIterator();
+        Iterator<Integer> circularIterator = circularList.backwardIterator();
         assertEquals(2, circularIterator.next());
     }
 

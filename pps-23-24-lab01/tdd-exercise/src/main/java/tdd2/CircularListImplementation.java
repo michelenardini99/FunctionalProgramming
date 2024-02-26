@@ -25,12 +25,12 @@ public class CircularListImplementation implements CircularList {
     }
 
     @Override
-    public Iterator forwardIterator() {
+    public Iterator<Integer> forwardIterator() {
         return new CircularIterator(circularList, true);
     }
 
     @Override
-    public Iterator backwardIterator() {
+    public Iterator<Integer> backwardIterator() {
         return new CircularIterator(circularList, false);
     }
 

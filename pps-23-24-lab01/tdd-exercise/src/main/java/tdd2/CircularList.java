@@ -10,8 +10,8 @@ public interface CircularList {
 
     boolean isEmpty();
 
-    Iterator forwardIterator();
+    Iterator<Integer> forwardIterator();
 
-    Iterator backwardIterator();
+    Iterator<Integer> backwardIterator();
 
 }

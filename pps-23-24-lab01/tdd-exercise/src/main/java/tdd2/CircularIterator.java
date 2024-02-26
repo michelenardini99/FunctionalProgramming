@@ -24,11 +24,7 @@ public class CircularIterator implements Iterator<Integer>{
 
     @Override
     public Integer next() {
-        if(pointToNextOne){
-            return nextValueofList();
-        }else{
-            return previousValueOfList();
-        }
+        return pointToNextOne ? nextValueofList() : previousValueOfList();
     }
 
     private Integer nextValueofList(){
