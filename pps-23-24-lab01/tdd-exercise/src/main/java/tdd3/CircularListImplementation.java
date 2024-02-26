@@ -44,12 +44,9 @@ public class CircularListImplementation implements CircularList {
     @Override
     public Optional<Integer> nextFilteredValue(Predicate<Integer> condition) {
         for(int i=0;i<circularList.size();i++){
-            if(!iterator.hasNext()){
-                iterator = circularList.listIterator();
-            }
-            int val = iterator.next();
-            if (condition.test(val)) {
-                return Optional.of(val);
+            Optional<Integer> value = next().filter(condition);
+            if (value.isPresent()) {
+                return value;
             }
         }
         return Optional.empty();
