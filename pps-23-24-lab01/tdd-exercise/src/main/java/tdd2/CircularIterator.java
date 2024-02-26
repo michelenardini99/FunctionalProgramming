@@ -2,8 +2,9 @@ package tdd2;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
 import java.util.ListIterator;
+import java.util.Optional;
+import java.util.function.Predicate;
 
 public class CircularIterator implements Iterator<Integer>{
 
@@ -40,8 +41,5 @@ public class CircularIterator implements Iterator<Integer>{
         }
         return circIterator.previous();
     }
-
-
-    
 
 }
