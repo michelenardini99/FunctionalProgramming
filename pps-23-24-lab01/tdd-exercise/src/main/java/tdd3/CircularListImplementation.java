@@ -1,7 +1,6 @@
 package tdd3;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.ListIterator;
 import java.util.Optional;
 import java.util.function.Predicate;
@@ -13,7 +12,7 @@ public class CircularListImplementation implements CircularList {
 
     public CircularListImplementation(){
         circularList = new ArrayList<>();
-        iterator = circularList.listIterator();
+        reset();
     }
 
     @Override
