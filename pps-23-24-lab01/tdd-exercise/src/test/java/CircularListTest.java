@@ -1,7 +1,5 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -43,6 +41,14 @@ public class CircularListTest {
     @Test
     void testNextListValue(){
         assertEquals(0, circularList.next().get());
+    }
+
+    @Test
+    void testIteratorNotResetAfterAdd(){
+        circularList.next();
+        circularList.add(4);
+        circularList.next();
+        assertEquals(2, circularList.next().get());
     }
 
     @Test

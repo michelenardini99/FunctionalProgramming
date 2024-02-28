@@ -1,11 +1,7 @@
 package tdd;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
+
 import java.util.ListIterator;
 import java.util.Optional;
 
@@ -24,7 +20,7 @@ public class CircularListImplementation implements CircularList {
     @Override
     public void add(int element) {
         this.circularList.add(element);
-        reset();
+        updateIterator(iterator.nextIndex());
     }
 
     @Override
@@ -48,14 +44,18 @@ public class CircularListImplementation implements CircularList {
     @Override
     public Optional<Integer> previous() {
         if(!iterator.hasPrevious()){
-            iterator = this.circularList.listIterator(circularList.size());
+            updateIterator(circularList.size());
         }
         return Optional.of(iterator.previous());
     }
 
+    private void updateIterator(int actualIteratorIndex) {
+        iterator = circularList.listIterator(actualIteratorIndex);
+    }
+
     @Override
     public void reset() {
-        iterator = this.circularList.listIterator();
+        updateIterator(0);
     }
 
 }

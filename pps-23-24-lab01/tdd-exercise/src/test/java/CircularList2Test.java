@@ -6,7 +6,6 @@ import java.util.Iterator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import tdd2.CircularIterator;
 import tdd2.CircularList;
 import tdd2.CircularListImplementation;
 
