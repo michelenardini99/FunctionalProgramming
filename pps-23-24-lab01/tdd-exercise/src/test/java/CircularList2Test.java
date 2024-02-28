@@ -12,7 +12,8 @@ import tdd2.CircularListImplementation;
 public class CircularList2Test {
 
     private static final int N_ITERATIONS = 3;
-    CircularList circularList;
+    private CircularList circularList;
+    Iterator<Integer> circularIterator;
     
     @BeforeEach
     void testCircularListCreatedCorrectly(){
@@ -32,16 +33,14 @@ public class CircularList2Test {
 
     @Test 
     void testForwardIterator(){
-        Iterator<Integer> circularIterator = circularList.forwardIterator();
-        circularIterator.next();
-        circularIterator.next();
-        circularIterator.next();
+        circularIterator = circularList.forwardIterator();
+        doNext(3);
         assertEquals(0, circularIterator.next());
     }
 
     @Test 
     void testBackwardIterator(){
-        Iterator<Integer> circularIterator = circularList.backwardIterator();
+        circularIterator = circularList.backwardIterator();
         assertEquals(2, circularIterator.next());
     }
 
@@ -49,6 +48,12 @@ public class CircularList2Test {
     private void fillList(){
         for(int i = 0; i < N_ITERATIONS; i++){
             circularList.add(i);
+        }
+    }
+
+    private void doNext(int n_times){
+        for(int i=0; i<n_times;i++){
+            circularIterator.next();
         }
     }
 }

@@ -7,11 +7,9 @@ import java.util.ListIterator;
 public class CircularListImplementation implements CircularList {
 
     ArrayList<Integer> circularList;
-    ListIterator<Integer> iterator;
 
     public CircularListImplementation(){
         circularList = new ArrayList<>();
-        iterator = circularList.listIterator();
     }
 
     @Override

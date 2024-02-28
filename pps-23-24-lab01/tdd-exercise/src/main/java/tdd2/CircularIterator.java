@@ -3,24 +3,22 @@ package tdd2;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.ListIterator;
-import java.util.Optional;
-import java.util.function.Predicate;
 
 public class CircularIterator implements Iterator<Integer>{
 
-    private ListIterator<Integer> circIterator;
+    private ListIterator<Integer> circularIterator;
     private boolean pointToNextOne;
     private ArrayList<Integer> list;
 
     public CircularIterator(ArrayList<Integer> list, boolean pointToNextOne){
         this.list = list;
-        circIterator = list.listIterator();
+        circularIterator = list.listIterator();
         this.pointToNextOne = pointToNextOne;
     }    
 
     @Override
     public boolean hasNext() {
-        return pointToNextOne ? circIterator.hasNext() : circIterator.hasPrevious();
+        return pointToNextOne ? circularIterator.hasNext() : circularIterator.hasPrevious();
     }
 
     @Override
@@ -29,17 +27,19 @@ public class CircularIterator implements Iterator<Integer>{
     }
 
     private Integer nextValueofList(){
-        if(!hasNext()){
-            circIterator = list.listIterator();
-        }
-        return circIterator.next();
+        updateCircularIterator(0);
+        return circularIterator.next();
     }
 
     private Integer previousValueOfList(){
+        updateCircularIterator(list.size());
+        return circularIterator.previous();
+    }
+
+    private void updateCircularIterator(int index){
         if(!hasNext()){
-            circIterator = list.listIterator(list.size());
+            circularIterator = list.listIterator(index);
         }
-        return circIterator.previous();
     }
 
 }
