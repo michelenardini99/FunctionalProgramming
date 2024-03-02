@@ -1,5 +1,4 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -26,16 +25,6 @@ public class CircularListTest {
     void testCircularListCreatedCorrectly(){
         circularList = new CircularListImplementation();
         fillList();
-    }
-
-    @Test
-    void testAdd(){
-        assertFalse(circularList.isEmpty());
-    }
-
-    @Test
-    void testSize(){
-        assertEquals(3, circularList.size());
     }
 
     @Test

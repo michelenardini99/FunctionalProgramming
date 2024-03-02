@@ -18,12 +18,6 @@ public class CircularListImplementation implements CircularList {
     }
 
     @Override
-    public void add(int element) {
-        this.circularList.add(element);
-        updateIterator(iterator.nextIndex());
-    }
-
-    @Override
     public int size() {
         return this.circularList.size();       
     }
@@ -31,6 +25,16 @@ public class CircularListImplementation implements CircularList {
     @Override
     public boolean isEmpty() {
         return this.circularList.isEmpty();
+    }
+
+    @Override
+    public void add(int element) {
+        this.circularList.add(element);
+        updateIterator(iterator.nextIndex());
+    }
+
+    private void updateIterator(int actualIteratorIndex) {
+        iterator = circularList.listIterator(actualIteratorIndex);
     }
 
     @Override
@@ -47,10 +51,6 @@ public class CircularListImplementation implements CircularList {
             updateIterator(circularList.size());
         }
         return Optional.of(iterator.previous());
-    }
-
-    private void updateIterator(int actualIteratorIndex) {
-        iterator = circularList.listIterator(actualIteratorIndex);
     }
 
     @Override
