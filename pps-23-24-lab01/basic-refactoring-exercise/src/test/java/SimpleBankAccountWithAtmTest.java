@@ -9,6 +9,7 @@ import example.model.SimpleBankAccountWithAtm;
 
 public class SimpleBankAccountWithAtmTest {
 
+    private static final int FEE = 1;
     private AccountHolder accountHolder;
     private BankAccount bankAccountWithAtm;
 
@@ -30,41 +31,50 @@ public class SimpleBankAccountWithAtmTest {
 
     @Test
     void testDepositWithAtm(){
-        bankAccountWithAtm.deposit(0, 100);
-        assertEquals(99, bankAccountWithAtm.getBalance());
+        int amount = 100;
+        bankAccountWithAtm.deposit(0, amount);
+        assertEquals(amount-FEE, bankAccountWithAtm.getBalance());
     }
 
     @Test
     void testDepositWithAtmWrongId(){
-        bankAccountWithAtm.deposit(1, 100);
+        int amount = 100;
+        bankAccountWithAtm.deposit(1, amount);
         assertEquals(0, bankAccountWithAtm.getBalance());
     }
 
     @Test
     void testDepositWithAtmNegativeAmount(){
-        bankAccountWithAtm.deposit(0, -100);
+        int amount = -100;
+        bankAccountWithAtm.deposit(0, amount);
         assertEquals(0, bankAccountWithAtm.getBalance());
     }
 
     @Test
     void testWithdrawWithAtm(){
-        bankAccountWithAtm.deposit(0, 100);
-        bankAccountWithAtm.withdraw(0, 30);
-        assertEquals(68, bankAccountWithAtm.getBalance());
+        int depositAmount = 100;
+        int withdrawAmount = 30;
+        bankAccountWithAtm.deposit(0, depositAmount);
+        bankAccountWithAtm.withdraw(0, withdrawAmount);
+        assertEquals(depositAmount-withdrawAmount-2*FEE, bankAccountWithAtm.getBalance());
     }
 
     @Test
     void testWithdrawWithAtmWrongId(){
-        bankAccountWithAtm.deposit(0, 100);
-        bankAccountWithAtm.withdraw(1, 30);
-        assertEquals(99, bankAccountWithAtm.getBalance());
+        int depositAmount = 100;
+        int withdrawAmount = 30;
+        bankAccountWithAtm.deposit(0, depositAmount);
+        bankAccountWithAtm.withdraw(1, withdrawAmount);
+        assertEquals(depositAmount-FEE, bankAccountWithAtm.getBalance());
     }
 
     @Test
     void testWithdrawWithAtmAmountHigherThanBalance(){
-        bankAccountWithAtm.deposit(0, 100);
-        bankAccountWithAtm.withdraw(0, 150);
-        assertEquals(99, bankAccountWithAtm.getBalance());
+        int depositAmount = 100;
+        int withdrawAmount = 150;
+        bankAccountWithAtm.deposit(0, depositAmount);
+        bankAccountWithAtm.withdraw(0, withdrawAmount);
+        assertEquals(depositAmount-FEE, bankAccountWithAtm.getBalance());
     }
 
 }
