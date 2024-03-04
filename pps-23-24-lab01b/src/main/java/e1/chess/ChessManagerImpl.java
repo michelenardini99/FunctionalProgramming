@@ -1,5 +1,7 @@
-package e1;
+package e1.chess;
 
+import e1.Pair;
+import e1.utils.Randomizer;
 
 public class ChessManagerImpl implements ChessManager{
 

@@ -1,4 +1,6 @@
-package e1;
+package e1.chess;
+
+import e1.Pair;
 
 public class Pawn implements ChessPiece{
 

@@ -6,6 +6,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import e1.chess.ChessManager;
+import e1.chess.ChessManagerImpl;
+
 public class ChessManagerTest {
 
     private ChessManager chessManager;

@@ -1,6 +1,8 @@
-package e1;
+package e1.rules;
 
 import java.util.function.Predicate;
+
+import e1.Pair;
 
 import java.util.Map;
 

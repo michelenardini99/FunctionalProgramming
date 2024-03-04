@@ -1,5 +1,10 @@
 package e1;
 
+import e1.chess.ChessManager;
+import e1.chess.ChessManagerImpl;
+import e1.rules.GameRulesStrategy;
+import e1.rules.GameRulesStrategyImpl;
+
 public class LogicsImpl implements Logics {
 	
 	private static final int DEFAULT_SIZE = 5;
