@@ -11,23 +11,25 @@ public class ChessPiecesTest {
 
     private ChessPiece pawn;
     private ChessPiece knight;
+    private ChessPieceFactory chessPieceFactory;
 
     @Test
     void testCreatePawnPiece(){
-        pawn = new Pawn(new Pair<Integer,Integer>(0, 2));
+        pawn = chessPieceFactory.createPawnPiece(new Pair<Integer,Integer>(0, 2));
         assertEquals(new Pair<>(0, 2), pawn.getPosition());
     }
 
     @Test
     void testCreateKnightPiece(){
-        knight = new Knight(new Pair<Integer,Integer>(0, 0));
+        chessPieceFactory.createKnightPiece(new Pair<Integer,Integer>(0, 0));
         assertEquals(new Pair<>(0, 0), knight.getPosition());
     }
 
     @BeforeEach
     void init(){
-        pawn = new Pawn(new Pair<Integer,Integer>(0, 2));
-        knight = new Knight(new Pair<Integer,Integer>(0, 0));
+        chessPieceFactory = new ChessPieceFactoryImpl();
+        pawn = chessPieceFactory.createPawnPiece(new Pair<Integer,Integer>(0, 2));
+        knight = chessPieceFactory.createKnightPiece(new Pair<Integer,Integer>(0, 0));
     }
 
     @Test

@@ -1,13 +1,10 @@
 package e1;
 
-import java.util.Random;
-
 public class LogicsImpl implements Logics {
 	
 	private static final int DEFAULT_SIZE = 5;
-	private ChessPiece pawn;
-	private ChessPiece knight;
-	private final Random random = new Random();
+	private final ChessManager chessManager = new ChessManagerImpl();
+	private final GameRulesStrategy gameRulesStrategy = new GameRulesStrategyImpl();
 	private final int size;
 	 
     public LogicsImpl(int size){
@@ -25,46 +22,35 @@ public class LogicsImpl implements Logics {
 	}
 
 	private void setPawnAndKnight() {
-		this.pawn = new Pawn(new Pair<Integer,Integer>(2, 0));
-        this.knight = new Knight(new Pair<Integer,Integer>(DEFAULT_SIZE-1,DEFAULT_SIZE-1));
+		chessManager.generatePieces(size);
 	}	
-
-	private final Pair<Integer,Integer> randomEmptyPosition(){
-    	Pair<Integer,Integer> pos = new Pair<>(this.random.nextInt(size),this.random.nextInt(size));
-    	// the recursive call below prevents clash with an existing pawn
-    	return this.pawn!=null && this.pawn.equals(pos) ? randomEmptyPosition() : pos;
-    }
     
 	@Override
 	public boolean hit(int row, int col) {
-		checkCoordinatesIsValid(row, col);
+		checkCoordinatesValidation(row, col);
 		// Below a compact way to express allowed moves for the knight
-		int x = row-this.knight.getPosition().getX();
-		int y = col-this.knight.getPosition().getY();
-		if (isMoveAllowed(x, y)) {
-			this.knight.setPosition(new Pair<>(row,col));
-			return this.pawn.isInTheSamePosition(this.knight.getPosition());
+		int x = row-chessManager.getKnight().getPosition().getX();
+		int y = col-chessManager.getKnight().getPosition().getY();
+		if (gameRulesStrategy.isMoveAllowed().test(new Pair<Integer,Integer>(x, y))) {
+			chessManager.setKnightPosition(new Pair<>(row,col));
+			return chessManager.haveYouWin();
 		}
 		return false;
 	}
 
-	private boolean isMoveAllowed(int x, int y) {
-		return x!=0 && y!=0 && Math.abs(x)+Math.abs(y)==3;
-	}
-
-	private void checkCoordinatesIsValid(int row, int col) {
-		if (row<0 || col<0 || row >= this.size || col >= this.size) {
+	private void checkCoordinatesValidation(int row, int col) {
+		if (gameRulesStrategy.checkCoordinatesIsValid(size).test(new Pair<Integer,Integer>(row, col))) {
 			throw new IndexOutOfBoundsException();
 		}
 	}
 
 	@Override
 	public boolean hasKnight(int row, int col) {
-		return this.knight.isInTheSamePosition(new Pair<>(row,col));
+		return this.chessManager.hasKnight(new Pair<Integer,Integer>(row, col));
 	}
 
 	@Override
 	public boolean hasPawn(int row, int col) {
-		return this.pawn.isInTheSamePosition(new Pair<>(row,col));
+		return this.chessManager.hasPawn(new Pair<Integer,Integer>(row, col));
 	}
 }
