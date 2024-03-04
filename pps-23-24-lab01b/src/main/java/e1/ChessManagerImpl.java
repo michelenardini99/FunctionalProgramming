@@ -3,9 +3,9 @@ package e1;
 
 public class ChessManagerImpl implements ChessManager{
 
-    ChessPieceFactory chessPieceFactory = new ChessPieceFactoryImpl();
-    ChessPiece knight;
-    ChessPiece pawn;
+    private ChessPieceFactory chessPieceFactory = new ChessPieceFactoryImpl();
+    private ChessPiece knight;
+    private ChessPiece pawn;
 
     @Override
     public void generatePieces(int size) {
