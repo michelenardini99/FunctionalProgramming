@@ -1,12 +1,12 @@
 package e1;
 
-import java.util.*;
+import java.util.Random;
 
 public class LogicsImpl implements Logics {
 	
 	private static final int DEFAULT_SIZE = 5;
-	private Pair<Integer,Integer> pawn;
-	private Pair<Integer,Integer> knight;
+	private ChessPiece pawn;
+	private ChessPiece knight;
 	private final Random random = new Random();
 	private final int size;
 	 
@@ -25,8 +25,8 @@ public class LogicsImpl implements Logics {
 	}
 
 	private void setPawnAndKnight() {
-		this.pawn = new Pair<Integer,Integer>(0, 0);
-        this.knight = new Pair<Integer,Integer>(this.size-1, this.size-1);
+		this.pawn = new Pawn(new Pair<Integer,Integer>(2, 0));
+        this.knight = new Knight(new Pair<Integer,Integer>(DEFAULT_SIZE-1,DEFAULT_SIZE-1));
 	}	
 
 	private final Pair<Integer,Integer> randomEmptyPosition(){
@@ -37,26 +37,34 @@ public class LogicsImpl implements Logics {
     
 	@Override
 	public boolean hit(int row, int col) {
-		if (row<0 || col<0 || row >= this.size || col >= this.size) {
-			throw new IndexOutOfBoundsException();
-		}
+		checkCoordinatesIsValid(row, col);
 		// Below a compact way to express allowed moves for the knight
-		int x = row-this.knight.getX();
-		int y = col-this.knight.getY();
-		if (x!=0 && y!=0 && Math.abs(x)+Math.abs(y)==3) {
-			this.knight = new Pair<>(row,col);
-			return this.pawn.equals(this.knight);
+		int x = row-this.knight.getPosition().getX();
+		int y = col-this.knight.getPosition().getY();
+		if (isMoveAllowed(x, y)) {
+			this.knight.setPosition(new Pair<>(row,col));
+			return this.pawn.isInTheSamePosition(this.knight.getPosition());
 		}
 		return false;
 	}
 
+	private boolean isMoveAllowed(int x, int y) {
+		return x!=0 && y!=0 && Math.abs(x)+Math.abs(y)==3;
+	}
+
+	private void checkCoordinatesIsValid(int row, int col) {
+		if (row<0 || col<0 || row >= this.size || col >= this.size) {
+			throw new IndexOutOfBoundsException();
+		}
+	}
+
 	@Override
 	public boolean hasKnight(int row, int col) {
-		return this.knight.equals(new Pair<>(row,col));
+		return this.knight.isInTheSamePosition(new Pair<>(row,col));
 	}
 
 	@Override
 	public boolean hasPawn(int row, int col) {
-		return this.pawn.equals(new Pair<>(row,col));
+		return this.pawn.isInTheSamePosition(new Pair<>(row,col));
 	}
 }

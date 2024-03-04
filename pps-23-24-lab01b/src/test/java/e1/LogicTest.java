@@ -40,7 +40,33 @@ public class LogicTest {
   @Test
   void testPawnGenerated(){
       int colPawn = 0;
-      int rowPawn = 0;
+      int rowPawn = 2;
       assertTrue(logics.hasPawn(rowPawn, colPawn));
   }
+
+  @Test
+  void testHitWithNotCorrectCoordinate(){
+    int row=-1;
+    int col= -1;
+    assertThrows(IndexOutOfBoundsException.class, () -> logics.hit(row, col) );
+  }
+
+  @Test
+  void testKnightNotHitPawn(){
+    int row = 3;
+    int col = 3;
+    assertFalse(logics.hit(row, col));
+  }
+
+  @Test
+  void testKnightHitPawn(){
+    int row = 3;
+    int col = 2;
+    logics.hit(row, col);
+    row = 2;
+    col = 0;
+    assertTrue(logics.hit(row, col));
+  }
+
+
 }
