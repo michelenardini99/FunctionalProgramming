@@ -3,13 +3,44 @@ import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 public class LogicTest {
 
+  private static final int DEFAULT_SIZE = 5;
+  private Logics logics;
+
+  
   @Test
-  public void test() {
-    assert(true);
-    // TODO: Add your test logic here
-    // You can generate random inputs and assert the expected output
-    // For example:
-    // int result = Logic.someMethod(5, 10);
-    // assertEquals(expectedResult, result);
+  void testLogicsImplCreatedCorrectly(){
+      assertNotNull(logics);
+  }
+
+  @Test
+  void testLogicsImplCreatedCorrectlyWithoutSizeParam(){
+      logics = new LogicsImpl();
+      assertNotNull(logics);
+  }
+
+  @Test
+  void testLogicsImplCreatedCorrectlyNegativeSize(){
+      int size = -5;
+      logics = new LogicsImpl(size);
+      assertNotNull(logics);
+  }
+
+  @BeforeEach
+  void init(){
+      logics = new LogicsImpl(DEFAULT_SIZE);
+  }
+
+  @Test
+  void testKnightGenerated(){
+      int colKnight = DEFAULT_SIZE - 1;
+      int rowKnight = DEFAULT_SIZE - 1;
+      assertTrue(logics.hasKnight(rowKnight, colKnight));
+  }
+
+  @Test
+  void testPawnGenerated(){
+      int colPawn = 0;
+      int rowPawn = 0;
+      assertTrue(logics.hasPawn(rowPawn, colPawn));
   }
 }
