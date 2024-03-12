@@ -16,8 +16,8 @@ public class GUI extends JFrame {
     private final Map<JButton,Pair<Integer,Integer>> buttons = new HashMap<>();
     private final Logics logics;
     
-    public GUI(int size) {
-        this.logics = new LogicsImpl(size);
+    public GUI(int size, int mine) {
+        this.logics = new LogicsImpl(size, mine);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setSize(100*size, 100*size);
         
@@ -27,7 +27,8 @@ public class GUI extends JFrame {
         ActionListener onClick = (e)->{
             final JButton bt = (JButton)e.getSource();
             final Pair<Integer,Integer> pos = buttons.get(bt);
-            boolean aMineWasFound = false; // call the logic here to tell it that cell at 'pos' has been seleced
+            boolean aMineWasFound = logics.hit(pos); // call the logic here to tell it that cell at 'pos' has been seleced
+            System.out.println("Left");
             if (aMineWasFound) {
                 quitGame();
                 JOptionPane.showMessageDialog(this, "You lost!!");
@@ -46,11 +47,14 @@ public class GUI extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 final JButton bt = (JButton)e.getSource();
-                if (bt.isEnabled()){
-                    final Pair<Integer,Integer> pos = buttons.get(bt);
-                    // call the logic here to put/remove a flag
+                if(e.getButton() == MouseEvent.BUTTON3){
+                    System.out.println("Right");
+                    if (bt.isEnabled()){
+                        final Pair<Integer,Integer> pos = buttons.get(bt);
+                        logics.flagCell(pos);
+                    }
+                    drawBoard(); 
                 }
-                drawBoard(); 
             }
         };
                 
@@ -70,9 +74,9 @@ public class GUI extends JFrame {
     private void quitGame() {
         this.drawBoard();
     	for (var entry: this.buttons.entrySet()) {
-            // call the logic here
-            // if this button is a mine, draw it "*"
-            // disable the button
+            if (logics.getMines().stream().filter(mine -> mine.getPosition().equals(entry.getValue())).findFirst().isPresent()){
+                entry.getKey().setText("*");
+            }
     	}
     }
 
@@ -80,7 +84,14 @@ public class GUI extends JFrame {
         for (var entry: this.buttons.entrySet()) {
             // call the logic here
             // if this button is a cell with counter, put the number
-            // if this button has a flag, put the flag
+            if(logics.getCells().stream().filter(cell -> cell.getPosition().equals(entry.getValue()) && cell.haveFlag()).findFirst().isPresent()){
+                entry.getKey().setText("F");
+                entry.getKey().setEnabled(false);
+            }
+            if(logics.getCells().stream().filter(cell -> cell.getPosition().equals(entry.getValue()) && cell.isCountered()).findFirst().isPresent()){
+                entry.getKey().setText(logics.getNumberMinesAround(entry.getValue()).toString());
+                entry.getKey().setEnabled(false);
+            }
     	}
     }
     
