@@ -1,0 +1,4 @@
+[debug] [scala-example-build] Classpath dependencies List()
+[debug] [scala-example-build] Dependencies from configurations List()
+[debug] Bloop wrote the configuration of project 'scala-example-build' to '/home/michelenardini/Scrivania/FunctionalProgramming/scala-example/project/.bloop/scala-example-build.json'
+[success] Generated .bloop/scala-example-build.json
