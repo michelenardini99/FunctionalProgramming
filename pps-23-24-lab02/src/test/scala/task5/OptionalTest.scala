@@ -52,3 +52,10 @@ class OptionalTest:
     val result = Optional.filter(nonEmpty, predicate)
     assertEquals(1, Optional.orElse(result, 1))
   }
+
+  @Test def filterShouldNotReturnValueWhenParameterIsEmpty(): Unit = {
+    val nonEmpty = Optional.Empty()
+    val predicate = (x: Int) => x == 2
+    val result = Optional.filter(nonEmpty, predicate)
+    assertEquals(1, Optional.orElse(result, 1))
+  }
