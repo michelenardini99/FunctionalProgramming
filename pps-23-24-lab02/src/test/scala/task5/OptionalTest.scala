@@ -3,6 +3,7 @@ package task5
 import org.junit.*
 import org.junit.Assert.*
 import Optionals.*
+import u02.CaseMatch.res
 
 class OptionalTest:
   @Test def emptyOptionalShouldBeEmpty(): Unit = {
@@ -35,5 +36,19 @@ class OptionalTest:
   @Test def mapShouldReturnTransformedValueWhenNonEmpty(): Unit = {
     val nonEmpty = Optional.Maybe(0)
     val result = Optional.map(nonEmpty, _ + 1)
+    assertEquals(1, Optional.orElse(result, 1))
+  }
+
+  @Test def filterShouldReturnValueWhenPredicateIsSatisfies(): Unit = {
+    val nonEmpty = Optional.Maybe(0)
+    val predicate = (x: Int) => x == 0
+    val result = Optional.filter(nonEmpty, predicate)
+    assertEquals(0, Optional.orElse(result, 1))
+  }
+
+  @Test def filterShouldNotReturnValueWhenPredicateIsNotSatisfies(): Unit = {
+    val nonEmpty = Optional.Maybe(0)
+    val predicate = (x: Int) => x == 2
+    val result = Optional.filter(nonEmpty, predicate)
     assertEquals(1, Optional.orElse(result, 1))
   }
