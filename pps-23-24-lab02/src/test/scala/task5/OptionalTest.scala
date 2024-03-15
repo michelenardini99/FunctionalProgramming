@@ -2,7 +2,7 @@ package task5
 
 import org.junit.*
 import org.junit.Assert.*
-import Optionals.*
+import tasks.Tasks.*
 import u02.CaseMatch.res
 
 class OptionalTest:
