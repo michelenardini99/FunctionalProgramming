@@ -23,3 +23,7 @@ class Task1Test:
         val lst2: Sequence[String] = Cons("a", Cons("b", Cons("c", Nil())))
         assertEquals(Cons((10, "a"), Cons((20, "b"), Cons((30, "c"), Nil()))), zip(lst1, lst2))
 
+    @Test def testConcatTwoList() = 
+        val lst1 = Cons(10, Cons(20, Nil()))
+        val lst2 = Cons(30, Cons(40, Nil()))
+        assertEquals(Cons(10, Cons(20, Cons(30, Cons(40, Nil())))), concat(lst1, lst2))

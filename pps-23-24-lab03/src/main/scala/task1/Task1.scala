@@ -31,10 +31,14 @@ object Task1:
 
     def take[A](l: Sequence[A])(n: Int): Sequence[A] = l match
       case Cons(h, t) if (n != 0) => Cons(h, take(t)(n-1))
-      case _                 => Nil()
+      case _                      => Nil()
     
     
-    def concat[A](l1: Sequence[A], l2: Sequence[A]): Sequence[A] = ???
+    def concat[A](l1: Sequence[A], l2: Sequence[A]): Sequence[A] = (l1, l2) match
+      case (Cons(h1, t1), l2)     => Cons(h1, concat(t1, l2))
+      case (Nil(), Cons(h2, t2))  => Cons(h2, t2)
+      case (_, _)                 => Nil()
+    
     def flatMap[A, B](l: Sequence[A])(mapper: A => Sequence[B]): Sequence[B] = ???
 
     def min(l: Sequence[Int]): Optional[Int] = ???
