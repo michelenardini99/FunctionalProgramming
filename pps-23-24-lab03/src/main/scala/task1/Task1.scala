@@ -1,4 +1,7 @@
+import u03.Optionals.Optional.*
 import u03.Optionals.Optional
+import Task1.Sequence
+import Task1.Sequence.*
 
 
 object Task1:
@@ -14,7 +17,7 @@ object Task1:
       case _          => 0
 
     def map[A, B](l: Sequence[A])(mapper: A => B): Sequence[B] = l match
-      case Cons(h, t) => Cons(mapper(h), map(t)(mapper))
+      case Cons(h, t) => flatMap(l)(v => Cons(mapper(v), Nil()))
       case Nil()      => Nil()
 
     def filter[A](l1: Sequence[A])(pred: A => Boolean): Sequence[A] = l1 match
@@ -40,8 +43,13 @@ object Task1:
       case (_, _)                 => Nil()
     
     def flatMap[A, B](l: Sequence[A])(mapper: A => Sequence[B]): Sequence[B] = l match
-      case Nil() => Nil()
+      case Nil()      => Nil()
       case Cons(h, t) => concat(mapper(h), flatMap(t)(mapper))
     
 
-    def min(l: Sequence[Int]): Optional[Int] = ???
+    def min(l: Sequence[Int]): Optional[Int] = l match
+      case Cons(h, t) if filter(t)(v => v < h) == Nil() => Just(h)
+      case Cons(h, t)                                   => min(filter(t)(v => v < h))
+      case Nil()                                        => Just(0)
+      
+    

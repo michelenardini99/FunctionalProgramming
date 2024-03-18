@@ -2,6 +2,9 @@
 import org.junit.*
 import org.junit.Assert.*
 import Task1.Sequence
+import u03.extensionmethods.Optionals.Optional.*
+import u03.Optionals.Optional.orElse
+import u03.Optionals.Optional
 
 class Task1Test:
 
@@ -31,3 +34,11 @@ class Task1Test:
     @Test def testFlatMap() = 
         assertEquals(Cons(11, Cons(12, Cons(21, Cons(22, Cons(31, Cons(32, Nil())))))),
                      flatMap(lst)(v => Cons(v + 1, Cons(v + 2, Nil()))))
+
+    @Test def testMapInTermsOfFlatMap() = 
+        assertEquals(Cons(11, Cons(21, Cons(31, Nil()))), map(lst)(v => v + 1))
+
+    @Test def testMinValueInFunction() = 
+        assertEquals(orElse(Optional.Just(10), 0), orElse(min(lst), 0))
+
+    

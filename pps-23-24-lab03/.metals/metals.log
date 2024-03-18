@@ -813,3 +813,500 @@ AVVERTENZA: Unmatched cancel notification for request id 10133
 2024.03.18 16:35:17 INFO  Attaching to debuggee VM succeeded.[0m
 2024.03.18 16:35:17 INFO  Canceling debug proxy for [Task1Test(testFlatMap)][0m
 2024.03.18 16:35:17 INFO  Closing debug server tcp://0.0.0.0:37577[0m
+mar 18, 2024 4:36:04 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 10157
+2024.03.18 16:39:27 INFO  compiling root (1 scala source)[0m
+2024.03.18 16:39:27 INFO  time: compiled root in 78ms[0m
+2024.03.18 16:39:44 INFO  compiling root (1 scala source)[0m
+2024.03.18 16:39:44 INFO  time: compiled root in 0.23s[0m
+mar 18, 2024 4:39:58 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 10422
+mar 18, 2024 4:40:08 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 10470
+mar 18, 2024 4:40:08 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 10471
+mar 18, 2024 4:40:08 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 10473
+mar 18, 2024 4:40:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 10486
+mar 18, 2024 4:40:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 10488
+2024.03.18 16:41:00 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 16:41:00 INFO  time: compiled root-test in 0.13s[0m
+2024.03.18 16:41:03 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json[0m
+2024.03.18 16:41:03 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json[0m
+2024.03.18 16:41:03 INFO  Starting debug proxy for [Task1Test(testMapInTermsOfFlatMap)][0m
+2024.03.18 16:41:03 INFO  Trying to attach to remote debuggee VM localhost:59167 .[0m
+2024.03.18 16:41:03 INFO  Attaching to debuggee VM succeeded.[0m
+2024.03.18 16:41:03 INFO  Canceling debug proxy for [Task1Test(testMapInTermsOfFlatMap)][0m
+2024.03.18 16:41:03 INFO  Closing debug server tcp://0.0.0.0:44807[0m
+mar 18, 2024 4:46:24 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 10746
+2024.03.18 16:46:30 ERROR Failed to tokenize input for semantic tokens for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala
+scala.meta.tokenizers.TokenizeException: <input>:22: error: Invalid literal number
+      case Cons(_, t)            => filter(t)(1pred)
+                                              ^
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.checkNoLetter(LegacyScanner.scala:820)
+	at scala.meta.internal.tokenizers.LegacyScanner.restOfUncertainToken$1(LegacyScanner.scala:864)
+	at scala.meta.internal.tokenizers.LegacyScanner.getNumber(LegacyScanner.scala:872)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:335)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:211)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1011)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:28)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:541)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:840)
+[0m
+2024.03.18 16:46:32 ERROR Failed to tokenize input for semantic tokens for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala
+scala.meta.tokenizers.TokenizeException: <input>:22: error: Invalid literal number
+      case Cons(_, t)            => filter(t)(1pred)
+                                              ^
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.checkNoLetter(LegacyScanner.scala:820)
+	at scala.meta.internal.tokenizers.LegacyScanner.restOfUncertainToken$1(LegacyScanner.scala:864)
+	at scala.meta.internal.tokenizers.LegacyScanner.getNumber(LegacyScanner.scala:872)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:335)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:211)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1011)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:28)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:541)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:840)
+[0m
+2024.03.18 16:46:46 INFO  compiling root (1 scala source)[0m
+2024.03.18 16:46:46 INFO  time: compiled root in 0.22s[0m
+2024.03.18 16:47:08 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 16:47:08 INFO  time: compiled root-test in 0.17s[0m
+2024.03.18 16:47:39 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 16:47:39 INFO  time: compiled root-test in 0.13s[0m
+2024.03.18 16:47:43 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json[0m
+2024.03.18 16:47:43 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json[0m
+2024.03.18 16:47:43 INFO  Starting debug proxy for [Task1Test(testFilterInTermsOfFlatMap)][0m
+2024.03.18 16:47:43 INFO  Trying to attach to remote debuggee VM localhost:54665 .[0m
+2024.03.18 16:47:43 INFO  Attaching to debuggee VM succeeded.[0m
+2024.03.18 16:47:44 INFO  Canceling debug proxy for [Task1Test(testFilterInTermsOfFlatMap)][0m
+2024.03.18 16:47:43 INFO  Closing debug server tcp://0.0.0.0:33207[0m
+2024.03.18 16:50:34 INFO  compiling root (1 scala source)[0m
+2024.03.18 16:50:34 INFO  time: compiled root in 0.24s[0m
+2024.03.18 16:50:36 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json[0m
+2024.03.18 16:50:36 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json[0m
+2024.03.18 16:50:37 INFO  Starting debug proxy for [Task1Test(testFilterInTermsOfFlatMap)][0m
+2024.03.18 16:50:37 INFO  Trying to attach to remote debuggee VM localhost:43835 .[0m
+2024.03.18 16:50:37 INFO  Attaching to debuggee VM succeeded.[0m
+2024.03.18 16:50:37 INFO  Canceling debug proxy for [Task1Test(testFilterInTermsOfFlatMap)][0m
+2024.03.18 16:50:37 INFO  Closing debug server tcp://0.0.0.0:43893[0m
+2024.03.18 16:53:17 INFO  compiling root (1 scala source)[0m
+2024.03.18 16:53:17 INFO  time: compiled root in 0.21s[0m
+2024.03.18 16:53:19 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json[0m
+2024.03.18 16:53:19 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json[0m
+2024.03.18 16:53:19 INFO  Starting debug proxy for [Task1Test(testFilterInTermsOfFlatMap)][0m
+2024.03.18 16:53:19 INFO  Trying to attach to remote debuggee VM localhost:40939 .[0m
+2024.03.18 16:53:19 INFO  Attaching to debuggee VM succeeded.[0m
+2024.03.18 16:53:20 INFO  Canceling debug proxy for [Task1Test(testFilterInTermsOfFlatMap)][0m
+2024.03.18 16:53:19 INFO  Closing debug server tcp://0.0.0.0:35843[0m
+2024.03.18 16:53:48 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 16:53:48 INFO  time: compiled root-test in 0.13s[0m
+2024.03.18 16:53:50 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json[0m
+2024.03.18 16:53:50 INFO  compiling root (1 scala source)[0m
+2024.03.18 16:53:50 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json[0m
+2024.03.18 16:53:50 INFO  Starting debug proxy for [Task1Test(testFilterInTermsOfFlatMap)][0m
+2024.03.18 16:53:50 INFO  Trying to attach to remote debuggee VM localhost:41669 .[0m
+2024.03.18 16:53:50 INFO  Attaching to debuggee VM succeeded.[0m
+2024.03.18 16:53:50 INFO  time: compiled root in 0.57s[0m
+2024.03.18 16:53:51 INFO  Canceling debug proxy for [Task1Test(testFilterInTermsOfFlatMap)][0m
+2024.03.18 16:53:51 INFO  Closing debug server tcp://0.0.0.0:46691[0m
+2024.03.18 16:54:56 INFO  compiling root (1 scala source)[0m
+2024.03.18 16:54:56 INFO  time: compiled root in 0.2s[0m
+2024.03.18 16:55:21 INFO  compiling root (1 scala source)[0m
+2024.03.18 16:55:21 INFO  time: compiled root in 0.11s[0m
+2024.03.18 16:55:28 INFO  compiling root (1 scala source)[0m
+2024.03.18 16:55:28 INFO  time: compiled root in 0.18s[0m
+2024.03.18 16:55:37 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json[0m
+2024.03.18 16:55:37 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json[0m
+2024.03.18 16:55:37 INFO  Starting debug proxy for [Task1Test(testFilterInTermsOfFlatMap)][0m
+2024.03.18 16:55:37 INFO  Trying to attach to remote debuggee VM localhost:59303 .[0m
+2024.03.18 16:55:37 INFO  Attaching to debuggee VM succeeded.[0m
+2024.03.18 16:55:37 INFO  Canceling debug proxy for [Task1Test(testFilterInTermsOfFlatMap)][0m
+2024.03.18 16:55:37 INFO  Closing debug server tcp://0.0.0.0:34025[0m
+2024.03.18 16:55:52 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 16:55:52 INFO  time: compiled root-test in 0.13s[0m
+2024.03.18 16:55:54 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json[0m
+2024.03.18 16:55:54 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json[0m
+2024.03.18 16:55:54 INFO  Starting debug proxy for [Task1Test(testFilterInTermsOfFlatMap)][0m
+2024.03.18 16:55:54 INFO  Trying to attach to remote debuggee VM localhost:35121 .[0m
+2024.03.18 16:55:54 INFO  Attaching to debuggee VM succeeded.[0m
+2024.03.18 16:55:54 INFO  Canceling debug proxy for [Task1Test(testFilterInTermsOfFlatMap)][0m
+2024.03.18 16:55:54 INFO  Closing debug server tcp://0.0.0.0:38549[0m
+2024.03.18 16:57:00 INFO  compiling root (1 scala source)[0m
+2024.03.18 16:57:00 INFO  time: compiled root in 0.22s[0m
+2024.03.18 16:57:05 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json[0m
+2024.03.18 16:57:05 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json[0m
+2024.03.18 16:57:05 INFO  Starting debug proxy for [Task1Test(testFilterInTermsOfFlatMap)][0m
+2024.03.18 16:57:05 INFO  Trying to attach to remote debuggee VM localhost:46559 .[0m
+2024.03.18 16:57:05 INFO  Attaching to debuggee VM succeeded.[0m
+2024.03.18 16:57:05 INFO  Canceling debug proxy for [Task1Test(testFilterInTermsOfFlatMap)][0m
+2024.03.18 16:57:05 INFO  Closing debug server tcp://0.0.0.0:32983[0m
+2024.03.18 17:00:34 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:00:34 INFO  time: compiled root-test in 79ms[0m
+2024.03.18 17:00:36 WARN  Using indexes to guess the definition of Just[0m
+2024.03.18 17:00:42 WARN  Using indexes to guess the definition of Just[0m
+2024.03.18 17:00:47 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:00:47 INFO  time: compiled root-test in 0.15s[0m
+2024.03.18 17:00:50 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:00:50 INFO  time: compiled root-test in 62ms[0m
+2024.03.18 17:00:57 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:00:57 INFO  time: compiled root-test in 0.12s[0m
+2024.03.18 17:01:04 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json[0m
+2024.03.18 17:01:04 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json[0m
+2024.03.18 17:01:04 INFO  Starting debug proxy for [Task1Test(testMinValueInFunction)][0m
+2024.03.18 17:01:04 INFO  Trying to attach to remote debuggee VM localhost:36329 .[0m
+2024.03.18 17:01:04 INFO  Attaching to debuggee VM succeeded.[0m
+2024.03.18 17:01:04 INFO  Canceling debug proxy for [Task1Test(testMinValueInFunction)][0m
+2024.03.18 17:01:04 INFO  Closing debug server tcp://0.0.0.0:41095[0m
+mar 18, 2024 5:01:12 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 11786
+2024.03.18 17:05:20 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:05:20 INFO  time: compiled root in 82ms[0m
+2024.03.18 17:05:23 WARN  Using indexes to guess the definition of Empty[0m
+2024.03.18 17:05:32 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:05:32 INFO  time: compiled root in 99ms[0m
+mar 18, 2024 5:05:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 12121
+2024.03.18 17:05:39 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:05:39 INFO  time: compiled root in 0.13s[0m
+2024.03.18 17:05:52 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:05:52 INFO  time: compiled root in 67ms[0m
+2024.03.18 17:06:08 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:06:08 INFO  time: compiled root in 0.2s[0m
+2024.03.18 17:09:05 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:09:05 INFO  time: compiled root in 89ms[0m
+2024.03.18 17:09:25 ERROR Failed to tokenize input for semantic tokens for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala
+scala.meta.tokenizers.TokenizeException: <input>:50: error: Invalid literal number
+      case Cons(h, t) if (orElse(Just(h), 0) < orElse(min(t), 0S)) => Just(h)
+                                                              ^
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.checkNoLetter(LegacyScanner.scala:820)
+	at scala.meta.internal.tokenizers.LegacyScanner.restOfUncertainToken$1(LegacyScanner.scala:864)
+	at scala.meta.internal.tokenizers.LegacyScanner.getNumber(LegacyScanner.scala:872)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchZero$1(LegacyScanner.scala:330)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:332)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:211)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1011)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:28)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:541)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:840)
+[0m
+2024.03.18 17:09:26 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:09:26 INFO  time: compiled root in 94ms[0m
+2024.03.18 17:09:27 ERROR Failed to tokenize input for semantic tokens for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala
+scala.meta.tokenizers.TokenizeException: <input>:50: error: Invalid literal number
+      case Cons(h, t) if (orElse(Just(h), 0) < orElse(min(t), 0S)) => Just(h)
+                                                              ^
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.checkNoLetter(LegacyScanner.scala:820)
+	at scala.meta.internal.tokenizers.LegacyScanner.restOfUncertainToken$1(LegacyScanner.scala:864)
+	at scala.meta.internal.tokenizers.LegacyScanner.getNumber(LegacyScanner.scala:872)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchZero$1(LegacyScanner.scala:330)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:332)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:211)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1011)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:28)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:541)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:840)
+[0m
+2024.03.18 17:09:28 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:09:28 INFO  time: compiled root in 0.26s[0m
+2024.03.18 17:09:41 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json[0m
+2024.03.18 17:09:41 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json[0m
+2024.03.18 17:09:42 INFO  Starting debug proxy for [Task1Test(testMinValueInFunction)][0m
+2024.03.18 17:09:42 INFO  Trying to attach to remote debuggee VM localhost:34529 .[0m
+2024.03.18 17:09:42 INFO  Attaching to debuggee VM succeeded.[0m
+2024.03.18 17:09:42 INFO  Canceling debug proxy for [Task1Test(testMinValueInFunction)][0m
+2024.03.18 17:09:42 INFO  Closing debug server tcp://0.0.0.0:45733[0m
+2024.03.18 17:10:53 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:10:53 INFO  time: compiled root in 0.14s[0m
+2024.03.18 17:10:55 WARN  Using indexes to guess the definition of Sequence[0m
+2024.03.18 17:11:03 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:11:03 INFO  time: compiled root in 0.12s[0m
+2024.03.18 17:11:05 WARN  Using indexes to guess the definition of Cons[0m
+2024.03.18 17:11:22 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:11:22 INFO  time: compiled root in 0.25s[0m
+2024.03.18 17:11:40 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:11:40 INFO  time: compiled root in 84ms[0m
+2024.03.18 17:11:41 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:11:43 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:11:43 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:11:47 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:11:50 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:11:50 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:11:52 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:11:52 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:11:52 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:11:52 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:11:59 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:11:59 INFO  time: compiled root in 91ms[0m
+2024.03.18 17:12:00 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:12:14 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:12:16 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:12:19 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:12:21 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:12:22 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:12:24 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:12:25 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:12:25 INFO  time: compiled root in 96ms[0m
+2024.03.18 17:12:25 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:12:27 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:12:30 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:12:30 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:12:35 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:12:36 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:12:39 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:12:39 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:12:39 INFO  time: compiled root in 81ms[0m
+2024.03.18 17:12:39 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:12:41 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:12:41 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:12:41 WARN  Using indexes to guess the definition of Optionals[0m
+2024.03.18 17:12:43 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:12:44 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:12:44 INFO  time: compiled root in 77ms[0m
+2024.03.18 17:12:44 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:12:56 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:12:57 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:12:59 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:13:00 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:13:01 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:13:01 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:13:04 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:13:04 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:13:05 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:13:05 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:13:06 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:13:06 INFO  time: compiled root in 0.25s[0m
+2024.03.18 17:13:06 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:13:14 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:13:14 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:13:16 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:13:16 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:13:16 INFO  time: compiled root in 0.14s[0m
+2024.03.18 17:13:17 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:13:18 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:13:18 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:13:21 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:13:26 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:13:27 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:13:34 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:13:37 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:13:41 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:13:41 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:13:41 INFO  time: compiled root in 92ms[0m
+2024.03.18 17:13:41 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+mar 18, 2024 5:13:42 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 13343
+2024.03.18 17:13:43 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:13:43 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:13:43 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:13:43 INFO  time: compiled root in 83ms[0m
+2024.03.18 17:13:43 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:14:06 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:14:06 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:14:06 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:14:06 INFO  time: compiled root in 0.27s[0m
+mar 18, 2024 5:14:29 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 13459
+2024.03.18 17:14:31 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:14:31 INFO  time: compiled root in 0.23s[0m
+2024.03.18 17:15:24 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:15:24 INFO  time: compiled root in 0.26s[0m
+2024.03.18 17:15:37 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:15:37 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:15:37 INFO  time: compiled root in 0.27s[0m
+mar 18, 2024 5:15:46 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 13555
+2024.03.18 17:24:38 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:24:38 INFO  time: compiled root in 0.22s[0m
+2024.03.18 17:24:50 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:24:50 INFO  time: compiled root in 0.22s[0m
+2024.03.18 17:25:02 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:25:02 INFO  time: compiled root in 0.24s[0m
+2024.03.18 17:25:44 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:25:44 INFO  time: compiled root in 85ms[0m
+mar 18, 2024 5:25:45 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 14077
+2024.03.18 17:25:47 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:25:47 INFO  time: compiled root in 0.23s[0m
+2024.03.18 17:27:34 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:27:34 INFO  time: compiled root in 0.21s[0m
+2024.03.18 17:27:55 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:27:55 INFO  time: compiled root in 0.21s[0m
+2024.03.18 17:28:24 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:28:24 INFO  time: compiled root in 0.2s[0m
+2024.03.18 17:28:25 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:28:34 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:28:36 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:28:36 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:28:37 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:28:39 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:28:39 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 17:28:39 INFO  time: compiled root in 0.27s[0m
+2024.03.18 17:28:53 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:28:53 INFO  time: compiled root in 0.22s[0m
+2024.03.18 17:29:08 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:29:08 INFO  time: compiled root in 0.24s[0m
+2024.03.18 17:29:55 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:29:55 INFO  time: compiled root in 0.24s[0m
+2024.03.18 17:31:50 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:31:50 INFO  time: compiled root in 96ms[0m
+2024.03.18 17:31:58 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:31:58 INFO  time: compiled root in 0.1s[0m
+2024.03.18 17:32:23 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:32:23 INFO  time: compiled root in 87ms[0m
+2024.03.18 17:33:30 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:33:30 INFO  time: compiled root in 0.23s[0m
+2024.03.18 17:33:49 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:33:49 INFO  time: compiled root in 0.23s[0m
+2024.03.18 17:34:18 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:34:18 INFO  time: compiled root in 0.2s[0m
+2024.03.18 17:34:26 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json[0m
+2024.03.18 17:34:26 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json[0m
+2024.03.18 17:34:26 INFO  Starting debug proxy for [Task1Test(testMinValueInFunction)][0m
+2024.03.18 17:34:26 INFO  Trying to attach to remote debuggee VM localhost:34435 .[0m
+2024.03.18 17:34:26 INFO  Attaching to debuggee VM succeeded.[0m
+2024.03.18 17:34:26 INFO  Canceling debug proxy for [Task1Test(testMinValueInFunction)][0m
+2024.03.18 17:34:26 INFO  Closing debug server tcp://0.0.0.0:40545[0m
+2024.03.18 17:34:50 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:34:50 INFO  time: compiled root-test in 0.24s[0m
+mar 18, 2024 5:34:52 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 15331
+2024.03.18 17:35:00 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:35:00 INFO  time: compiled root-test in 0.42s[0m
+2024.03.18 17:35:07 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:35:07 INFO  time: compiled root-test in 0.21s[0m
+2024.03.18 17:35:18 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:35:18 INFO  time: compiled root-test in 0.29s[0m
+mar 18, 2024 5:35:19 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 15463
+2024.03.18 17:35:25 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:35:25 INFO  time: compiled root-test in 0.21s[0m
+2024.03.18 17:35:37 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:35:37 INFO  time: compiled root-test in 0.18s[0m
+2024.03.18 17:35:42 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:35:42 INFO  time: compiled root-test in 0.23s[0m
+2024.03.18 17:35:53 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:35:53 INFO  time: compiled root-test in 0.21s[0m
+2024.03.18 17:35:57 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:35:57 INFO  time: compiled root-test in 0.2s[0m
+2024.03.18 17:36:25 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:36:25 INFO  time: compiled root-test in 0.22s[0m
+2024.03.18 17:36:27 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:36:27 INFO  time: compiled root-test in 0.32s[0m
+mar 18, 2024 5:36:27 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+java.util.concurrent.CompletionException: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:332)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:347)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:708)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2162)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:29)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:26)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at scala.concurrent.ExecutionContext$parasitic$.execute(ExecutionContext.scala:222)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:429)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:338)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:285)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:504)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+	at scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$.<clinit>(DebugProvider.scala:1012)
+	at scala.meta.internal.metals.debug.DebugProvider.ensureNoWorkspaceErrors(DebugProvider.scala:493)
+	at scala.meta.internal.metals.debug.DebugProvider.$anonfun$startTestSuite$4(DebugProvider.scala:781)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:470)
+	... 3 more
+
+2024.03.18 17:36:29 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:36:29 INFO  time: compiled root-test in 0.2s[0m
+2024.03.18 17:36:36 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:36:36 INFO  time: compiled root-test in 0.18s[0m
+2024.03.18 17:37:25 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:37:25 INFO  time: compiled root-test in 0.34s[0m
+2024.03.18 17:37:28 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:37:28 INFO  time: compiled root-test in 0.4s[0m
+2024.03.18 17:37:37 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:37:37 INFO  time: compiled root-test in 0.2s[0m
+2024.03.18 17:38:05 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:38:05 INFO  time: compiled root-test in 0.14s[0m
+2024.03.18 17:38:07 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json[0m
+2024.03.18 17:38:07 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json[0m
+2024.03.18 17:38:07 INFO  Starting debug proxy for [Task1Test(testMinValueInFunction)][0m
+2024.03.18 17:38:07 INFO  Trying to attach to remote debuggee VM localhost:52105 .[0m
+2024.03.18 17:38:07 INFO  Attaching to debuggee VM succeeded.[0m
+2024.03.18 17:38:07 INFO  Canceling debug proxy for [Task1Test(testMinValueInFunction)][0m
+2024.03.18 17:38:07 INFO  Closing debug server tcp://0.0.0.0:37187[0m
+2024.03.18 17:38:15 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:38:15 INFO  time: compiled root in 0.25s[0m
