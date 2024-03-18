@@ -53,4 +53,18 @@ class Task1Test:
         val courses: Sequence[String] = Cons("Storia", Cons("Matematica", Cons("Geografia", Nil())))
         assertEquals(courses, getCoursesFromPersonSequence(persons))
 
-    
+    @Test def testFoldLeft() = 
+        val lst = Cons(3, Cons(7, Cons(1, Cons(5, Nil()))))
+        assertEquals(-16, foldLeft(lst)(0)(_ - _))
+
+    @Test def testTakeAWhile() = 
+        val s = Stream.iterate(0)(_ + 1)
+        val res = Cons (0, Cons (1 , Cons (2 , Cons (3 , Cons (4 , Nil ())))))
+        assertEquals(res, Stream.toList(Stream.takeWhile(s)(_ < 5)))
+
+    @Test def testFill() = 
+        assertEquals(Cons("a", Cons("a", Cons("a", Nil()))), Stream.toList(Stream.fill(3)("a")))
+
+    @Test def testNumeroDiPell() = 
+        val pell: Stream[Int] = Stream.iterate(0)(i => i -2)
+        assertEquals(Cons(0, Cons(1, Cons(2, Cons(5, Cons(12, Nil()))))), Stream.toList(Stream.take(pell)(5)))

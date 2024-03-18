@@ -1816,3 +1816,289 @@ AVVERTENZA: Unmatched cancel notification for request id 20704
 2024.03.18 18:25:52 INFO  Closing debug server tcp://0.0.0.0:34479[0m
 2024.03.18 18:27:03 INFO  compiling root (1 scala source)[0m
 2024.03.18 18:27:03 INFO  time: compiled root in 0.24s[0m
+mar 18, 2024 6:27:21 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 22248
+2024.03.18 18:29:47 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 18:29:47 INFO  time: compiled root-test in 83ms[0m
+mar 18, 2024 6:30:05 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 22878
+mar 18, 2024 6:30:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 23041
+2024.03.18 18:31:25 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:31:25 INFO  time: compiled root in 0.22s[0m
+2024.03.18 18:31:27 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 18:31:27 INFO  time: compiled root-test in 0.19s[0m
+2024.03.18 18:31:29 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json[0m
+2024.03.18 18:31:29 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json[0m
+2024.03.18 18:31:29 INFO  Starting debug proxy for [tasks.Task1Test(testFoldLeft)][0m
+2024.03.18 18:31:29 INFO  Trying to attach to remote debuggee VM localhost:50087 .[0m
+2024.03.18 18:31:29 INFO  Attaching to debuggee VM succeeded.[0m
+2024.03.18 18:31:30 INFO  Canceling debug proxy for [tasks.Task1Test(testFoldLeft)][0m
+2024.03.18 18:31:29 INFO  Closing debug server tcp://0.0.0.0:37615[0m
+2024.03.18 18:32:45 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:32:45 INFO  time: compiled root in 0.35s[0m
+2024.03.18 18:34:35 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:34:35 INFO  time: compiled root in 0.24s[0m
+2024.03.18 18:34:40 WARN  Using indexes to guess the definition of Cons[0m
+2024.03.18 18:35:00 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:35:00 INFO  time: compiled root in 0.2s[0m
+2024.03.18 18:35:03 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:35:03 INFO  time: compiled root in 0.22s[0m
+2024.03.18 18:36:04 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:36:04 INFO  time: compiled root in 0.23s[0m
+2024.03.18 18:36:10 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 18:36:10 INFO  time: compiled root-test in 0.19s[0m
+2024.03.18 18:36:10 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json[0m
+2024.03.18 18:36:10 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json[0m
+2024.03.18 18:36:10 INFO  Starting debug proxy for [tasks.Task1Test(testFoldLeft)][0m
+2024.03.18 18:36:10 INFO  Trying to attach to remote debuggee VM localhost:42009 .[0m
+2024.03.18 18:36:10 INFO  Attaching to debuggee VM succeeded.[0m
+2024.03.18 18:37:12 INFO  Canceling debug proxy for [tasks.Task1Test(testFoldLeft)][0m
+2024.03.18 18:37:12 INFO  Closing debug server tcp://0.0.0.0:39603[0m
+2024.03.18 18:37:55 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:37:55 INFO  time: compiled root in 0.21s[0m
+mar 18, 2024 6:39:30 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 23879
+mar 18, 2024 6:39:30 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 23880
+2024.03.18 18:39:31 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:39:31 INFO  time: compiled root in 0.21s[0m
+mar 18, 2024 6:40:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 23906
+2024.03.18 18:40:16 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:40:16 INFO  time: compiled root in 0.22s[0m
+2024.03.18 18:40:21 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json[0m
+2024.03.18 18:40:21 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json[0m
+2024.03.18 18:40:21 INFO  Starting debug proxy for [tasks.Task1Test(testFoldLeft)][0m
+2024.03.18 18:40:21 INFO  Trying to attach to remote debuggee VM localhost:39175 .[0m
+2024.03.18 18:40:21 INFO  Attaching to debuggee VM succeeded.[0m
+2024.03.18 18:40:34 INFO  Canceling debug proxy for [tasks.Task1Test(testFoldLeft)][0m
+2024.03.18 18:40:34 INFO  Closing debug server tcp://0.0.0.0:35129[0m
+2024.03.18 18:41:57 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:41:57 INFO  time: compiled root in 0.12s[0m
+2024.03.18 18:42:44 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:42:44 INFO  time: compiled root in 0.28s[0m
+2024.03.18 18:42:49 WARN  Using indexes to guess the definition of Nil[0m
+2024.03.18 18:42:52 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:42:52 INFO  time: compiled root in 0.26s[0m
+2024.03.18 18:43:06 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json[0m
+2024.03.18 18:43:06 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json[0m
+2024.03.18 18:43:06 INFO  Starting debug proxy for [tasks.Task1Test(testFoldLeft)][0m
+2024.03.18 18:43:06 INFO  Trying to attach to remote debuggee VM localhost:57651 .[0m
+2024.03.18 18:43:06 INFO  Attaching to debuggee VM succeeded.[0m
+2024.03.18 18:43:22 INFO  Canceling debug proxy for [tasks.Task1Test(testFoldLeft)][0m
+2024.03.18 18:43:22 INFO  Closing debug server tcp://0.0.0.0:38877[0m
+2024.03.18 18:45:15 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:45:15 INFO  time: compiled root in 0.22s[0m
+2024.03.18 18:45:19 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json[0m
+2024.03.18 18:45:19 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json[0m
+2024.03.18 18:45:19 INFO  Starting debug proxy for [tasks.Task1Test(testFoldLeft)][0m
+2024.03.18 18:45:19 INFO  Trying to attach to remote debuggee VM localhost:50329 .[0m
+2024.03.18 18:45:19 INFO  Attaching to debuggee VM succeeded.[0m
+2024.03.18 18:45:31 INFO  Canceling debug proxy for [tasks.Task1Test(testFoldLeft)][0m
+2024.03.18 18:45:31 INFO  Closing debug server tcp://0.0.0.0:40795[0m
+mar 18, 2024 6:52:07 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 24421
+2024.03.18 18:52:13 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 18:52:13 INFO  time: compiled root-test in 0.12s[0m
+2024.03.18 18:52:48 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:52:48 INFO  time: compiled root in 0.21s[0m
+mar 18, 2024 6:53:05 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 24600
+2024.03.18 18:53:15 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 18:53:15 INFO  time: compiled root-test in 0.19s[0m
+mar 18, 2024 6:53:16 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 24640
+2024.03.18 18:53:17 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:53:17 INFO  time: compiled root in 0.27s[0m
+2024.03.18 18:53:19 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json[0m
+2024.03.18 18:53:19 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json[0m
+2024.03.18 18:53:19 INFO  Starting debug proxy for [tasks.Task1Test(testFoldLeft)][0m
+2024.03.18 18:53:19 INFO  Trying to attach to remote debuggee VM localhost:52131 .[0m
+2024.03.18 18:53:19 INFO  Attaching to debuggee VM succeeded.[0m
+2024.03.18 18:53:19 INFO  Canceling debug proxy for [tasks.Task1Test(testFoldLeft)][0m
+2024.03.18 18:53:19 INFO  Closing debug server tcp://0.0.0.0:34771[0m
+2024.03.18 18:53:35 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 18:53:35 INFO  time: compiled root-test in 76ms[0m
+2024.03.18 18:53:40 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 18:53:40 INFO  time: compiled root-test in 0.13s[0m
+2024.03.18 18:58:55 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:58:55 INFO  time: compiled root in 0.21s[0m
+2024.03.18 18:59:16 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:59:16 INFO  time: compiled root in 0.21s[0m
+2024.03.18 18:59:30 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 18:59:30 INFO  time: compiled root-test in 0.14s[0m
+2024.03.18 18:59:32 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json[0m
+2024.03.18 18:59:32 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json[0m
+2024.03.18 18:59:32 INFO  Starting debug proxy for [tasks.Task1Test(testFoldLeft)][0m
+2024.03.18 18:59:32 INFO  Trying to attach to remote debuggee VM localhost:60227 .[0m
+2024.03.18 18:59:32 INFO  Attaching to debuggee VM succeeded.[0m
+2024.03.18 18:59:33 INFO  Canceling debug proxy for [tasks.Task1Test(testFoldLeft)][0m
+2024.03.18 18:59:32 INFO  Closing debug server tcp://0.0.0.0:34803[0m
+2024.03.18 18:59:54 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 18:59:54 INFO  time: compiled root-test in 0.13s[0m
+2024.03.18 19:00:00 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 19:00:00 INFO  time: compiled root-test in 0.15s[0m
+2024.03.18 19:00:03 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 19:00:03 INFO  time: compiled root-test in 0.13s[0m
+2024.03.18 19:00:10 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json[0m
+2024.03.18 19:00:10 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json[0m
+2024.03.18 19:00:10 INFO  Starting debug proxy for [tasks.Task1Test(testFoldLeft)][0m
+2024.03.18 19:00:10 INFO  Trying to attach to remote debuggee VM localhost:35819 .[0m
+2024.03.18 19:00:10 INFO  Attaching to debuggee VM succeeded.[0m
+2024.03.18 19:00:11 INFO  Canceling debug proxy for [tasks.Task1Test(testFoldLeft)][0m
+2024.03.18 19:00:10 INFO  Closing debug server tcp://0.0.0.0:37651[0m
+2024.03.18 19:01:05 INFO  compiling root (1 scala source)[0m
+2024.03.18 19:01:05 INFO  time: compiled root in 0.19s[0m
+2024.03.18 19:01:30 INFO  compiling root (1 scala source)[0m
+2024.03.18 19:01:30 INFO  time: compiled root in 67ms[0m
+2024.03.18 19:01:31 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/tasks/Task.scala[0m
+2024.03.18 19:01:33 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/tasks/Task.scala[0m
+2024.03.18 19:01:33 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/tasks/Task.scala[0m
+2024.03.18 19:01:33 WARN  Using indexes to guess the definition of isStudent[0m
+2024.03.18 19:01:36 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/tasks/Task.scala[0m
+2024.03.18 19:01:37 INFO  compiling root (1 scala source)[0m
+2024.03.18 19:01:37 INFO  time: compiled root in 68ms[0m
+2024.03.18 19:01:38 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/tasks/Task.scala[0m
+2024.03.18 19:01:38 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/tasks/Task.scala[0m
+2024.03.18 19:01:38 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/tasks/Task.scala[0m
+2024.03.18 19:01:38 WARN  Using indexes to guess the definition of course[0m
+2024.03.18 19:01:40 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/tasks/Task.scala[0m
+2024.03.18 19:01:41 INFO  compiling root (1 scala source)[0m
+2024.03.18 19:01:41 INFO  time: compiled root in 0.2s[0m
+2024.03.18 19:01:57 INFO  compiling root (1 scala source)[0m
+2024.03.18 19:01:57 INFO  time: compiled root in 0.22s[0m
+2024.03.18 19:02:13 INFO  compiling root (1 scala source)[0m
+2024.03.18 19:02:13 INFO  time: compiled root in 0.2s[0m
+2024.03.18 19:02:34 INFO  compiling root (1 scala source)[0m
+2024.03.18 19:02:34 INFO  time: compiled root in 0.21s[0m
+2024.03.18 19:03:37 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 19:03:37 INFO  time: compiled root-test in 0.23s[0m
+2024.03.18 19:03:38 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json[0m
+2024.03.18 19:03:38 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json[0m
+2024.03.18 19:03:38 INFO  Starting debug proxy for [tasks.Task1Test()][0m
+2024.03.18 19:03:37 INFO  Trying to attach to remote debuggee VM localhost:56689 .[0m
+2024.03.18 19:03:37 INFO  Attaching to debuggee VM succeeded.[0m
+2024.03.18 19:03:38 INFO  Canceling debug proxy for [tasks.Task1Test()][0m
+2024.03.18 19:03:37 INFO  Closing debug server tcp://0.0.0.0:40237[0m
+2024.03.18 19:04:29 INFO  compiling root (1 scala source)[0m
+2024.03.18 19:04:29 INFO  time: compiled root in 0.19s[0m
+2024.03.18 19:05:11 INFO  compiling root (1 scala source)[0m
+2024.03.18 19:05:11 INFO  time: compiled root in 0.29s[0m
+2024.03.18 19:05:39 INFO  compiling root (1 scala source)[0m
+2024.03.18 19:05:39 INFO  time: compiled root in 0.26s[0m
+2024.03.18 19:05:42 INFO  compiling root (1 scala source)[0m
+2024.03.18 19:05:42 INFO  time: compiled root in 0.22s[0m
+2024.03.18 19:05:46 INFO  compiling root (1 scala source)[0m
+2024.03.18 19:05:46 INFO  time: compiled root in 0.24s[0m
+2024.03.18 19:06:03 INFO  compiling root (1 scala source)[0m
+2024.03.18 19:06:03 INFO  time: compiled root in 98ms[0m
+2024.03.18 19:06:07 INFO  compiling root (1 scala source)[0m
+2024.03.18 19:06:07 INFO  time: compiled root in 0.23s[0m
+2024.03.18 19:06:40 INFO  compiling root (1 scala source)[0m
+2024.03.18 19:06:40 INFO  time: compiled root in 0.24s[0m
+mar 18, 2024 7:06:57 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 26111
+mar 18, 2024 7:07:07 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 26182
+mar 18, 2024 7:08:22 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: A severe compiler error occurred, full details of the error can be found in the error report /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/.reports/metals-full/2024-03-18/r_compiler-error_(root-test)_19-08-22-360.md
+2024.03.18 19:09:05 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 19:09:05 INFO  time: compiled root-test in 94ms[0m
+2024.03.18 19:09:40 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 19:09:40 INFO  time: compiled root-test in 0.25s[0m
+mar 18, 2024 7:09:41 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 26702
+2024.03.18 19:10:25 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 19:10:25 INFO  time: compiled root-test in 0.37s[0m
+2024.03.18 19:10:28 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 19:10:28 INFO  time: compiled root-test in 0.3s[0m
+2024.03.18 19:10:46 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 19:10:46 INFO  time: compiled root-test in 0.29s[0m
+2024.03.18 19:10:50 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 19:10:50 INFO  time: compiled root-test in 0.12s[0m
+2024.03.18 19:10:58 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json[0m
+2024.03.18 19:10:58 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json[0m
+2024.03.18 19:10:58 INFO  Starting debug proxy for [tasks.Task1Test(testTakeAWhile)][0m
+2024.03.18 19:10:58 INFO  Trying to attach to remote debuggee VM localhost:47393 .[0m
+2024.03.18 19:10:58 INFO  Attaching to debuggee VM succeeded.[0m
+2024.03.18 19:10:58 INFO  Canceling debug proxy for [tasks.Task1Test(testTakeAWhile)][0m
+2024.03.18 19:10:58 INFO  Closing debug server tcp://0.0.0.0:34837[0m
+2024.03.18 19:13:13 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 19:13:13 INFO  time: compiled root-test in 0.2s[0m
+2024.03.18 19:13:37 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 19:13:37 INFO  time: compiled root-test in 0.27s[0m
+mar 18, 2024 7:13:38 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 27374
+2024.03.18 19:13:45 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 19:13:45 INFO  time: compiled root-test in 0.2s[0m
+mar 18, 2024 7:14:11 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 27450
+2024.03.18 19:15:02 INFO  compiling root (1 scala source)[0m
+2024.03.18 19:15:02 INFO  time: compiled root in 0.23s[0m
+2024.03.18 19:15:06 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 19:15:06 INFO  time: compiled root-test in 0.18s[0m
+2024.03.18 19:15:11 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 19:15:11 INFO  time: compiled root-test in 0.1s[0m
+2024.03.18 19:15:56 INFO  compiling root (1 scala source)[0m
+2024.03.18 19:15:56 INFO  time: compiled root in 0.24s[0m
+2024.03.18 19:15:57 INFO  compiling root-test (1 scala source)[0m
+mar 18, 2024 7:15:58 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 27781
+2024.03.18 19:15:57 INFO  time: compiled root-test in 0.21s[0m
+2024.03.18 19:16:03 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json[0m
+2024.03.18 19:16:03 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json[0m
+2024.03.18 19:16:04 INFO  Starting debug proxy for [tasks.Task1Test(testFill)][0m
+2024.03.18 19:16:04 INFO  Trying to attach to remote debuggee VM localhost:46381 .[0m
+2024.03.18 19:16:04 INFO  Attaching to debuggee VM succeeded.[0m
+2024.03.18 19:16:04 INFO  Canceling debug proxy for [tasks.Task1Test(testFill)][0m
+2024.03.18 19:16:04 INFO  Closing debug server tcp://0.0.0.0:41859[0m
+mar 18, 2024 7:16:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 27819
+2024.03.18 19:23:28 INFO  compiling root (1 scala source)[0m
+2024.03.18 19:23:28 INFO  time: compiled root in 0.23s[0m
+2024.03.18 19:25:05 INFO  compiling root (1 scala source)[0m
+2024.03.18 19:25:05 INFO  time: compiled root in 0.37s[0m
+mar 18, 2024 7:25:17 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 28303
+2024.03.18 19:25:18 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json[0m
+2024.03.18 19:25:18 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json[0m
+2024.03.18 19:25:18 INFO  Starting debug proxy for [tasks.Task1Test(testFill)][0m
+2024.03.18 19:25:18 INFO  Trying to attach to remote debuggee VM localhost:54945 .[0m
+2024.03.18 19:25:18 INFO  Attaching to debuggee VM succeeded.[0m
+2024.03.18 19:25:18 INFO  Canceling debug proxy for [tasks.Task1Test(testFill)][0m
+2024.03.18 19:25:18 INFO  Closing debug server tcp://0.0.0.0:34643[0m
+2024.03.18 19:31:46 INFO  compiling root (1 scala source)[0m
+2024.03.18 19:31:46 INFO  time: compiled root in 85ms[0m
+mar 18, 2024 7:58:39 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 29664
+2024.03.18 19:59:12 INFO  compiling root (1 scala source)[0m
+2024.03.18 19:59:12 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 19:59:12 INFO  time: compiled root in 0.39s[0m
+2024.03.18 19:59:12 INFO  time: compiled root-test in 0.15s[0m
+mar 18, 2024 7:59:27 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 29945
+2024.03.18 19:59:55 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/test/scala/tasks/Task1Test.scala[0m
+2024.03.18 19:59:55 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 19:59:55 INFO  time: compiled root-test in 0.17s[0m
+2024.03.18 19:59:57 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json[0m
+2024.03.18 19:59:57 INFO  compiling root (1 scala source)[0m
+2024.03.18 19:59:57 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json[0m
+2024.03.18 19:59:57 INFO  Starting debug proxy for [tasks.Task1Test(testNumeroDiPell)][0m
+2024.03.18 19:59:57 INFO  Trying to attach to remote debuggee VM localhost:40027 .[0m
+2024.03.18 19:59:57 INFO  Attaching to debuggee VM succeeded.[0m
+2024.03.18 19:59:58 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/tasks/Task.scala[0m
+2024.03.18 19:59:57 INFO  time: compiled root in 0.61s[0m
+2024.03.18 19:59:57 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 19:59:57 INFO  time: compiled root-test in 0.32s[0m
+2024.03.18 19:59:58 INFO  Canceling debug proxy for [tasks.Task1Test(testNumeroDiPell)][0m
+2024.03.18 19:59:58 INFO  Closing debug server tcp://0.0.0.0:36359[0m
+2024.03.18 20:00:18 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 20:00:18 INFO  time: compiled root-test in 0.16s[0m
+2024.03.18 20:00:19 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json[0m
+2024.03.18 20:00:19 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json[0m
+2024.03.18 20:00:19 INFO  Starting debug proxy for [tasks.Task1Test(testNumeroDiPell)][0m
+2024.03.18 20:00:19 INFO  Trying to attach to remote debuggee VM localhost:47965 .[0m
+2024.03.18 20:00:19 INFO  Attaching to debuggee VM succeeded.[0m
+2024.03.18 20:00:20 INFO  Canceling debug proxy for [tasks.Task1Test(testNumeroDiPell)][0m
+2024.03.18 20:00:19 INFO  Closing debug server tcp://0.0.0.0:42197[0m
