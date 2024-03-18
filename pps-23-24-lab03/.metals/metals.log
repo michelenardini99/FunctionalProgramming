@@ -1310,3 +1310,509 @@ Caused by: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsExcepti
 2024.03.18 17:38:07 INFO  Closing debug server tcp://0.0.0.0:37187[0m
 2024.03.18 17:38:15 INFO  compiling root (1 scala source)[0m
 2024.03.18 17:38:15 INFO  time: compiled root in 0.25s[0m
+mar 18, 2024 5:38:37 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFORMAZIONI: Unsupported notification method: $/setTrace
+mar 18, 2024 5:38:41 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFORMAZIONI: Unsupported notification method: $/setTrace
+2024.03.18 17:43:20 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:43:20 INFO  time: compiled root in 91ms[0m
+2024.03.18 17:43:25 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:43:25 INFO  time: compiled root in 0.29s[0m
+2024.03.18 17:43:35 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:43:35 INFO  time: compiled root in 0.23s[0m
+2024.03.18 17:43:43 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:43:43 INFO  time: compiled root in 0.26s[0m
+2024.03.18 17:44:04 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:44:04 INFO  time: compiled root in 0.19s[0m
+2024.03.18 17:44:09 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:44:09 INFO  time: compiled root in 0.2s[0m
+2024.03.18 17:44:18 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:44:18 INFO  time: compiled root-test in 0.11s[0m
+2024.03.18 17:44:21 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:44:21 INFO  time: compiled root-test in 61ms[0m
+2024.03.18 17:44:26 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:44:26 INFO  time: compiled root-test in 0.49s[0m
+2024.03.18 17:44:42 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:44:42 INFO  time: compiled root-test in 0.14s[0m
+2024.03.18 17:44:44 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json[0m
+2024.03.18 17:44:44 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json[0m
+2024.03.18 17:44:44 INFO  Starting debug proxy for [Task1Test()][0m
+2024.03.18 17:44:44 INFO  Trying to attach to remote debuggee VM localhost:34489 .[0m
+2024.03.18 17:44:44 INFO  Attaching to debuggee VM succeeded.[0m
+2024.03.18 17:44:45 INFO  Canceling debug proxy for [Task1Test()][0m
+2024.03.18 17:44:44 INFO  Closing debug server tcp://0.0.0.0:45233[0m
+2024.03.18 17:45:00 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:45:00 INFO  time: compiled root-test in 0.19s[0m
+2024.03.18 17:45:09 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:45:09 INFO  time: compiled root in 0.48s[0m
+2024.03.18 17:45:29 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:45:29 INFO  time: compiled root-test in 24ms[0m
+2024.03.18 17:45:41 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:45:41 INFO  time: compiled root-test in 68ms[0m
+mar 18, 2024 5:45:50 PM scala.meta.internal.mtags.SymbolIndexBucket addMtagsSourceFile
+AVVERTENZA: Error indexing /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task.scala
+java.nio.file.NoSuchFileException: /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task.scala
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:218)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:380)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:432)
+	at java.base/java.nio.file.Files.readAllBytes(Files.java:3288)
+	at scala.meta.internal.io.PlatformFileIO$.slurp(PlatformFileIO.scala:45)
+	at scala.meta.internal.io.FileIO$.slurp(FileIO.scala:24)
+	at scala.meta.internal.mtags.ScalametaCommonEnrichments$XtensionAbsolutePath.toInput(ScalametaCommonEnrichments.scala:425)
+	at scala.meta.internal.mtags.Mtags.index(Mtags.scala:67)
+	at scala.meta.internal.mtags.Mtags.allSymbols(Mtags.scala:21)
+	at scala.meta.internal.mtags.SymbolIndexBucket.allSymbols(SymbolIndexBucket.scala:281)
+	at scala.meta.internal.mtags.SymbolIndexBucket.addMtagsSourceFile(SymbolIndexBucket.scala:292)
+	at scala.meta.internal.mtags.SymbolIndexBucket.$anonfun$query0$1(SymbolIndexBucket.scala:207)
+	at scala.meta.internal.mtags.SymbolIndexBucket.$anonfun$query0$1$adapted(SymbolIndexBucket.scala:207)
+	at scala.collection.immutable.Set$Set2.foreach(Set.scala:210)
+	at scala.meta.internal.mtags.SymbolIndexBucket.query0(SymbolIndexBucket.scala:207)
+	at scala.meta.internal.mtags.SymbolIndexBucket.query(SymbolIndexBucket.scala:180)
+	at scala.meta.internal.mtags.OnDemandSymbolIndex.$anonfun$findSymbolDefinition$1(OnDemandSymbolIndex.scala:141)
+	at scala.collection.immutable.List.flatMap(List.scala:293)
+	at scala.meta.internal.mtags.OnDemandSymbolIndex.findSymbolDefinition(OnDemandSymbolIndex.scala:141)
+	at scala.meta.internal.mtags.OnDemandSymbolIndex.definition(OnDemandSymbolIndex.scala:48)
+	at scala.meta.internal.metals.Docstrings.indexSymbol(Docstrings.scala:118)
+	at scala.meta.internal.metals.Docstrings.documentation(Docstrings.scala:44)
+	at scala.meta.internal.metals.MetalsSymbolSearch.documentation(MetalsSymbolSearch.scala:43)
+	at scala.meta.internal.mtags.MtagsEnrichments$.symbolDocumentation(MtagsEnrichments.scala:252)
+	at scala.meta.internal.pc.CompletionItemResolver$.resolve(CompletionItemResolver.scala:27)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.completionItemResolve$$anonfun$1(ScalaPresentationCompiler.scala:215)
+	at scala.meta.internal.pc.CompilerAccess.withSharedCompiler(CompilerAccess.scala:156)
+	at scala.meta.internal.pc.CompilerAccess.withNonInterruptableCompiler$$anonfun$1(CompilerAccess.scala:142)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:245)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+mar 18, 2024 5:45:50 PM scala.meta.internal.mtags.SymbolIndexBucket addMtagsSourceFile
+AVVERTENZA: Error indexing /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task.scala
+java.nio.file.NoSuchFileException: /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task.scala
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:218)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:380)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:432)
+	at java.base/java.nio.file.Files.readAllBytes(Files.java:3288)
+	at scala.meta.internal.io.PlatformFileIO$.slurp(PlatformFileIO.scala:45)
+	at scala.meta.internal.io.FileIO$.slurp(FileIO.scala:24)
+	at scala.meta.internal.mtags.ScalametaCommonEnrichments$XtensionAbsolutePath.toInput(ScalametaCommonEnrichments.scala:425)
+	at scala.meta.internal.mtags.Mtags.index(Mtags.scala:67)
+	at scala.meta.internal.mtags.Mtags.allSymbols(Mtags.scala:21)
+	at scala.meta.internal.mtags.SymbolIndexBucket.allSymbols(SymbolIndexBucket.scala:281)
+	at scala.meta.internal.mtags.SymbolIndexBucket.addMtagsSourceFile(SymbolIndexBucket.scala:292)
+	at scala.meta.internal.mtags.SymbolIndexBucket.addMtagsSourceFile(SymbolIndexBucket.scala:303)
+	at scala.meta.internal.mtags.SymbolIndexBucket.$anonfun$query0$1(SymbolIndexBucket.scala:207)
+	at scala.meta.internal.mtags.SymbolIndexBucket.$anonfun$query0$1$adapted(SymbolIndexBucket.scala:207)
+	at scala.collection.immutable.Set$Set2.foreach(Set.scala:210)
+	at scala.meta.internal.mtags.SymbolIndexBucket.query0(SymbolIndexBucket.scala:207)
+	at scala.meta.internal.mtags.SymbolIndexBucket.query(SymbolIndexBucket.scala:180)
+	at scala.meta.internal.mtags.OnDemandSymbolIndex.$anonfun$findSymbolDefinition$1(OnDemandSymbolIndex.scala:141)
+	at scala.collection.immutable.List.flatMap(List.scala:293)
+	at scala.meta.internal.mtags.OnDemandSymbolIndex.findSymbolDefinition(OnDemandSymbolIndex.scala:141)
+	at scala.meta.internal.mtags.OnDemandSymbolIndex.definition(OnDemandSymbolIndex.scala:48)
+	at scala.meta.internal.metals.Docstrings.indexSymbol(Docstrings.scala:118)
+	at scala.meta.internal.metals.Docstrings.documentation(Docstrings.scala:44)
+	at scala.meta.internal.metals.MetalsSymbolSearch.documentation(MetalsSymbolSearch.scala:43)
+	at scala.meta.internal.mtags.MtagsEnrichments$.symbolDocumentation(MtagsEnrichments.scala:252)
+	at scala.meta.internal.pc.CompletionItemResolver$.resolve(CompletionItemResolver.scala:27)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.completionItemResolve$$anonfun$1(ScalaPresentationCompiler.scala:215)
+	at scala.meta.internal.pc.CompilerAccess.withSharedCompiler(CompilerAccess.scala:156)
+	at scala.meta.internal.pc.CompilerAccess.withNonInterruptableCompiler$$anonfun$1(CompilerAccess.scala:142)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:245)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+2024.03.18 17:46:00 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:46:00 INFO  time: compiled root-test in 81ms[0m
+2024.03.18 17:46:05 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:46:05 INFO  time: compiled root-test in 0.12s[0m
+2024.03.18 17:46:12 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:46:12 INFO  time: compiled root-test in 63ms[0m
+2024.03.18 17:46:15 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:46:15 INFO  time: compiled root-test in 80ms[0m
+mar 18, 2024 5:46:17 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+AVVERTENZA: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "textDocument/didChange",
+  "params": {
+    "textDocument": {
+      "version": 19,
+      "uri": "file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/test/scala/tasks/Task1Test.scala"
+    },
+    "contentChanges": [
+      {
+        "text": "\n\nimport org.junit.*\nimport org.junit.Assert.*\nimport Tasks.Sequence\nimport u03.extensionmethods.Optionals.Optional.*\nimport u03.Optionals.Optional.orElse\nimport u03.Optionals.Optional\n\nclass Task1Test:\n\n    import Tasks.Sequence.*\n\n    val lst: Sequence[Int] \u003d Cons(10, Cons(20, Cons(30, Nil())))\n\n    @Test def testTake() \u003d \n        assertEquals(Cons(10, Cons(20, Nil())), take(lst)(2))\n\n    @Test def testTakeZeroElement() \u003d \n        assertEquals(Nil(), take(lst)(0))\n\n    @Test def testTakeMoreElementThanListContains() \u003d \n        assertEquals(lst, take(lst)(5))\n\n    @Test def testZipList() \u003d \n        val lst1: Sequence[Int] \u003d Cons(10, Cons(20, Cons(30, Nil())))\n        val lst2: Sequence[String] \u003d Cons(\"a\", Cons(\"b\", Cons(\"c\", Nil())))\n        assertEquals(Cons((10, \"a\"), Cons((20, \"b\"), Cons((30, \"c\"), Nil()))), zip(lst1, lst2))\n\n    @Test def testConcatTwoList() \u003d \n        val lst1 \u003d Cons(10, Cons(20, Nil()))\n        val lst2 \u003d Cons(30, Cons(40, Nil()))\n        assertEquals(Cons(10, Cons(20, Cons(30, Cons(40, Nil())))), concat(lst1, lst2))\n\n    @Test def testFlatMap() \u003d \n        assertEquals(Cons(11, Cons(12, Cons(21, Cons(22, Cons(31, Cons(32, Nil())))))),\n                     flatMap(lst)(v \u003d\u003e Cons(v + 1, Cons(v + 2, Nil()))))\n\n    @Test def testMapInTermsOfFlatMap() \u003d \n        assertEquals(Cons(11, Cons(21, Cons(31, Nil()))), map(lst)(v \u003d\u003e v + 1))\n\n    @Test def testMinValueInFunction() \u003d \n        assertEquals(orElse(Optional.Just(10), 0), orElse(min(lst), 0))\n\n    \n"
+      }
+    ]
+  }
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.reflect.InvocationTargetException
+	at jdk.internal.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.lang.IllegalArgumentException: -1 is not a valid offset, allowed [0..1495]
+	at scala.meta.internal.inputs.InternalInput.offsetToLine(InternalInput.scala:54)
+	at scala.meta.internal.inputs.InternalInput.offsetToLine$(InternalInput.scala:48)
+	at scala.meta.inputs.Input$VirtualFile.offsetToLine(Input.scala:80)
+	at scala.meta.inputs.Position$Range.startLine(Position.scala:39)
+	at scala.meta.internal.mtags.ScalametaCommonEnrichments$XtensionMetaPosition.toLsp(ScalametaCommonEnrichments.scala:77)
+	at scala.meta.internal.parsing.TokenEditDistance$Diff.$anonfun$toRevised$8(TokenEditDistance.scala:310)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.parsing.TokenEditDistance$Diff.toRevised(TokenEditDistance.scala:241)
+	at scala.meta.internal.metals.Diagnostics.toFreshDiagnostic(Diagnostics.scala:281)
+	at scala.meta.internal.metals.Diagnostics.$anonfun$publishDiagnostics$2(Diagnostics.scala:239)
+	at scala.meta.internal.metals.Diagnostics.$anonfun$publishDiagnostics$2$adapted(Diagnostics.scala:238)
+	at scala.collection.IterableOnceOps.foreach(IterableOnce.scala:576)
+	at scala.collection.IterableOnceOps.foreach$(IterableOnce.scala:574)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:933)
+	at scala.meta.internal.metals.Diagnostics.publishDiagnostics(Diagnostics.scala:238)
+	at scala.meta.internal.metals.Diagnostics.publishDiagnostics(Diagnostics.scala:203)
+	at scala.meta.internal.metals.Diagnostics.didChange(Diagnostics.scala:138)
+	at scala.meta.internal.metals.MetalsLspService.didChange(MetalsLspService.scala:1192)
+	at scala.meta.internal.metals.WorkspaceLspService.didChange(WorkspaceLspService.scala:355)
+	at scala.meta.metals.lsp.DelegatingScalaService.didChange(DelegatingScalaService.scala:50)
+	... 15 more
+
+2024.03.18 17:46:17 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:46:17 INFO  time: compiled root-test in 0.13s[0m
+mar 18, 2024 5:46:28 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: java.lang.IllegalArgumentException: -1 is not a valid offset, allowed [0..1495]
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: -1 is not a valid offset, allowed [0..1495]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:332)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:347)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:708)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2162)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.IllegalArgumentException: -1 is not a valid offset, allowed [0..1495]
+	at scala.meta.internal.inputs.InternalInput.offsetToLine(InternalInput.scala:54)
+	at scala.meta.internal.inputs.InternalInput.offsetToLine$(InternalInput.scala:48)
+	at scala.meta.inputs.Input$VirtualFile.offsetToLine(Input.scala:80)
+	at scala.meta.inputs.Position$Range.startLine(Position.scala:39)
+	at scala.meta.internal.mtags.ScalametaCommonEnrichments$XtensionMetaPosition.toLsp(ScalametaCommonEnrichments.scala:77)
+	at scala.meta.internal.parsing.TokenEditDistance$Diff.$anonfun$toRevised$8(TokenEditDistance.scala:310)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.parsing.TokenEditDistance$Diff.toRevised(TokenEditDistance.scala:241)
+	at scala.meta.internal.metals.Diagnostics.toFreshDiagnostic(Diagnostics.scala:281)
+	at scala.meta.internal.metals.Diagnostics.$anonfun$publishDiagnostics$2(Diagnostics.scala:239)
+	at scala.meta.internal.metals.Diagnostics.$anonfun$publishDiagnostics$2$adapted(Diagnostics.scala:238)
+	at scala.collection.IterableOnceOps.foreach(IterableOnce.scala:576)
+	at scala.collection.IterableOnceOps.foreach$(IterableOnce.scala:574)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:933)
+	at scala.meta.internal.metals.Diagnostics.publishDiagnostics(Diagnostics.scala:238)
+	at scala.meta.internal.metals.Diagnostics.publishDiagnostics(Diagnostics.scala:203)
+	at scala.meta.internal.metals.Diagnostics.onClose(Diagnostics.scala:122)
+	at scala.meta.internal.metals.Diagnostics.onSyntaxError(Diagnostics.scala:109)
+	at scala.meta.internal.metals.MetalsLspService.$anonfun$parseTreesAndPublishDiags$2(MetalsLspService.scala:849)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:687)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	... 3 more
+
+2024.03.18 17:46:48 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/test/scala/tasks/Task1Test.scala[0m
+2024.03.18 17:46:48 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:46:48 INFO  time: compiled root-test in 0.19s[0m
+2024.03.18 17:47:18 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:47:18 INFO  time: compiled root-test in 62ms[0m
+2024.03.18 17:47:48 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:47:48 INFO  time: compiled root-test in 0.18s[0m
+2024.03.18 17:47:57 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:47:57 INFO  time: compiled root-test in 0.12s[0m
+2024.03.18 17:48:05 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:48:05 INFO  time: compiled root-test in 0.45s[0m
+2024.03.18 17:48:11 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:48:11 INFO  time: compiled root-test in 0.43s[0m
+2024.03.18 17:48:23 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:48:23 INFO  time: compiled root-test in 77ms[0m
+2024.03.18 17:48:28 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:48:28 INFO  time: compiled root-test in 63ms[0m
+2024.03.18 17:48:39 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:48:39 INFO  time: compiled root-test in 0.33s[0m
+2024.03.18 17:48:45 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:48:45 INFO  time: compiled root-test in 0.37s[0m
+2024.03.18 17:48:52 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:48:52 INFO  time: compiled root-test in 0.3s[0m
+2024.03.18 17:49:02 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:49:02 INFO  time: compiled root-test in 0.26s[0m
+2024.03.18 17:49:32 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:49:32 INFO  time: compiled root-test in 0.32s[0m
+2024.03.18 17:49:34 WARN  Using indexes to guess the definition of Tasks[0m
+2024.03.18 17:49:34 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:49:34 INFO  time: compiled root-test in 0.33s[0m
+2024.03.18 17:49:38 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:49:38 INFO  time: compiled root-test in 0.15s[0m
+2024.03.18 17:50:23 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:50:23 INFO  time: compiled root-test in 0.29s[0m
+2024.03.18 17:50:44 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:50:44 INFO  time: compiled root-test in 0.27s[0m
+mar 18, 2024 5:50:45 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 17199
+2024.03.18 17:51:03 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:51:03 INFO  time: compiled root-test in 0.32s[0m
+2024.03.18 17:51:29 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:51:29 INFO  time: compiled root-test in 0.31s[0m
+2024.03.18 17:51:31 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:51:31 INFO  time: compiled root-test in 0.17s[0m
+2024.03.18 17:51:59 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:51:59 INFO  time: compiled root in 0.19s[0m
+2024.03.18 17:52:01 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:52:01 INFO  time: compiled root-test in 0.21s[0m
+2024.03.18 17:52:04 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json[0m
+2024.03.18 17:52:04 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:52:04 INFO  time: compiled root-test in 90ms[0m
+2024.03.18 17:52:04 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json[0m
+2024.03.18 17:52:04 INFO  Starting debug proxy for [tasks.Task1Test()][0m
+2024.03.18 17:52:04 INFO  Trying to attach to remote debuggee VM localhost:59795 .[0m
+2024.03.18 17:52:04 INFO  Attaching to debuggee VM succeeded.[0m
+2024.03.18 17:52:05 INFO  Canceling debug proxy for [tasks.Task1Test()][0m
+2024.03.18 17:52:04 INFO  Closing debug server tcp://0.0.0.0:43283[0m
+2024.03.18 17:52:39 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 17:52:39 INFO  time: compiled root-test in 50ms[0m
+mar 18, 2024 5:56:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 18154
+2024.03.18 17:57:10 INFO  compiling root (1 scala source)[0m
+2024.03.18 17:57:10 INFO  time: compiled root in 0.34s[0m
+2024.03.18 18:05:51 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:05:51 INFO  time: compiled root in 0.23s[0m
+mar 18, 2024 6:07:42 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 18942
+mar 18, 2024 6:07:45 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 18972
+2024.03.18 18:08:10 ERROR Failed to tokenize input for semantic tokens for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/test/scala/tasks/Task1Test.scala
+scala.meta.tokenizers.TokenizeException: <input>:47: error: unclosed string interpolation
+        val persons: Sequence[Person] = Cons(Person.Teacher")
+                                                            ^
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.getStringPart(LegacyScanner.scala:659)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchDoubleQuote$1(LegacyScanner.scala:357)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:376)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:211)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1011)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:28)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:541)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:840)
+[0m
+2024.03.18 18:09:31 ERROR Failed to tokenize input for semantic tokens for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/test/scala/tasks/Task1Test.scala
+scala.meta.tokenizers.TokenizeException: <input>:49: error: unclosed string literal
+                                        Cons(Person.Student("Riccardo", "Sto),
+                                                                        ^
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.getStringLit(LegacyScanner.scala:553)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchDoubleQuote$1(LegacyScanner.scala:372)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:376)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:211)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1011)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:28)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:541)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:840)
+[0m
+2024.03.18 18:09:32 ERROR Failed to tokenize input for semantic tokens for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/test/scala/tasks/Task1Test.scala
+scala.meta.tokenizers.TokenizeException: <input>:49: error: unclosed string literal
+                                        Cons(Person.Student("Riccardo", "),
+                                                                        ^
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.getStringLit(LegacyScanner.scala:553)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchDoubleQuote$1(LegacyScanner.scala:372)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:376)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:211)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1011)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:28)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:541)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:840)
+[0m
+2024.03.18 18:10:33 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 18:10:33 INFO  time: compiled root-test in 91ms[0m
+2024.03.18 18:10:34 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/test/scala/tasks/Task1Test.scala[0m
+2024.03.18 18:10:43 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/test/scala/tasks/Task1Test.scala[0m
+2024.03.18 18:10:43 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 18:10:43 INFO  time: compiled root-test in 0.13s[0m
+2024.03.18 18:11:50 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 18:11:50 INFO  time: compiled root-test in 91ms[0m
+2024.03.18 18:12:11 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 18:12:11 INFO  time: compiled root-test in 71ms[0m
+2024.03.18 18:12:14 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 18:12:14 INFO  time: compiled root-test in 0.12s[0m
+mar 18, 2024 6:12:14 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+GRAVE: Internal error: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+java.util.concurrent.CompletionException: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:332)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:347)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:708)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2162)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:29)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:26)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at scala.concurrent.ExecutionContext$parasitic$.execute(ExecutionContext.scala:222)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:429)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:338)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:285)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:504)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$: Cannot run class, since the workspace has errors.
+	at scala.meta.internal.metals.debug.DebugProvider$WorkspaceErrorsException$.<clinit>(DebugProvider.scala:1012)
+	at scala.meta.internal.metals.debug.DebugProvider.ensureNoWorkspaceErrors(DebugProvider.scala:493)
+	at scala.meta.internal.metals.debug.DebugProvider.$anonfun$startTestSuite$4(DebugProvider.scala:781)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:470)
+	... 3 more
+
+2024.03.18 18:12:14 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:12:14 INFO  time: compiled root in 0.1s[0m
+2024.03.18 18:12:14 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:12:14 INFO  time: compiled root in 80ms[0m
+2024.03.18 18:12:22 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:12:22 INFO  time: compiled root in 0.11s[0m
+2024.03.18 18:12:25 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:12:25 INFO  time: compiled root in 85ms[0m
+2024.03.18 18:12:28 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:12:28 INFO  time: compiled root in 93ms[0m
+mar 18, 2024 6:12:42 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 20313
+2024.03.18 18:13:01 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:13:01 INFO  time: compiled root in 0.21s[0m
+2024.03.18 18:13:03 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 18:13:03 INFO  time: compiled root-test in 0.13s[0m
+2024.03.18 18:13:04 WARN  Using indexes to guess the definition of getCoursesFromPersonSequence[0m
+2024.03.18 18:13:04 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 18:13:04 INFO  time: compiled root-test in 66ms[0m
+2024.03.18 18:13:12 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 18:13:12 INFO  time: compiled root-test in 0.21s[0m
+2024.03.18 18:13:15 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json[0m
+2024.03.18 18:13:15 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json[0m
+2024.03.18 18:13:15 INFO  Starting debug proxy for [tasks.Task1Test(testGetSequenceOfCoursesFromPersonSequence)][0m
+2024.03.18 18:13:15 INFO  Trying to attach to remote debuggee VM localhost:60207 .[0m
+2024.03.18 18:13:15 INFO  Attaching to debuggee VM succeeded.[0m
+2024.03.18 18:13:15 INFO  Closing debug server tcp://0.0.0.0:34557[0m
+2024.03.18 18:13:15 INFO  Canceling debug proxy for [tasks.Task1Test(testGetSequenceOfCoursesFromPersonSequence)][0m
+mar 18, 2024 6:14:15 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 20704
+2024.03.18 18:14:40 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:14:40 INFO  time: compiled root in 88ms[0m
+2024.03.18 18:18:25 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:18:25 INFO  time: compiled root in 99ms[0m
+2024.03.18 18:18:40 WARN  Using indexes to guess the definition of flatMap[0m
+2024.03.18 18:18:44 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:18:44 INFO  time: compiled root in 93ms[0m
+2024.03.18 18:20:20 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:20:20 INFO  time: compiled root in 0.24s[0m
+2024.03.18 18:21:00 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:21:00 INFO  time: compiled root in 0.28s[0m
+2024.03.18 18:21:09 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:21:09 INFO  time: compiled root in 0.2s[0m
+2024.03.18 18:21:11 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:21:11 INFO  time: compiled root in 0.19s[0m
+2024.03.18 18:21:13 WARN  Using indexes to guess the definition of Cons[0m
+2024.03.18 18:21:21 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:21:21 INFO  time: compiled root in 0.3s[0m
+2024.03.18 18:21:33 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:21:33 INFO  time: compiled root in 0.3s[0m
+2024.03.18 18:21:36 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:21:36 INFO  time: compiled root in 0.29s[0m
+2024.03.18 18:21:39 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:21:39 INFO  time: compiled root in 0.21s[0m
+2024.03.18 18:24:13 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:24:13 INFO  time: compiled root in 86ms[0m
+2024.03.18 18:24:22 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:24:22 INFO  time: compiled root in 84ms[0m
+2024.03.18 18:24:51 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:24:51 INFO  time: compiled root in 0.35s[0m
+2024.03.18 18:24:57 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:24:57 INFO  time: compiled root in 0.25s[0m
+2024.03.18 18:25:31 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:25:31 INFO  time: compiled root in 0.2s[0m
+2024.03.18 18:25:36 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json[0m
+2024.03.18 18:25:36 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json[0m
+2024.03.18 18:25:36 INFO  Starting debug proxy for [tasks.Task1Test(testGetSequenceOfCoursesFromPersonSequence)][0m
+2024.03.18 18:25:36 INFO  Trying to attach to remote debuggee VM localhost:47901 .[0m
+2024.03.18 18:25:36 INFO  Attaching to debuggee VM succeeded.[0m
+2024.03.18 18:25:37 INFO  Canceling debug proxy for [tasks.Task1Test(testGetSequenceOfCoursesFromPersonSequence)][0m
+2024.03.18 18:25:36 INFO  Closing debug server tcp://0.0.0.0:45491[0m
+2024.03.18 18:25:48 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 18:25:48 INFO  time: compiled root-test in 0.13s[0m
+2024.03.18 18:25:51 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json[0m
+2024.03.18 18:25:51 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json[0m
+2024.03.18 18:25:52 INFO  Starting debug proxy for [tasks.Task1Test(testGetSequenceOfCoursesFromPersonSequence)][0m
+2024.03.18 18:25:52 INFO  Trying to attach to remote debuggee VM localhost:38581 .[0m
+2024.03.18 18:25:52 INFO  Attaching to debuggee VM succeeded.[0m
+2024.03.18 18:25:52 INFO  Canceling debug proxy for [tasks.Task1Test(testGetSequenceOfCoursesFromPersonSequence)][0m
+2024.03.18 18:25:52 INFO  Closing debug server tcp://0.0.0.0:34479[0m
+2024.03.18 18:27:03 INFO  compiling root (1 scala source)[0m
+2024.03.18 18:27:03 INFO  time: compiled root in 0.24s[0m
