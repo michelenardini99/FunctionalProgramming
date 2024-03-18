@@ -5,6 +5,7 @@ import org.junit.Assert.*
 import u03.extensionmethods.Optionals.Optional.*
 import u03.Optionals.Optional.orElse
 import u03.Optionals.Optional
+import tasks.Tasks.Stream.pellNumber
 
 class Task1Test:
 
@@ -66,5 +67,4 @@ class Task1Test:
         assertEquals(Cons("a", Cons("a", Cons("a", Nil()))), Stream.toList(Stream.fill(3)("a")))
 
     @Test def testNumeroDiPell() = 
-        val pell: Stream[Int] = Stream.iterate(0)(i => i -2)
-        assertEquals(Cons(0, Cons(1, Cons(2, Cons(5, Cons(12, Nil()))))), Stream.toList(Stream.take(pell)(5)))
+        assertEquals(Cons(0, Cons(1, Cons(2, Cons(5, Cons(12, Nil()))))), Stream.toList(Stream.take(pellNumber)(5)))

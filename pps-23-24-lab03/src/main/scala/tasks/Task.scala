@@ -132,6 +132,10 @@ object Tasks:
       case n if n > 0 => cons(v, fill(n - 1)(v))
       case _          => Empty()
     
-    
+    def pellNumber: Stream[Int] = {
+      def pell(a: Int = 0, b: Int = 1): Stream[Int] =
+        cons(a, pell(b, 2 * b + a))
+      pell()
+    }
 
     
