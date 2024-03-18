@@ -39,6 +39,9 @@ object Task1:
       case (Nil(), Cons(h2, t2))  => Cons(h2, t2)
       case (_, _)                 => Nil()
     
-    def flatMap[A, B](l: Sequence[A])(mapper: A => Sequence[B]): Sequence[B] = ???
+    def flatMap[A, B](l: Sequence[A])(mapper: A => Sequence[B]): Sequence[B] = l match
+      case Nil() => Nil()
+      case Cons(h, t) => concat(mapper(h), flatMap(t)(mapper))
+    
 
     def min(l: Sequence[Int]): Optional[Int] = ???
