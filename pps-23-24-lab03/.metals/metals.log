@@ -1,0 +1,474 @@
+2024.03.18 14:26:46 INFO  Started: Metals version 1.2.2 in folders '/home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03' for client Visual Studio Code 1.87.1.[0m
+14:26:47.310 [pool-1-thread-4] INFO org.flywaydb.core.internal.license.VersionPrinter -- Flyway Community Edition 9.22.3 by Redgate
+14:26:47.313 [pool-1-thread-4] INFO org.flywaydb.core.internal.license.VersionPrinter -- See release notes here: https://rd.gt/416ObMi
+14:26:47.313 [pool-1-thread-4] INFO org.flywaydb.core.internal.license.VersionPrinter -- 
+14:26:47.316 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classpath resources at 'classpath:db/callback' ...
+14:26:47.316 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Determining location urls for classpath:db/callback using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@5cb0d902 ...
+14:26:47.316 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Unable to resolve location classpath:db/callback.
+14:26:47.316 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classpath resources at 'classpath:db/migration' ...
+14:26:47.316 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Determining location urls for classpath:db/migration using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@5cb0d902 ...
+14:26:47.317 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning URL: jar:file:/home/michelenardini/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalameta/metals_2.13/1.2.2/metals_2.13-1.2.2.jar!/db/migration
+14:26:47.320 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/
+14:26:47.320 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V1__Create_tables.sql
+14:26:47.320 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V2__Server_discovery.sql
+14:26:47.320 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V3__Jar_symbols.sql
+14:26:47.321 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V4__Fingerprints.sql
+14:26:47.321 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classes at classpath:db/migration
+14:26:47.324 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+14:26:47.325 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V1__Create_tables.sql
+14:26:47.326 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V3__Jar_symbols.sql
+14:26:47.326 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V4__Fingerprints.sql
+14:26:47.326 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V2__Server_discovery.sql
+14:26:47.403 [pool-1-thread-4] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:h2:file:/home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/metals (H2 2.2)
+14:26:47.404 [pool-1-thread-4] DEBUG org.flywaydb.core.FlywayExecutor -- Driver: H2 JDBC Driver 2.2.224 (2023-09-17)
+14:26:47.404 [pool-1-thread-4] DEBUG org.flywaydb.core.FlywayExecutor -- DDL Transactions Supported: false
+14:26:47.405 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.schemahistory.SchemaHistoryFactory -- Schemas: 
+14:26:47.405 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.schemahistory.SchemaHistoryFactory -- Default schema: null
+14:26:47.411 [pool-1-thread-4] WARN org.flywaydb.core.internal.database.base.Database -- Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+14:26:47.413 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.callback.SqlScriptCallbackFactory -- Scanning for SQL callbacks ...
+14:26:47.413 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+14:26:47.422 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.command.DbValidate -- Validating migrations ...
+14:26:47.427 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+14:26:47.450 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V1__Create_tables.sql (filename: V1__Create_tables.sql)
+14:26:47.450 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+14:26:47.450 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V3__Jar_symbols.sql (filename: V3__Jar_symbols.sql)
+14:26:47.450 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V4__Fingerprints.sql (filename: V4__Fingerprints.sql)
+14:26:47.450 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V2__Server_discovery.sql (filename: V2__Server_discovery.sql)
+14:26:47.451 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V1__Create_tables.sql (filename: V1__Create_tables.sql)
+14:26:47.451 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+14:26:47.451 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V3__Jar_symbols.sql (filename: V3__Jar_symbols.sql)
+14:26:47.451 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V4__Fingerprints.sql (filename: V4__Fingerprints.sql)
+14:26:47.451 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V2__Server_discovery.sql (filename: V2__Server_discovery.sql)
+14:26:47.453 [pool-1-thread-4] INFO org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory -- Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+14:26:47.458 [pool-1-thread-4] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 4 migrations (execution time 00:00.034s)
+14:26:47.461 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.command.DbSchemas -- Skipping creation of existing schema: "PUBLIC"
+14:26:47.466 [pool-1-thread-4] INFO org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory -- Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+14:26:47.469 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.parser.Parser -- Parsing  ...
+14:26:47.478 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.sqlscript.ParserSqlScript -- Found statement at line 1: CREATE TABLE IF NOT EXISTS "PUBLIC"."flyway_schema_history" (
+    "installed_rank" INT NOT NULL,
+    "version" VARCHAR(50),
+    "description" VARCHAR(200) NOT NULL,
+    "type" VARCHAR(20) NOT NULL,
+    "script" VARCHAR(1000) NOT NULL,
+    "checksum" INT,
+    "installed_by" VARCHAR(100) NOT NULL,
+    "installed_on" TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "execution_time" INT NOT NULL,
+    "success" BOOLEAN NOT NULL,
+    CONSTRAINT "flyway_schema_history_pk" PRIMARY KEY ("installed_rank")
+) AS SELECT -1, NULL, '<< Flyway Schema History table created >>', 'TABLE', '', NULL, 'SA', CURRENT_TIMESTAMP, 0, TRUE
+14:26:47.479 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.sqlscript.ParserSqlScript -- Found statement at line 14: CREATE INDEX "PUBLIC"."flyway_schema_history_s_idx" ON "PUBLIC"."flyway_schema_history" ("success")
+14:26:47.480 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- Executing SQL: CREATE TABLE IF NOT EXISTS "PUBLIC"."flyway_schema_history" (
+    "installed_rank" INT NOT NULL,
+    "version" VARCHAR(50),
+    "description" VARCHAR(200) NOT NULL,
+    "type" VARCHAR(20) NOT NULL,
+    "script" VARCHAR(1000) NOT NULL,
+    "checksum" INT,
+    "installed_by" VARCHAR(100) NOT NULL,
+    "installed_on" TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "execution_time" INT NOT NULL,
+    "success" BOOLEAN NOT NULL,
+    CONSTRAINT "flyway_schema_history_pk" PRIMARY KEY ("installed_rank")
+) AS SELECT -1, NULL, '<< Flyway Schema History table created >>', 'TABLE', '', NULL, 'SA', CURRENT_TIMESTAMP, 0, TRUE
+14:26:47.488 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- 0 rows affected
+14:26:47.488 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- Executing SQL: CREATE INDEX "PUBLIC"."flyway_schema_history_s_idx" ON "PUBLIC"."flyway_schema_history" ("success")
+14:26:47.492 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- 0 rows affected
+14:26:47.492 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory -- Created Schema History table "PUBLIC"."flyway_schema_history"
+14:26:47.501 [pool-1-thread-4] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema "PUBLIC": << Empty Schema >>
+14:26:47.501 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.parser.Parser -- Parsing V1__Create_tables.sql ...
+14:26:47.503 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.sqlscript.ParserSqlScript -- Found statement at line 4: -- The relationship between library dependency sources under .metals/readonly/**
+-- and build targets they belong to. Required to know what classpath to use
+-- for compiling dependency sources.
+create table dependency_source(
+  text_document_uri varchar primary key,
+  build_target_uri varchar not null
+)
+14:26:47.504 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.sqlscript.ParserSqlScript -- Found statement at line 12: -- The relationship between library dependency sources under .metals/readonly/**
+-- and worksheets they belong to. Required to know what classpath to use
+-- for compiling dependency sources.
+create table worksheet_dependency_source(
+  text_document_uri varchar primary key,
+  worksheet_uri varchar not null
+)
+14:26:47.505 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.sqlscript.ParserSqlScript -- Found statement at line 19: -- The relationship between what library dependency sources under .metals/readonly/**
+-- map to which build targets.
+create table sbt_digest(
+  md5 varchar,
+  status tinyint not null,
+  when_recorded timestamp
+)
+14:26:47.506 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.sqlscript.ParserSqlScript -- Found statement at line 27: -- Which window/showMessage and window/showMessageRequest dialogues have been dismissed
+-- by the user via "Don't show again" or closed by clicking on "x".
+create table dismissed_notification(
+  id int,
+  when_dismissed timestamp,
+  when_expires timestamp
+)
+14:26:47.507 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.sqlscript.ParserSqlScript -- Found statement at line 34: -- The choice of build tool when multiple build tool files are found in a workspace
+create table chosen_build_tool(
+  build_tool varchar primary key
+)
+14:26:47.509 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.command.DbMigrate -- Starting migration of schema "PUBLIC" to version "1 - Create tables" ...
+14:26:47.510 [pool-1-thread-4] INFO org.flywaydb.core.internal.command.DbMigrate -- Migrating schema "PUBLIC" to version "1 - Create tables"
+14:26:47.511 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- Executing SQL: -- The relationship between library dependency sources under .metals/readonly/**
+-- and build targets they belong to. Required to know what classpath to use
+-- for compiling dependency sources.
+create table dependency_source(
+  text_document_uri varchar primary key,
+  build_target_uri varchar not null
+)
+14:26:47.513 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- 0 rows affected
+14:26:47.514 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- Executing SQL: -- The relationship between library dependency sources under .metals/readonly/**
+-- and worksheets they belong to. Required to know what classpath to use
+-- for compiling dependency sources.
+create table worksheet_dependency_source(
+  text_document_uri varchar primary key,
+  worksheet_uri varchar not null
+)
+14:26:47.515 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- 0 rows affected
+14:26:47.515 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- Executing SQL: -- The relationship between what library dependency sources under .metals/readonly/**
+-- map to which build targets.
+create table sbt_digest(
+  md5 varchar,
+  status tinyint not null,
+  when_recorded timestamp
+)
+14:26:47.516 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- 0 rows affected
+14:26:47.517 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- Executing SQL: -- Which window/showMessage and window/showMessageRequest dialogues have been dismissed
+-- by the user via "Don't show again" or closed by clicking on "x".
+create table dismissed_notification(
+  id int,
+  when_dismissed timestamp,
+  when_expires timestamp
+)
+14:26:47.518 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- 0 rows affected
+14:26:47.518 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- Executing SQL: -- The choice of build tool when multiple build tool files are found in a workspace
+create table chosen_build_tool(
+  build_tool varchar primary key
+)
+14:26:47.519 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- 0 rows affected
+14:26:47.520 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.command.DbMigrate -- Successfully completed migration of schema "PUBLIC" to version "1 - Create tables"
+14:26:47.523 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory -- Schema History table "PUBLIC"."flyway_schema_history" successfully updated to reflect changes
+14:26:47.529 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.parser.Parser -- Parsing V2__Server_discovery.sql ...
+14:26:47.532 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.sqlscript.ParserSqlScript -- Found statement at line 4: -- For each unique combination of installed build servers we select one server.
+-- The md5 checksum is computed from the names of the installed build servers, and
+-- the selected server is the server which the user chose for this workspace.
+create table chosen_build_server(
+  md5 varchar primary key,
+  selected_server varchar,
+  when_recorded timestamp
+)
+14:26:47.532 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.command.DbMigrate -- Starting migration of schema "PUBLIC" to version "2 - Server discovery" ...
+14:26:47.533 [pool-1-thread-4] INFO org.flywaydb.core.internal.command.DbMigrate -- Migrating schema "PUBLIC" to version "2 - Server discovery"
+14:26:47.533 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- Executing SQL: -- For each unique combination of installed build servers we select one server.
+-- The md5 checksum is computed from the names of the installed build servers, and
+-- the selected server is the server which the user chose for this workspace.
+create table chosen_build_server(
+  md5 varchar primary key,
+  selected_server varchar,
+  when_recorded timestamp
+)
+14:26:47.535 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- 0 rows affected
+14:26:47.535 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.command.DbMigrate -- Successfully completed migration of schema "PUBLIC" to version "2 - Server discovery"
+14:26:47.537 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory -- Schema History table "PUBLIC"."flyway_schema_history" successfully updated to reflect changes
+14:26:47.540 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.parser.Parser -- Parsing V3__Jar_symbols.sql ...
+14:26:47.541 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.sqlscript.ParserSqlScript -- Found statement at line 2: -- Indexed jars, the MD5 digest of path, modified time and size as key
+create table indexed_jar(
+  id int auto_increment unique,
+  md5 varchar primary key
+)
+14:26:47.542 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.sqlscript.ParserSqlScript -- Found statement at line 7: -- Top Level Symbols per jar, allow for multiple jars with same symbols and paths
+create table toplevel_symbol(
+  symbol varchar not null,
+  path varchar not null,
+  jar int,
+  foreign key (jar) references indexed_jar (id) on delete cascade,
+  primary key (jar, path, symbol)
+)
+14:26:47.544 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.sqlscript.ParserSqlScript -- Found statement at line 15: -- Create index to speedup lookup of jar symbols
+create index toplevel_symbol_jar on toplevel_symbol(jar)
+14:26:47.544 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.command.DbMigrate -- Starting migration of schema "PUBLIC" to version "3 - Jar symbols" ...
+14:26:47.545 [pool-1-thread-4] INFO org.flywaydb.core.internal.command.DbMigrate -- Migrating schema "PUBLIC" to version "3 - Jar symbols"
+14:26:47.545 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- Executing SQL: -- Indexed jars, the MD5 digest of path, modified time and size as key
+create table indexed_jar(
+  id int auto_increment unique,
+  md5 varchar primary key
+)
+14:26:47.551 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- 0 rows affected
+14:26:47.552 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- Executing SQL: -- Top Level Symbols per jar, allow for multiple jars with same symbols and paths
+create table toplevel_symbol(
+  symbol varchar not null,
+  path varchar not null,
+  jar int,
+  foreign key (jar) references indexed_jar (id) on delete cascade,
+  primary key (jar, path, symbol)
+)
+14:26:47.558 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- 0 rows affected
+14:26:47.558 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- Executing SQL: -- Create index to speedup lookup of jar symbols
+create index toplevel_symbol_jar on toplevel_symbol(jar)
+14:26:47.559 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- 0 rows affected
+14:26:47.559 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.command.DbMigrate -- Successfully completed migration of schema "PUBLIC" to version "3 - Jar symbols"
+14:26:47.561 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory -- Schema History table "PUBLIC"."flyway_schema_history" successfully updated to reflect changes
+14:26:47.563 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.parser.Parser -- Parsing V4__Fingerprints.sql ...
+14:26:47.566 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.sqlscript.ParserSqlScript -- Found statement at line 2: -- Fingerprints saved between invocations
+create table fingerprints(
+  path varchar not null,
+  text varchar not null,
+  md5 varchar not null,
+  id int auto_increment unique
+)
+14:26:47.566 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.command.DbMigrate -- Starting migration of schema "PUBLIC" to version "4 - Fingerprints" ...
+14:26:47.567 [pool-1-thread-4] INFO org.flywaydb.core.internal.command.DbMigrate -- Migrating schema "PUBLIC" to version "4 - Fingerprints"
+14:26:47.567 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- Executing SQL: -- Fingerprints saved between invocations
+create table fingerprints(
+  path varchar not null,
+  text varchar not null,
+  md5 varchar not null,
+  id int auto_increment unique
+)
+14:26:47.569 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor -- 0 rows affected
+14:26:47.569 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.command.DbMigrate -- Successfully completed migration of schema "PUBLIC" to version "4 - Fingerprints"
+14:26:47.571 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory -- Schema History table "PUBLIC"."flyway_schema_history" successfully updated to reflect changes
+14:26:47.579 [pool-1-thread-4] INFO org.flywaydb.core.internal.command.DbMigrate -- Successfully applied 4 migrations to schema "PUBLIC", now at version v4 (execution time 00:00.030s)
+14:26:47.646 [pool-1-thread-4] DEBUG org.flywaydb.core.FlywayExecutor -- Memory usage: 94 of 128M
+2024.03.18 14:26:47 WARN  Build server is not auto-connectable.[0m
+2024.03.18 14:49:00 INFO  no build target found for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/task1.scala. Using presentation compiler with project's scala-library version: 3.3.1[0m
+mar 18, 2024 2:49:01 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 18
+mar 18, 2024 2:49:01 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 20
+mar 18, 2024 2:49:01 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 22
+2024.03.18 14:49:03 WARN  Could not find semantic tokens for: file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/task1.scala[0m
+2024.03.18 14:49:04 INFO  time: code lens generation in 1.53s[0m
+2024.03.18 14:49:04 INFO  time: code lens generation in 2.63s[0m
+2024.03.18 14:49:04 INFO  time: code lens generation in 7.12s[0m
+2024.03.18 14:49:04 INFO  time: code lens generation in 2.67s[0m
+2024.03.18 14:49:04 INFO  time: code lens generation in 5.84s[0m
+2024.03.18 14:49:11 WARN  no build target for: /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/task1.scala[0m
+2024.03.18 14:49:14 WARN  no build target for: /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/task1.scala[0m
+2024.03.18 14:49:39 WARN  Could not find semantic tokens for: file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/test/scala/task1/Task1Test.scala[0m
+2024.03.18 14:53:27 WARN  Could not find semantic tokens for: file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/test/scala/task1/Task1Test.scala[0m
+2024.03.18 14:53:28 WARN  Could not find semantic tokens for: file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/test/scala/task1/Task1Test.scala[0m
+2024.03.18 14:53:37 WARN  Could not find semantic tokens for: file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/test/scala/task1/Task1Test.scala[0m
+2024.03.18 14:53:43 WARN  Could not find semantic tokens for: file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/test/scala/task1/Task1Test.scala[0m
+2024.03.18 14:53:44 WARN  Could not find semantic tokens for: file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/test/scala/task1/Task1Test.scala[0m
+2024.03.18 14:53:46 WARN  Could not find semantic tokens for: file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/test/scala/task1/Task1Test.scala[0m
+2024.03.18 14:53:46 WARN  Could not find semantic tokens for: file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/test/scala/task1/Task1Test.scala[0m
+2024.03.18 14:53:47 WARN  Could not find semantic tokens for: file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/test/scala/task1/Task1Test.scala[0m
+2024.03.18 14:53:55 WARN  no build target for: /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/test/scala/task1/Task1Test.scala[0m
+mar 18, 2024 2:54:21 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 289
+mar 18, 2024 2:54:22 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 296
+2024.03.18 14:54:40 WARN  no build target for: /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/test/scala/task1/Task1Test.scala[0m
+2024.03.18 14:56:08 WARN  no build target for: /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+2024.03.18 14:56:29 WARN  no build target for: /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala[0m
+mar 18, 2024 2:56:46 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 561
+mar 18, 2024 2:56:55 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 616
+2024.03.18 14:57:52 WARN  no build target for: /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/test/scala/task1/Task1Test.scala[0m
+2024.03.18 14:58:36 WARN  no build target for: /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/test/scala/task1/Task1Test.scala[0m
+2024.03.18 14:59:46 INFO  Shutting down server[0m
+2024.03.18 14:59:46 INFO  shutting down Metals[0m
+2024.03.18 14:59:46 INFO  Exiting server[0m
+2024.03.18 15:00:06 INFO  Started: Metals version 1.2.2 in folders '/home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03' for client Visual Studio Code 1.87.1.[0m
+15:00:08.232 [pool-1-thread-1] INFO org.flywaydb.core.internal.license.VersionPrinter -- Flyway Community Edition 9.22.3 by Redgate
+15:00:08.240 [pool-1-thread-1] INFO org.flywaydb.core.internal.license.VersionPrinter -- See release notes here: https://rd.gt/416ObMi
+15:00:08.240 [pool-1-thread-1] INFO org.flywaydb.core.internal.license.VersionPrinter -- 
+15:00:08.248 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classpath resources at 'classpath:db/callback' ...
+15:00:08.248 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Determining location urls for classpath:db/callback using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@5cb0d902 ...
+15:00:08.249 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Unable to resolve location classpath:db/callback.
+15:00:08.249 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classpath resources at 'classpath:db/migration' ...
+15:00:08.249 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Determining location urls for classpath:db/migration using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@5cb0d902 ...
+15:00:08.252 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning URL: jar:file:/home/michelenardini/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalameta/metals_2.13/1.2.2/metals_2.13-1.2.2.jar!/db/migration
+15:00:08.264 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/
+15:00:08.265 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V1__Create_tables.sql
+15:00:08.266 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V2__Server_discovery.sql
+15:00:08.266 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V3__Jar_symbols.sql
+15:00:08.267 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V4__Fingerprints.sql
+15:00:08.267 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classes at classpath:db/migration
+15:00:08.282 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+15:00:08.283 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V1__Create_tables.sql
+15:00:08.287 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V3__Jar_symbols.sql
+15:00:08.288 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V4__Fingerprints.sql
+15:00:08.289 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V2__Server_discovery.sql
+15:00:08.510 [pool-1-thread-1] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:h2:file:/home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/metals (H2 2.2)
+15:00:08.511 [pool-1-thread-1] DEBUG org.flywaydb.core.FlywayExecutor -- Driver: H2 JDBC Driver 2.2.224 (2023-09-17)
+15:00:08.511 [pool-1-thread-1] DEBUG org.flywaydb.core.FlywayExecutor -- DDL Transactions Supported: false
+15:00:08.514 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.schemahistory.SchemaHistoryFactory -- Schemas: 
+15:00:08.515 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.schemahistory.SchemaHistoryFactory -- Default schema: null
+15:00:08.531 [pool-1-thread-1] WARN org.flywaydb.core.internal.database.base.Database -- Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+15:00:08.535 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.callback.SqlScriptCallbackFactory -- Scanning for SQL callbacks ...
+15:00:08.536 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+15:00:08.562 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.command.DbValidate -- Validating migrations ...
+15:00:08.575 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+15:00:08.600 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V1__Create_tables.sql (filename: V1__Create_tables.sql)
+15:00:08.601 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+15:00:08.601 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V3__Jar_symbols.sql (filename: V3__Jar_symbols.sql)
+15:00:08.601 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V4__Fingerprints.sql (filename: V4__Fingerprints.sql)
+15:00:08.602 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V2__Server_discovery.sql (filename: V2__Server_discovery.sql)
+15:00:08.604 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V1__Create_tables.sql (filename: V1__Create_tables.sql)
+15:00:08.605 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+15:00:08.605 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V3__Jar_symbols.sql (filename: V3__Jar_symbols.sql)
+15:00:08.605 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V4__Fingerprints.sql (filename: V4__Fingerprints.sql)
+15:00:08.605 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V2__Server_discovery.sql (filename: V2__Server_discovery.sql)
+15:00:08.642 [pool-1-thread-1] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 4 migrations (execution time 00:00.077s)
+15:00:08.648 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.command.DbSchemas -- Skipping creation of existing schema: "PUBLIC"
+15:00:08.666 [pool-1-thread-1] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema "PUBLIC": 4
+15:00:08.677 [pool-1-thread-1] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema "PUBLIC" is up to date. No migration necessary.
+15:00:08.961 [pool-1-thread-1] DEBUG org.flywaydb.core.FlywayExecutor -- Memory usage: 33 of 100M
+2024.03.18 15:00:09 WARN  Build server is not auto-connectable.[0m
+2024.03.18 15:00:14 INFO  no build target found for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/main/scala/task1/Task1.scala. Using presentation compiler with project's scala-library version: 3.3.1[0m
+mar 18, 2024 3:00:15 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 3
+2024.03.18 15:00:15 INFO  running '/home/michelenardini/.local/share/coursier/bin/sbt -Dbloop.export-jar-classifiers=sources bloopInstall'[0m
+2024.03.18 15:00:15 WARN  no build target for: /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/project/metals.sbt[0m
+2024.03.18 15:00:15 INFO  skipping build import with status 'Started'[0m
+2024.03.18 15:00:24 INFO  time: code lens generation in 9.78s[0m
+2024.03.18 15:00:24 INFO  time: code lens generation in 13s[0m
+2024.03.18 15:00:24 INFO  time: code lens generation in 13s[0m
+2024.03.18 15:00:24 INFO  time: code lens generation in 9.8s[0m
+2024.03.18 15:00:25 INFO  [info] welcome to sbt 1.9.9 (Red Hat, Inc. Java 17.0.9)[0m
+2024.03.18 15:00:35 INFO  [info] loading settings for project pps-23-24-lab03-build-build from metals.sbt ...[0m
+2024.03.18 15:00:41 INFO  [info] loading project definition from /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/project/project[0m
+2024.03.18 15:00:55 INFO  [info] loading settings for project pps-23-24-lab03-build from metals.sbt ...[0m
+2024.03.18 15:00:55 INFO  [info] loading project definition from /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/project[0m
+2024.03.18 15:00:59 INFO  [success] Generated .bloop/pps-23-24-lab03-build.json[0m
+2024.03.18 15:01:01 INFO  [success] Total time: 6 s, completed 18 mar 2024, 15:01:01[0m
+2024.03.18 15:01:03 INFO  [info] loading settings for project root from build.sbt ...[0m
+2024.03.18 15:01:03 INFO  [info] set current project to pps-23-24-lab03 (in build file:/home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/)[0m
+2024.03.18 15:01:06 INFO  [success] Generated .bloop/root.json[0m
+2024.03.18 15:01:06 INFO  [success] Generated .bloop/root-test.json[0m
+2024.03.18 15:01:06 INFO  [success] Total time: 2 s, completed 18 mar 2024, 15:01:06[0m
+2024.03.18 15:01:06 INFO  time: ran 'sbt bloopInstall' in 51s[0m
+2024.03.18 15:01:06 INFO  Attempting to connect to the build server...[0m
+2024.03.18 15:01:06 INFO  Bloop uses /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64 defined at /home/michelenardini/.bloop/bloop.json[0m
+2024.03.18 15:01:18 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/bsp.trace.json or /home/michelenardini/.cache/metals/bsp.trace.json[0m
+2024.03.18 15:01:18 INFO  Attempting to connect to the build server...[0m
+2024.03.18 15:01:18 INFO  Bloop uses /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64 defined at /home/michelenardini/.bloop/bloop.json[0m
+2024.03.18 15:01:18 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/project/.metals/bsp.trace.json or /home/michelenardini/.cache/metals/bsp.trace.json[0m
+2024.03.18 15:01:19 INFO  time: Connected to build server in 12s[0m
+2024.03.18 15:01:19 INFO  Connected to Build server: Bloop v1.5.15[0m
+2024.03.18 15:01:18 INFO  time: Imported build in 0.13s[0m
+2024.03.18 15:01:22 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64/lib/src.zip, /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64/lib/src.zip. Java symbols will not be available.[0m
+2024.03.18 15:01:27 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64/lib/src.zip, /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64/lib/src.zip. Java symbols will not be available.[0m
+2024.03.18 15:01:27 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64/lib/src.zip, /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64/lib/src.zip. Java symbols will not be available.[0m
+2024.03.18 15:01:27 INFO  time: indexed workspace in 7.96s[0m
+2024.03.18 15:01:34 INFO  compiling root (22 scala sources)[0m
+2024.03.18 15:01:47 INFO  time: compiled root in 13s[0m
+2024.03.18 15:01:55 INFO  compiling root (22 scala sources)[0m
+2024.03.18 15:01:58 INFO  time: compiled root in 2.81s[0m
+2024.03.18 15:02:11 INFO  compiling root (22 scala sources)[0m
+2024.03.18 15:02:11 INFO  time: compiled root in 0.93s[0m
+2024.03.18 15:02:24 INFO  compiling root (22 scala sources)[0m
+2024.03.18 15:02:24 INFO  time: compiled root in 0.83s[0m
+2024.03.18 15:02:31 WARN  Using indexes to guess the definition of Optional[0m
+2024.03.18 15:02:40 WARN  Using indexes to guess the definition of Optional[0m
+2024.03.18 15:02:43 INFO  compiling root (22 scala sources)[0m
+2024.03.18 15:02:54 INFO  time: compiled root in 11s[0m
+2024.03.18 15:03:05 INFO  compiling root (1 scala source)[0m
+2024.03.18 15:03:05 INFO  time: compiled root in 0.14s[0m
+2024.03.18 15:03:29 INFO  compiling root (1 scala source)[0m
+2024.03.18 15:03:29 INFO  time: compiled root in 0.72s[0m
+2024.03.18 15:03:34 INFO  compiling root-test (10 scala sources)[0m
+2024.03.18 15:03:35 INFO  time: compiled root-test in 1.47s[0m
+2024.03.18 15:04:04 INFO  compiling root-test (10 scala sources)[0m
+2024.03.18 15:04:04 INFO  time: compiled root-test in 0.4s[0m
+2024.03.18 15:04:42 INFO  compiling root-test (10 scala sources)[0m
+2024.03.18 15:04:42 INFO  time: compiled root-test in 0.43s[0m
+2024.03.18 15:04:52 INFO  compiling root-test (10 scala sources)[0m
+2024.03.18 15:04:52 INFO  time: compiled root-test in 0.73s[0m
+2024.03.18 15:05:22 INFO  compiling root-test (10 scala sources)[0m
+2024.03.18 15:05:22 INFO  time: compiled root-test in 0.3s[0m
+2024.03.18 15:05:24 WARN  Using indexes to guess the definition of Task1[0m
+2024.03.18 15:05:30 WARN  Using indexes to guess the definition of Task1[0m
+2024.03.18 15:05:31 WARN  Using indexes to guess the definition of Task1[0m
+2024.03.18 15:05:34 WARN  Using indexes to guess the definition of Task1[0m
+2024.03.18 15:06:17 INFO  compiling root-test (10 scala sources)[0m
+2024.03.18 15:06:17 INFO  time: compiled root-test in 0.37s[0m
+2024.03.18 15:06:45 INFO  compiling root-test (10 scala sources)[0m
+2024.03.18 15:06:45 INFO  time: compiled root-test in 0.34s[0m
+2024.03.18 15:07:10 INFO  compiling root-test (10 scala sources)[0m
+2024.03.18 15:07:10 INFO  time: compiled root-test in 0.29s[0m
+2024.03.18 15:07:58 INFO  compiling root-test (10 scala sources)[0m
+2024.03.18 15:07:58 INFO  time: compiled root-test in 0.59s[0m
+mar 18, 2024 3:08:32 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 1154
+mar 18, 2024 3:08:33 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: A severe compiler error occurred, full details of the error can be found in the error report /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/.reports/metals-full/2024-03-18/r_compiler-error_(root-test)_15-08-33-487.md
+2024.03.18 15:08:38 INFO  compiling root-test (10 scala sources)[0m
+2024.03.18 15:08:38 INFO  time: compiled root-test in 0.51s[0m
+2024.03.18 15:08:59 WARN  Using indexes to guess the definition of Sequence[0m
+2024.03.18 15:09:05 INFO  compiling root-test (10 scala sources)[0m
+2024.03.18 15:09:05 INFO  time: compiled root-test in 0.49s[0m
+2024.03.18 15:09:42 INFO  compiling root-test (10 scala sources)[0m
+2024.03.18 15:09:42 INFO  time: compiled root-test in 0.24s[0m
+2024.03.18 15:09:51 INFO  compiling root-test (10 scala sources)[0m
+2024.03.18 15:09:51 WARN  there was 1 deprecation warning; re-run with -deprecation for details[0m
+2024.03.18 15:09:51 INFO  time: compiled root-test in 0.62s[0m
+2024.03.18 15:09:56 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json[0m
+2024.03.18 15:09:56 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json[0m
+2024.03.18 15:09:56 INFO  Starting debug proxy for [Task1Test(testTake)][0m
+2024.03.18 15:09:57 INFO  Trying to attach to remote debuggee VM localhost:37857 .[0m
+2024.03.18 15:09:57 INFO  Attaching to debuggee VM succeeded.[0m
+2024.03.18 15:09:58 INFO  Canceling debug proxy for [Task1Test(testTake)][0m
+2024.03.18 15:09:57 INFO  Closing debug server tcp://0.0.0.0:43959[0m
+mar 18, 2024 3:12:43 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 1468
+2024.03.18 15:15:51 INFO  compiling root (1 scala source)[0m
+2024.03.18 15:15:51 INFO  time: compiled root in 0.17s[0m
+2024.03.18 15:16:07 INFO  compiling root (1 scala source)[0m
+2024.03.18 15:16:07 INFO  time: compiled root in 0.25s[0m
+2024.03.18 15:16:10 INFO  compiling root (1 scala source)[0m
+2024.03.18 15:16:10 INFO  time: compiled root in 0.19s[0m
+mar 18, 2024 3:17:12 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 1711
+2024.03.18 15:19:28 INFO  compiling root (1 scala source)[0m
+2024.03.18 15:19:28 INFO  time: compiled root in 0.39s[0m
+2024.03.18 15:19:34 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json[0m
+2024.03.18 15:19:34 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json[0m
+2024.03.18 15:19:34 INFO  Starting debug proxy for [Task1Test(testTake)][0m
+2024.03.18 15:19:34 INFO  Trying to attach to remote debuggee VM localhost:60091 .[0m
+2024.03.18 15:19:34 INFO  Attaching to debuggee VM succeeded.[0m
+2024.03.18 15:19:34 INFO  Canceling debug proxy for [Task1Test(testTake)][0m
+2024.03.18 15:19:34 INFO  Closing debug server tcp://0.0.0.0:33279[0m
+2024.03.18 15:20:30 INFO  compiling root (1 scala source)[0m
+2024.03.18 15:20:30 INFO  time: compiled root in 0.29s[0m
+2024.03.18 15:20:42 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json[0m
+2024.03.18 15:20:42 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json[0m
+2024.03.18 15:20:42 INFO  Starting debug proxy for [Task1Test(testTake)][0m
+2024.03.18 15:20:42 INFO  Trying to attach to remote debuggee VM localhost:42461 .[0m
+2024.03.18 15:20:42 INFO  Attaching to debuggee VM succeeded.[0m
+2024.03.18 15:20:42 INFO  Canceling debug proxy for [Task1Test(testTake)][0m
+2024.03.18 15:20:42 INFO  Closing debug server tcp://0.0.0.0:46875[0m
+mar 18, 2024 3:20:55 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 2143
+2024.03.18 15:21:27 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 15:21:27 INFO  time: compiled root-test in 0.44s[0m
+2024.03.18 15:21:34 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 15:21:34 INFO  time: compiled root-test in 0.15s[0m
+2024.03.18 15:21:36 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json[0m
+2024.03.18 15:21:36 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json[0m
+2024.03.18 15:21:36 INFO  Starting debug proxy for [Task1Test(testTakeZeroElement)][0m
+2024.03.18 15:21:36 INFO  Trying to attach to remote debuggee VM localhost:35799 .[0m
+2024.03.18 15:21:36 INFO  Attaching to debuggee VM succeeded.[0m
+2024.03.18 15:21:37 INFO  Canceling debug proxy for [Task1Test(testTakeZeroElement)][0m
+2024.03.18 15:21:36 INFO  Closing debug server tcp://0.0.0.0:37229[0m
+2024.03.18 15:22:24 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 15:22:24 INFO  time: compiled root-test in 72ms[0m
+2024.03.18 15:22:42 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 15:22:42 INFO  time: compiled root-test in 0.12s[0m
+2024.03.18 15:22:52 INFO  compiling root-test (1 scala source)[0m
+2024.03.18 15:22:52 INFO  time: compiled root-test in 0.15s[0m
+2024.03.18 15:22:54 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json[0m
+2024.03.18 15:22:54 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json[0m
+2024.03.18 15:22:54 INFO  Starting debug proxy for [Task1Test(testTakeMoreElementThanListContains)][0m
+2024.03.18 15:22:54 INFO  Trying to attach to remote debuggee VM localhost:35311 .[0m
+2024.03.18 15:22:54 INFO  Attaching to debuggee VM succeeded.[0m
+2024.03.18 15:22:55 INFO  Canceling debug proxy for [Task1Test(testTakeMoreElementThanListContains)][0m
+2024.03.18 15:22:54 INFO  Closing debug server tcp://0.0.0.0:38797[0m
+mar 18, 2024 3:23:34 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFORMAZIONI: Unsupported notification method: $/setTrace

@@ -1,0 +1,4 @@
+[debug] [root-test] Classpath dependencies List()
+[debug] [root-test] Dependencies from configurations List(root)
+[debug] Bloop wrote the configuration of project 'root-test' to '/home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.bloop/root-test.json'
+[success] Generated .bloop/root-test.json
