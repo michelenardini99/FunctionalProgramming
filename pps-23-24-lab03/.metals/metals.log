@@ -2123,3 +2123,77 @@ AVVERTENZA: Unmatched cancel notification for request id 31011
 2024.03.18 20:24:28 INFO  Attaching to debuggee VM succeeded.[0m
 2024.03.18 20:24:29 INFO  Canceling debug proxy for [tasks.Task1Test(testNumeroDiPell)][0m
 2024.03.18 20:24:28 INFO  Closing debug server tcp://0.0.0.0:37953[0m
+2024.03.18 20:29:07 INFO  Shutting down server[0m
+2024.03.18 20:29:07 INFO  shutting down Metals[0m
+2024.03.18 20:29:07 INFO  Shut down connection with build server.[0m
+2024.03.18 20:29:07 INFO  Exiting server[0m
+2024.03.20 20:47:35 INFO  Started: Metals version 1.2.2 in folders '/home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03' for client Visual Studio Code 1.87.1.
+20:47:39.700 [pool-1-thread-1] INFO org.flywaydb.core.internal.license.VersionPrinter -- Flyway Community Edition 9.22.3 by Redgate
+20:47:39.704 [pool-1-thread-1] INFO org.flywaydb.core.internal.license.VersionPrinter -- See release notes here: https://rd.gt/416ObMi
+20:47:39.704 [pool-1-thread-1] INFO org.flywaydb.core.internal.license.VersionPrinter -- 
+20:47:39.707 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classpath resources at 'classpath:db/callback' ...
+20:47:39.707 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Determining location urls for classpath:db/callback using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@5cb0d902 ...
+20:47:39.707 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Unable to resolve location classpath:db/callback.
+20:47:39.707 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classpath resources at 'classpath:db/migration' ...
+20:47:39.707 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Determining location urls for classpath:db/migration using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@5cb0d902 ...
+20:47:39.708 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning URL: jar:file:/home/michelenardini/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalameta/metals_2.13/1.2.2/metals_2.13-1.2.2.jar!/db/migration
+20:47:39.710 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/
+20:47:39.710 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V1__Create_tables.sql
+20:47:39.710 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V2__Server_discovery.sql
+20:47:39.710 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V3__Jar_symbols.sql
+20:47:39.710 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V4__Fingerprints.sql
+20:47:39.710 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classes at classpath:db/migration
+20:47:39.713 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+20:47:39.713 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V1__Create_tables.sql
+20:47:39.714 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V3__Jar_symbols.sql
+20:47:39.714 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V4__Fingerprints.sql
+20:47:39.714 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V2__Server_discovery.sql
+20:47:39.855 [pool-1-thread-1] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:h2:file:/home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/metals (H2 2.2)
+20:47:39.856 [pool-1-thread-1] DEBUG org.flywaydb.core.FlywayExecutor -- Driver: H2 JDBC Driver 2.2.224 (2023-09-17)
+20:47:39.856 [pool-1-thread-1] DEBUG org.flywaydb.core.FlywayExecutor -- DDL Transactions Supported: false
+20:47:39.858 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.schemahistory.SchemaHistoryFactory -- Schemas: 
+20:47:39.859 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.schemahistory.SchemaHistoryFactory -- Default schema: null
+20:47:39.868 [pool-1-thread-1] WARN org.flywaydb.core.internal.database.base.Database -- Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+20:47:39.870 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.callback.SqlScriptCallbackFactory -- Scanning for SQL callbacks ...
+20:47:39.871 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+20:47:39.887 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.command.DbValidate -- Validating migrations ...
+20:47:39.891 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+20:47:39.954 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V1__Create_tables.sql (filename: V1__Create_tables.sql)
+20:47:39.954 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+20:47:39.954 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V3__Jar_symbols.sql (filename: V3__Jar_symbols.sql)
+20:47:39.954 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V4__Fingerprints.sql (filename: V4__Fingerprints.sql)
+20:47:39.955 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V2__Server_discovery.sql (filename: V2__Server_discovery.sql)
+20:47:39.956 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V1__Create_tables.sql (filename: V1__Create_tables.sql)
+20:47:39.956 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+20:47:39.956 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V3__Jar_symbols.sql (filename: V3__Jar_symbols.sql)
+20:47:39.956 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V4__Fingerprints.sql (filename: V4__Fingerprints.sql)
+20:47:39.956 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V2__Server_discovery.sql (filename: V2__Server_discovery.sql)
+20:47:39.972 [pool-1-thread-1] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 4 migrations (execution time 00:00.084s)
+20:47:39.975 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.command.DbSchemas -- Skipping creation of existing schema: "PUBLIC"
+20:47:39.983 [pool-1-thread-1] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema "PUBLIC": 4
+20:47:40.061 [pool-1-thread-1] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema "PUBLIC" is up to date. No migration necessary.
+20:47:40.218 [pool-1-thread-1] DEBUG org.flywaydb.core.FlywayExecutor -- Memory usage: 34 of 100M
+2024.03.20 20:47:42 INFO  Attempting to connect to the build server...
+2024.03.20 20:47:42 INFO  skipping build import with status 'Installed'
+2024.03.20 20:47:42 INFO  Bloop uses /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64 defined at /home/michelenardini/.bloop/bloop.json
+2024.03.20 20:47:58 INFO  no build target found for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/src/test/scala/tasks/Task1Test.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2024.03.20 20:48:06 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/.metals/bsp.trace.json or /home/michelenardini/.cache/metals/bsp.trace.json
+2024.03.20 20:48:06 INFO  Attempting to connect to the build server...
+2024.03.20 20:48:06 INFO  Bloop uses /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64 defined at /home/michelenardini/.bloop/bloop.json
+2024.03.20 20:48:06 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab03/project/.metals/bsp.trace.json or /home/michelenardini/.cache/metals/bsp.trace.json
+2024.03.20 20:48:06 INFO  time: Connected to build server in 25s
+2024.03.20 20:48:06 INFO  Connected to Build server: Bloop v1.5.15
+2024.03.20 20:48:07 INFO  time: Imported build in 0.18s
+2024.03.20 20:48:12 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64/lib/src.zip, /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64/lib/src.zip. Java symbols will not be available.
+2024.03.20 20:48:12 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64/lib/src.zip, /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64/lib/src.zip. Java symbols will not be available.
+2024.03.20 20:48:12 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64/lib/src.zip, /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64/lib/src.zip. Java symbols will not be available.
+2024.03.20 20:48:12 INFO  time: indexed workspace in 5.69s
+2024.03.20 20:57:14 INFO  compiling root (1 scala source)
+2024.03.20 20:57:18 INFO  time: compiled root in 4.72s
+mar 20, 2024 8:58:31 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 118
+2024.03.20 21:19:33 INFO  Shutting down server
+2024.03.20 21:19:33 INFO  shutting down Metals
+2024.03.20 21:19:33 INFO  Shut down connection with build server.
+2024.03.20 21:19:33 INFO  Shut down connection with build server.
+2024.03.20 21:19:33 INFO  Exiting server

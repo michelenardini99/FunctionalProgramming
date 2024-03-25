@@ -1,4 +1,5 @@
 package tasks.adts
+import u03.Sequences.Sequence.*
 import u03.Sequences.*
 import u03.Optionals.*
 import u02.AlgebraicDataTypes.Person
@@ -13,9 +14,9 @@ import u02.AlgebraicDataTypes.Person
  *  - add/set methods below create the new school 
  */
 
-object SchoolModel:
+object Ex2SchoolModel:
 
-  trait SchoolModule:
+  trait SchoolModel:
     type School
     type Teacher
     type Course
@@ -28,3 +29,24 @@ object SchoolModel:
       def nameOfCourse(teacher: Teacher): String
       def setTeacherToCourse(teacher: Teacher, course: Course): School
       def coursesOfATeacher(teacher: Teacher): Sequence[Course]
+
+  object BasicSchoolModel extends SchoolModel:
+
+    case class Course(course: String)
+    case class Teacher(name: String, courses: Sequence[String])
+    case class School(teachers: Sequence[Teacher], courses: Sequence[Course])
+
+    extension (school: School)
+      def addTeacher(name: String): School = school match
+        case School(teachers, courses) => School(Cons(Teacher(name, Nil()), teachers), courses)
+      
+      def addCourse(name: String): School = school match
+        case School(teachers, courses) => School(teachers, Cons(Course(name), courses))
+      
+      def teacherByName(name: String): Optional[Teacher] = ???
+      def courseByName(name: String): Optional[Course] = ???
+      def nameOfTeacher(teacher: Teacher): String = ???
+      def nameOfCourse(teacher: Teacher): String = ???
+      def setTeacherToCourse(teacher: Teacher, course: Course): School = ???
+      def coursesOfATeacher(teacher: Teacher): Sequence[Course] = ???
+      
