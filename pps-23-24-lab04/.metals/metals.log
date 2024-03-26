@@ -2074,3 +2074,157 @@ Caused by: java.lang.StringIndexOutOfBoundsException: begin 1703, end 1764, leng
 2024.03.26 19:52:23 INFO  Canceling debug proxy for [tasks.adts.SchoolTest(testSetCourseToTeacher)]
 mar 26, 2024 7:52:32 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFORMAZIONI: Unsupported notification method: $/setTrace
+2024.03.26 19:57:00 INFO  compiling root (1 scala source)
+2024.03.26 19:57:00 INFO  time: compiled root in 54ms
+2024.03.26 19:57:04 WARN  Using indexes to guess the definition of Empty
+2024.03.26 19:57:10 INFO  compiling root (1 scala source)
+2024.03.26 19:57:10 INFO  time: compiled root in 48ms
+2024.03.26 19:57:18 INFO  compiling root (1 scala source)
+2024.03.26 19:57:18 INFO  time: compiled root in 65ms
+2024.03.26 19:57:28 INFO  compiling root (1 scala source)
+2024.03.26 19:57:28 INFO  time: compiled root in 62ms
+2024.03.26 19:57:34 INFO  compiling root (1 scala source)
+2024.03.26 19:57:34 INFO  time: compiled root in 81ms
+mar 26, 2024 7:57:55 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 7182
+2024.03.26 19:58:12 INFO  compiling root (1 scala source)
+2024.03.26 19:58:12 INFO  time: compiled root in 0.21s
+2024.03.26 19:58:24 INFO  compiling root (1 scala source)
+2024.03.26 19:58:24 INFO  time: compiled root in 0.12s
+2024.03.26 19:59:09 INFO  compiling root (1 scala source)
+2024.03.26 19:59:09 INFO  time: compiled root in 0.18s
+2024.03.26 19:59:15 INFO  compiling root (1 scala source)
+2024.03.26 19:59:15 INFO  time: compiled root in 0.13s
+2024.03.26 19:59:26 INFO  compiling root (1 scala source)
+2024.03.26 19:59:26 INFO  time: compiled root in 0.19s
+2024.03.26 20:40:53 INFO  Started: Metals version 1.2.2 in folders '/home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04' for client Visual Studio Code 1.87.1.
+20:40:57.601 [pool-1-thread-1] INFO org.flywaydb.core.internal.license.VersionPrinter -- Flyway Community Edition 9.22.3 by Redgate
+20:40:57.602 [pool-1-thread-1] INFO org.flywaydb.core.internal.license.VersionPrinter -- See release notes here: https://rd.gt/416ObMi
+20:40:57.602 [pool-1-thread-1] INFO org.flywaydb.core.internal.license.VersionPrinter -- 
+20:40:57.605 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classpath resources at 'classpath:db/callback' ...
+20:40:57.605 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Determining location urls for classpath:db/callback using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@5cb0d902 ...
+20:40:57.605 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Unable to resolve location classpath:db/callback.
+20:40:57.605 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classpath resources at 'classpath:db/migration' ...
+20:40:57.605 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Determining location urls for classpath:db/migration using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@5cb0d902 ...
+20:40:57.606 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning URL: jar:file:/home/michelenardini/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalameta/metals_2.13/1.2.2/metals_2.13-1.2.2.jar!/db/migration
+20:40:57.608 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/
+20:40:57.608 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V1__Create_tables.sql
+20:40:57.608 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V2__Server_discovery.sql
+20:40:57.608 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V3__Jar_symbols.sql
+20:40:57.608 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V4__Fingerprints.sql
+20:40:57.608 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classes at classpath:db/migration
+20:40:57.611 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+20:40:57.611 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V1__Create_tables.sql
+20:40:57.612 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V3__Jar_symbols.sql
+20:40:57.612 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V4__Fingerprints.sql
+20:40:57.612 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V2__Server_discovery.sql
+20:40:57.682 [pool-1-thread-1] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:h2:file:/home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/metals (H2 2.2)
+20:40:57.682 [pool-1-thread-1] DEBUG org.flywaydb.core.FlywayExecutor -- Driver: H2 JDBC Driver 2.2.224 (2023-09-17)
+20:40:57.682 [pool-1-thread-1] DEBUG org.flywaydb.core.FlywayExecutor -- DDL Transactions Supported: false
+20:40:57.683 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.schemahistory.SchemaHistoryFactory -- Schemas: 
+20:40:57.683 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.schemahistory.SchemaHistoryFactory -- Default schema: null
+20:40:57.687 [pool-1-thread-1] WARN org.flywaydb.core.internal.database.base.Database -- Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+20:40:57.688 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.callback.SqlScriptCallbackFactory -- Scanning for SQL callbacks ...
+20:40:57.688 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+20:40:57.694 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.command.DbValidate -- Validating migrations ...
+20:40:57.697 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+20:40:57.716 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V1__Create_tables.sql (filename: V1__Create_tables.sql)
+20:40:57.716 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+20:40:57.716 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V3__Jar_symbols.sql (filename: V3__Jar_symbols.sql)
+20:40:57.716 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V4__Fingerprints.sql (filename: V4__Fingerprints.sql)
+20:40:57.717 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V2__Server_discovery.sql (filename: V2__Server_discovery.sql)
+20:40:57.718 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V1__Create_tables.sql (filename: V1__Create_tables.sql)
+20:40:57.718 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+20:40:57.718 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V3__Jar_symbols.sql (filename: V3__Jar_symbols.sql)
+20:40:57.719 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V4__Fingerprints.sql (filename: V4__Fingerprints.sql)
+20:40:57.719 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V2__Server_discovery.sql (filename: V2__Server_discovery.sql)
+20:40:57.733 [pool-1-thread-1] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 4 migrations (execution time 00:00.037s)
+20:40:57.735 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.command.DbSchemas -- Skipping creation of existing schema: "PUBLIC"
+20:40:57.740 [pool-1-thread-1] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema "PUBLIC": 4
+20:40:57.744 [pool-1-thread-1] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema "PUBLIC" is up to date. No migration necessary.
+20:40:57.803 [pool-1-thread-1] DEBUG org.flywaydb.core.FlywayExecutor -- Memory usage: 38 of 100M
+2024.03.26 20:40:58 INFO  skipping build import with status 'Installed'
+2024.03.26 20:40:58 INFO  Attempting to connect to the build server...
+2024.03.26 20:40:58 INFO  Bloop uses /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64 defined at /home/michelenardini/.bloop/bloop.json
+2024.03.26 20:41:04 INFO  no build target found for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/test/scala/tasks/adts/StackTest.scala. Using presentation compiler with project's scala-library version: 3.3.1
+mar 26, 2024 8:41:05 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 14
+mar 26, 2024 8:41:05 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 15
+mar 26, 2024 8:41:05 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 17
+mar 26, 2024 8:41:05 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 18
+mar 26, 2024 8:41:05 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 19
+2024.03.26 20:41:08 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/bsp.trace.json or /home/michelenardini/.cache/metals/bsp.trace.json
+2024.03.26 20:41:08 INFO  Attempting to connect to the build server...
+2024.03.26 20:41:08 INFO  Bloop uses /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64 defined at /home/michelenardini/.bloop/bloop.json
+2024.03.26 20:41:08 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/project/.metals/bsp.trace.json or /home/michelenardini/.cache/metals/bsp.trace.json
+2024.03.26 20:41:08 INFO  time: Connected to build server in 11s
+2024.03.26 20:41:08 INFO  Connected to Build server: Bloop v1.5.15
+2024.03.26 20:41:09 INFO  time: Imported build in 0.15s
+2024.03.26 20:41:13 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64/lib/src.zip, /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64/lib/src.zip. Java symbols will not be available.
+2024.03.26 20:41:13 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64/lib/src.zip, /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64/lib/src.zip. Java symbols will not be available.
+2024.03.26 20:41:13 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64/lib/src.zip, /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.9.0.9-3.fc39.x86_64/lib/src.zip. Java symbols will not be available.
+2024.03.26 20:41:14 INFO  time: indexed workspace in 4.83s
+2024.03.26 20:41:16 INFO  compiling root-test (1 scala source)
+2024.03.26 20:41:22 INFO  time: compiled root-test in 4.91s
+2024.03.26 20:41:25 INFO  compiling root (1 scala source)
+2024.03.26 20:41:26 INFO  time: compiled root in 1.13s
+2024.03.26 20:41:30 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json
+2024.03.26 20:41:30 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json
+2024.03.26 20:41:31 INFO  Starting debug proxy for [tasks.adts.Stacktest(testEmpty)]
+2024.03.26 20:41:32 INFO  Trying to attach to remote debuggee VM localhost:58817 .
+2024.03.26 20:41:32 INFO  Attaching to debuggee VM succeeded.
+2024.03.26 20:41:33 INFO  Closing debug server tcp://0.0.0.0:34149
+2024.03.26 20:41:34 INFO  Canceling debug proxy for [tasks.adts.Stacktest(testEmpty)]
+2024.03.26 20:41:55 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json
+2024.03.26 20:41:56 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json
+2024.03.26 20:41:56 INFO  Starting debug proxy for [tasks.adts.Stacktest(testEmpty)]
+2024.03.26 20:41:56 INFO  Trying to attach to remote debuggee VM localhost:60695 .
+2024.03.26 20:41:56 INFO  Attaching to debuggee VM succeeded.
+2024.03.26 20:41:56 INFO  Canceling debug proxy for [tasks.adts.Stacktest(testEmpty)]
+2024.03.26 20:41:56 INFO  Closing debug server tcp://0.0.0.0:35339
+2024.03.26 20:43:04 INFO  compiling root (1 scala source)
+2024.03.26 20:43:05 INFO  time: compiled root in 1.07s
+2024.03.26 20:43:31 INFO  compiling root (1 scala source)
+2024.03.26 20:43:32 INFO  time: compiled root in 1.25s
+2024.03.26 20:43:49 INFO  compiling root (1 scala source)
+2024.03.26 20:43:49 INFO  time: compiled root in 0.92s
+mar 26, 2024 8:43:51 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 554
+2024.03.26 20:43:54 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json
+2024.03.26 20:43:54 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json
+2024.03.26 20:43:54 INFO  Starting debug proxy for [tasks.adts.Stacktest(testEmpty)]
+2024.03.26 20:43:54 INFO  Trying to attach to remote debuggee VM localhost:59823 .
+2024.03.26 20:43:54 INFO  Attaching to debuggee VM succeeded.
+2024.03.26 20:43:54 INFO  Canceling debug proxy for [tasks.adts.Stacktest(testEmpty)]
+2024.03.26 20:43:54 INFO  Closing debug server tcp://0.0.0.0:37919
+2024.03.26 20:44:06 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json
+2024.03.26 20:44:06 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json
+2024.03.26 20:44:06 INFO  Starting debug proxy for [tasks.adts.Stacktest(testPush)]
+2024.03.26 20:44:06 INFO  Trying to attach to remote debuggee VM localhost:55035 .
+2024.03.26 20:44:06 INFO  Attaching to debuggee VM succeeded.
+2024.03.26 20:44:07 INFO  Canceling debug proxy for [tasks.adts.Stacktest(testPush)]
+2024.03.26 20:44:06 INFO  Closing debug server tcp://0.0.0.0:33183
+2024.03.26 20:47:00 INFO  compiling root (1 scala source)
+2024.03.26 20:47:00 INFO  time: compiled root in 0.54s
+2024.03.26 20:54:25 INFO  compiling root (1 scala source)
+2024.03.26 20:54:26 INFO  time: compiled root in 1.11s
+2024.03.26 20:54:29 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json
+2024.03.26 20:54:30 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json
+2024.03.26 20:54:30 INFO  Starting debug proxy for [tasks.adts.Stacktest(testPopOnEmpty)]
+2024.03.26 20:54:30 INFO  Trying to attach to remote debuggee VM localhost:35211 .
+2024.03.26 20:54:30 INFO  Attaching to debuggee VM succeeded.
+2024.03.26 20:54:30 INFO  Canceling debug proxy for [tasks.adts.Stacktest(testPopOnEmpty)]
+2024.03.26 20:54:30 INFO  Closing debug server tcp://0.0.0.0:35395
+2024.03.26 20:54:32 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/dap-server.trace.json or /home/michelenardini/.cache/metals/dap-server.trace.json
+2024.03.26 20:54:32 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/dap-client.trace.json or /home/michelenardini/.cache/metals/dap-client.trace.json
+2024.03.26 20:54:32 INFO  Starting debug proxy for [tasks.adts.Stacktest(testPopOnNotEmpty)]
+2024.03.26 20:54:32 INFO  Trying to attach to remote debuggee VM localhost:47609 .
+2024.03.26 20:54:32 INFO  Attaching to debuggee VM succeeded.
+2024.03.26 20:54:32 INFO  Canceling debug proxy for [tasks.adts.Stacktest(testPopOnNotEmpty)]
+2024.03.26 20:54:32 INFO  Closing debug server tcp://0.0.0.0:34853
+mar 26, 2024 8:55:19 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFORMAZIONI: Unsupported notification method: $/setTrace
