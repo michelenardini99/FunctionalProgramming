@@ -2,6 +2,7 @@ package tasks.adts
 import u03.Sequences.Sequence.*
 import u03.Sequences.*
 import u03.Optionals.*
+import u03.Optionals.Optional.*
 import u02.AlgebraicDataTypes.Person
 
 /*  Exercise 2: 
@@ -43,7 +44,16 @@ object Ex2SchoolModel:
       def addCourse(name: String): School = school match
         case School(teachers, courses) => School(teachers, Cons(Course(name), courses))
       
-      def teacherByName(name: String): Optional[Teacher] = ???
+      def teacherByName(name: String): Optional[Teacher] = school match
+        case School(teachers, _) => {
+          val teacherFiltered = filter(teachers)(t => t.name == name)
+          teacherFiltered match
+            case Cons(teacher, _) => Just(teacher)
+            case _ => Empty()
+        }
+      
+      
+      
       def courseByName(name: String): Optional[Course] = ???
       def nameOfTeacher(teacher: Teacher): String = ???
       def nameOfCourse(teacher: Teacher): String = ???
