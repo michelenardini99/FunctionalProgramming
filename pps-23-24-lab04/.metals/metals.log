@@ -2228,3 +2228,1348 @@ AVVERTENZA: Unmatched cancel notification for request id 554
 2024.03.26 20:54:32 INFO  Closing debug server tcp://0.0.0.0:34853
 mar 26, 2024 8:55:19 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFORMAZIONI: Unsupported notification method: $/setTrace
+2024.03.26 21:02:33 INFO  compiling root (1 scala source)
+2024.03.26 21:02:33 INFO  time: compiled root in 0.77s
+2024.03.26 21:02:42 INFO  compiling root (1 scala source)
+2024.03.26 21:02:42 INFO  time: compiled root in 0.48s
+2024.03.26 21:12:35 INFO  compiling root (1 scala source)
+2024.03.26 21:12:35 INFO  time: compiled root in 0.51s
+2024.03.26 21:13:00 INFO  compiling root (1 scala source)
+2024.03.26 21:13:00 INFO  time: compiled root in 0.87s
+2024.03.26 21:13:38 INFO  compiling root (1 scala source)
+2024.03.26 21:13:38 INFO  time: compiled root in 0.39s
+2024.03.26 21:13:52 INFO  compiling root (1 scala source)
+2024.03.26 21:13:52 INFO  time: compiled root in 0.37s
+2024.03.26 21:14:12 INFO  compiling root (1 scala source)
+2024.03.26 21:14:12 INFO  time: compiled root in 0.38s
+2024.03.26 21:14:49 ERROR Failed to tokenize input for semantic tokens for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+scala.meta.tokenizers.TokenizeException: <input>:40: error: unclosed comment
+    /*
+    ^
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError(Reporter.scala:27)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError$(Reporter.scala:26)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.incompleteInputError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError(Reporter.scala:29)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError$(Reporter.scala:29)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.incompleteInputError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.skipNestedComments(LegacyScanner.scala:52)
+	at scala.meta.internal.tokenizers.LegacyScanner.skipToCommentEnd(LegacyScanner.scala:71)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:313)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:211)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1011)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:28)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:541)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:840)
+
+2024.03.26 21:14:52 INFO  compiling root (1 scala source)
+2024.03.26 21:14:52 INFO  time: compiled root in 0.44s
+2024.03.26 21:15:29 INFO  compiling root (1 scala source)
+2024.03.26 21:15:29 INFO  time: compiled root in 0.35s
+2024.03.26 21:15:45 INFO  compiling root (1 scala source)
+2024.03.26 21:15:45 INFO  time: compiled root in 0.4s
+error while checking  extends Summable[Double] {
+  def <error> = null
+}
+error while checking given object extends Summable[Double] {
+  def <error> = null
+}
+error while checking  {
+  def sumAllInt(seq: Sequence[Int]): Int =
+    seq match
+      {
+        case Cons(h, t) =>
+          h + sumAllInt(t)
+        case _ =>
+          0
+      }
+  trait Summable[A] {
+    def sum(a1: A, a2: A): A
+    def zero: A
+  }
+  def sumAll[A =  : Summable](seq: Sequence[A]): A =
+    {
+      val summable = summon[Summable[A]]
+      seq match
+        {
+          case Cons(h, t) =>
+            summable.sum(h, sumAll(t))
+          case _ =>
+            summable.zero
+        }
+    }
+  given object extends Summable[Int] {
+    def sum(a1: Int, a2: Int): Int = a1 + a2
+    def zero: Int = 0
+  }
+  given object extends Summable[Double] {
+    def <error> = null
+  }
+  @main def trySummables =
+    {
+      val si = Cons(10, Cons(20, Cons(30, Nil())))
+      println(sumAllInt(si))
+      println(sumAll(si))
+      val sd = Cons(10.0, Cons(20.0, Cons(30.0, Nil())))
+      println(sumAll(sd))
+      val ss = Cons("10", Cons("20", Cons("30", Nil())))
+      println(sumAll(ss))
+    }
+}
+error while checking module object Ex4Summables {
+  def sumAllInt(seq: Sequence[Int]): Int =
+    seq match
+      {
+        case Cons(h, t) =>
+          h + sumAllInt(t)
+        case _ =>
+          0
+      }
+  trait Summable[A] {
+    def sum(a1: A, a2: A): A
+    def zero: A
+  }
+  def sumAll[A =  : Summable](seq: Sequence[A]): A =
+    {
+      val summable = summon[Summable[A]]
+      seq match
+        {
+          case Cons(h, t) =>
+            summable.sum(h, sumAll(t))
+          case _ =>
+            summable.zero
+        }
+    }
+  given object extends Summable[Int] {
+    def sum(a1: Int, a2: Int): Int = a1 + a2
+    def zero: Int = 0
+  }
+  given object extends Summable[Double] {
+    def <error> = null
+  }
+  @main def trySummables =
+    {
+      val si = Cons(10, Cons(20, Cons(30, Nil())))
+      println(sumAllInt(si))
+      println(sumAll(si))
+      val sd = Cons(10.0, Cons(20.0, Cons(30.0, Nil())))
+      println(sumAll(sd))
+      val ss = Cons("10", Cons("20", Cons("30", Nil())))
+      println(sumAll(ss))
+    }
+}
+error while checking package u04lab {
+  import u03.Sequences.*
+  import Sequence.*
+  module object Ex4Summables {
+    def sumAllInt(seq: Sequence[Int]): Int =
+      seq match
+        {
+          case Cons(h, t) =>
+            h + sumAllInt(t)
+          case _ =>
+            0
+        }
+    trait Summable[A] {
+      def sum(a1: A, a2: A): A
+      def zero: A
+    }
+    def sumAll[A =  : Summable](seq: Sequence[A]): A =
+      {
+        val summable = summon[Summable[A]]
+        seq match
+          {
+            case Cons(h, t) =>
+              summable.sum(h, sumAll(t))
+            case _ =>
+              summable.zero
+          }
+      }
+    given object extends Summable[Int] {
+      def sum(a1: Int, a2: Int): Int = a1 + a2
+      def zero: Int = 0
+    }
+    given object extends Summable[Double] {
+      def <error> = null
+    }
+    @main def trySummables =
+      {
+        val si = Cons(10, Cons(20, Cons(30, Nil())))
+        println(sumAllInt(si))
+        println(sumAll(si))
+        val sd = Cons(10.0, Cons(20.0, Cons(30.0, Nil())))
+        println(sumAll(sd))
+        val ss = Cons("10", Cons("20", Cons("30", Nil())))
+        println(sumAll(ss))
+      }
+  }
+}
+mar 26, 2024 9:16:07 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: A severe compiler error occurred, full details of the error can be found in the error report /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/.reports/metals-full/2024-03-26/r_compiler-error_(root)_21-16-07-624.md
+2024.03.26 21:16:07 WARN  Could not find semantic tokens for: file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+error while checking  extends Summable[Double] {
+  def sum(a1: Double, a2: Double): Double = ???
+  def <error> = null
+}
+error while checking given object extends Summable[Double] {
+  def sum(a1: Double, a2: Double): Double = ???
+  def <error> = null
+}
+error while checking  {
+  def sumAllInt(seq: Sequence[Int]): Int =
+    seq match
+      {
+        case Cons(h, t) =>
+          h + sumAllInt(t)
+        case _ =>
+          0
+      }
+  trait Summable[A] {
+    def sum(a1: A, a2: A): A
+    def zero: A
+  }
+  def sumAll[A =  : Summable](seq: Sequence[A]): A =
+    {
+      val summable = summon[Summable[A]]
+      seq match
+        {
+          case Cons(h, t) =>
+            summable.sum(h, sumAll(t))
+          case _ =>
+            summable.zero
+        }
+    }
+  given object extends Summable[Int] {
+    def sum(a1: Int, a2: Int): Int = a1 + a2
+    def zero: Int = 0
+  }
+  given object extends Summable[Double] {
+    def sum(a1: Double, a2: Double): Double = ???
+    def <error> = null
+  }
+  @main def trySummables =
+    {
+      val si = Cons(10, Cons(20, Cons(30, Nil())))
+      println(sumAllInt(si))
+      println(sumAll(si))
+      val sd = Cons(10.0, Cons(20.0, Cons(30.0, Nil())))
+      println(sumAll(sd))
+      val ss = Cons("10", Cons("20", Cons("30", Nil())))
+      println(sumAll(ss))
+    }
+}
+error while checking module object Ex4Summables {
+  def sumAllInt(seq: Sequence[Int]): Int =
+    seq match
+      {
+        case Cons(h, t) =>
+          h + sumAllInt(t)
+        case _ =>
+          0
+      }
+  trait Summable[A] {
+    def sum(a1: A, a2: A): A
+    def zero: A
+  }
+  def sumAll[A =  : Summable](seq: Sequence[A]): A =
+    {
+      val summable = summon[Summable[A]]
+      seq match
+        {
+          case Cons(h, t) =>
+            summable.sum(h, sumAll(t))
+          case _ =>
+            summable.zero
+        }
+    }
+  given object extends Summable[Int] {
+    def sum(a1: Int, a2: Int): Int = a1 + a2
+    def zero: Int = 0
+  }
+  given object extends Summable[Double] {
+    def sum(a1: Double, a2: Double): Double = ???
+    def <error> = null
+  }
+  @main def trySummables =
+    {
+      val si = Cons(10, Cons(20, Cons(30, Nil())))
+      println(sumAllInt(si))
+      println(sumAll(si))
+      val sd = Cons(10.0, Cons(20.0, Cons(30.0, Nil())))
+      println(sumAll(sd))
+      val ss = Cons("10", Cons("20", Cons("30", Nil())))
+      println(sumAll(ss))
+    }
+}
+error while checking package u04lab {
+  import u03.Sequences.*
+  import Sequence.*
+  module object Ex4Summables {
+    def sumAllInt(seq: Sequence[Int]): Int =
+      seq match
+        {
+          case Cons(h, t) =>
+            h + sumAllInt(t)
+          case _ =>
+            0
+        }
+    trait Summable[A] {
+      def sum(a1: A, a2: A): A
+      def zero: A
+    }
+    def sumAll[A =  : Summable](seq: Sequence[A]): A =
+      {
+        val summable = summon[Summable[A]]
+        seq match
+          {
+            case Cons(h, t) =>
+              summable.sum(h, sumAll(t))
+            case _ =>
+              summable.zero
+          }
+      }
+    given object extends Summable[Int] {
+      def sum(a1: Int, a2: Int): Int = a1 + a2
+      def zero: Int = 0
+    }
+    given object extends Summable[Double] {
+      def sum(a1: Double, a2: Double): Double = ???
+      def <error> = null
+    }
+    @main def trySummables =
+      {
+        val si = Cons(10, Cons(20, Cons(30, Nil())))
+        println(sumAllInt(si))
+        println(sumAll(si))
+        val sd = Cons(10.0, Cons(20.0, Cons(30.0, Nil())))
+        println(sumAll(sd))
+        val ss = Cons("10", Cons("20", Cons("30", Nil())))
+        println(sumAll(ss))
+      }
+  }
+}
+mar 26, 2024 9:16:12 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: A severe compiler error occurred, full details of the error can be found in the error report /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/.reports/metals-full/2024-03-26/r_compiler-error_(root)_21-16-12-426.md
+2024.03.26 21:16:12 WARN  Could not find semantic tokens for: file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+mar 26, 2024 9:16:17 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 1767
+error while checking  extends Summable[Double] {
+  def sum(a1: Double, a2: Double): Double = null
+}
+error while checking given object extends Summable[Double] {
+  def sum(a1: Double, a2: Double): Double = null
+}
+error while checking  {
+  def sumAllInt(seq: Sequence[Int]): Int =
+    seq match
+      {
+        case Cons(h, t) =>
+          h + sumAllInt(t)
+        case _ =>
+          0
+      }
+  trait Summable[A] {
+    def sum(a1: A, a2: A): A
+    def zero: A
+  }
+  def sumAll[A =  : Summable](seq: Sequence[A]): A =
+    {
+      val summable = summon[Summable[A]]
+      seq match
+        {
+          case Cons(h, t) =>
+            summable.sum(h, sumAll(t))
+          case _ =>
+            summable.zero
+        }
+    }
+  given object extends Summable[Int] {
+    def sum(a1: Int, a2: Int): Int = a1 + a2
+    def zero: Int = 0
+  }
+  given object extends Summable[Double] {
+    def sum(a1: Double, a2: Double): Double = null
+  }
+  @main def trySummables =
+    {
+      val si = Cons(10, Cons(20, Cons(30, Nil())))
+      println(sumAllInt(si))
+      println(sumAll(si))
+      val sd = Cons(10.0, Cons(20.0, Cons(30.0, Nil())))
+      println(sumAll(sd))
+      val ss = Cons("10", Cons("20", Cons("30", Nil())))
+      println(sumAll(ss))
+    }
+}
+error while checking module object Ex4Summables {
+  def sumAllInt(seq: Sequence[Int]): Int =
+    seq match
+      {
+        case Cons(h, t) =>
+          h + sumAllInt(t)
+        case _ =>
+          0
+      }
+  trait Summable[A] {
+    def sum(a1: A, a2: A): A
+    def zero: A
+  }
+  def sumAll[A =  : Summable](seq: Sequence[A]): A =
+    {
+      val summable = summon[Summable[A]]
+      seq match
+        {
+          case Cons(h, t) =>
+            summable.sum(h, sumAll(t))
+          case _ =>
+            summable.zero
+        }
+    }
+  given object extends Summable[Int] {
+    def sum(a1: Int, a2: Int): Int = a1 + a2
+    def zero: Int = 0
+  }
+  given object extends Summable[Double] {
+    def sum(a1: Double, a2: Double): Double = null
+  }
+  @main def trySummables =
+    {
+      val si = Cons(10, Cons(20, Cons(30, Nil())))
+      println(sumAllInt(si))
+      println(sumAll(si))
+      val sd = Cons(10.0, Cons(20.0, Cons(30.0, Nil())))
+      println(sumAll(sd))
+      val ss = Cons("10", Cons("20", Cons("30", Nil())))
+      println(sumAll(ss))
+    }
+}
+error while checking package u04lab {
+  import u03.Sequences.*
+  import Sequence.*
+  module object Ex4Summables {
+    def sumAllInt(seq: Sequence[Int]): Int =
+      seq match
+        {
+          case Cons(h, t) =>
+            h + sumAllInt(t)
+          case _ =>
+            0
+        }
+    trait Summable[A] {
+      def sum(a1: A, a2: A): A
+      def zero: A
+    }
+    def sumAll[A =  : Summable](seq: Sequence[A]): A =
+      {
+        val summable = summon[Summable[A]]
+        seq match
+          {
+            case Cons(h, t) =>
+              summable.sum(h, sumAll(t))
+            case _ =>
+              summable.zero
+          }
+      }
+    given object extends Summable[Int] {
+      def sum(a1: Int, a2: Int): Int = a1 + a2
+      def zero: Int = 0
+    }
+    given object extends Summable[Double] {
+      def sum(a1: Double, a2: Double): Double = null
+    }
+    @main def trySummables =
+      {
+        val si = Cons(10, Cons(20, Cons(30, Nil())))
+        println(sumAllInt(si))
+        println(sumAll(si))
+        val sd = Cons(10.0, Cons(20.0, Cons(30.0, Nil())))
+        println(sumAll(sd))
+        val ss = Cons("10", Cons("20", Cons("30", Nil())))
+        println(sumAll(ss))
+      }
+  }
+}
+mar 26, 2024 9:16:18 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: A severe compiler error occurred, full details of the error can be found in the error report /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/.reports/metals-full/2024-03-26/r_compiler-error_(root)_21-16-18-230.md
+2024.03.26 21:16:18 WARN  Could not find semantic tokens for: file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+mar 26, 2024 9:16:24 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 1800
+2024.03.26 21:16:43 INFO  compiling root (1 scala source)
+2024.03.26 21:16:43 INFO  time: compiled root in 0.31s
+2024.03.26 21:16:52 ERROR Failed to tokenize input for semantic tokens for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+scala.meta.tokenizers.TokenizeException: <input>:49: error: unclosed comment
+    /*
+    ^
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError(Reporter.scala:27)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError$(Reporter.scala:26)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.incompleteInputError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError(Reporter.scala:29)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError$(Reporter.scala:29)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.incompleteInputError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.skipNestedComments(LegacyScanner.scala:52)
+	at scala.meta.internal.tokenizers.LegacyScanner.skipToCommentEnd(LegacyScanner.scala:71)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:313)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:211)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1011)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:28)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:541)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:840)
+
+2024.03.26 21:16:54 INFO  compiling root (1 scala source)
+2024.03.26 21:16:54 INFO  time: compiled root in 0.4s
+2024.03.26 21:17:12 ERROR Failed to tokenize input for semantic tokens for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+scala.meta.tokenizers.TokenizeException: <input>:49: error: unclosed comment
+    /*
+    ^
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError(Reporter.scala:27)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError$(Reporter.scala:26)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.incompleteInputError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError(Reporter.scala:29)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError$(Reporter.scala:29)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.incompleteInputError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.skipNestedComments(LegacyScanner.scala:52)
+	at scala.meta.internal.tokenizers.LegacyScanner.skipToCommentEnd(LegacyScanner.scala:71)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:313)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:211)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1011)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:28)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:541)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:840)
+
+2024.03.26 21:17:14 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+2024.03.26 21:17:14 INFO  compiling root (1 scala source)
+2024.03.26 21:17:14 INFO  time: compiled root in 0.3s
+2024.03.26 21:17:14 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+2024.03.26 21:17:19 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+2024.03.26 21:17:19 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+2024.03.26 21:17:22 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+mar 26, 2024 9:17:22 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: A severe compiler error occurred, full details of the error can be found in the error report /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/.reports/metals-full/2024-03-26/r_compiler-error_(root)_21-17-22-450.md
+2024.03.26 21:17:22 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+2024.03.26 21:17:23 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+2024.03.26 21:17:24 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+2024.03.26 21:17:26 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+2024.03.26 21:17:27 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+2024.03.26 21:17:28 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+2024.03.26 21:17:30 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+2024.03.26 21:17:31 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+2024.03.26 21:17:31 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+2024.03.26 21:17:32 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+2024.03.26 21:17:33 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+2024.03.26 21:17:33 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+2024.03.26 21:17:34 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+error while checking  extends Summable[String] {
+  def <error> = null
+}
+error while checking given object extends Summable[String] {
+  def <error> = null
+}
+error while checking  {
+  def sumAllInt(seq: Sequence[Int]): Int =
+    seq match
+      {
+        case Cons(h, t) =>
+          h + sumAllInt(t)
+        case _ =>
+          0
+      }
+  trait Summable[A] {
+    def sum(a1: A, a2: A): A
+    def zero: A
+  }
+  def sumAll[A =  : Summable](seq: Sequence[A]): A =
+    {
+      val summable = summon[Summable[A]]
+      seq match
+        {
+          case Cons(h, t) =>
+            summable.sum(h, sumAll(t))
+          case _ =>
+            summable.zero
+        }
+    }
+  given object extends Summable[Int] {
+    def sum(a1: Int, a2: Int): Int = a1 + a2
+    def zero: Int = 0
+  }
+  given object extends Summable[Double] {
+    def sum(a1: Double, a2: Double): Double = a1 + a2
+    def zero: Double = 0
+  }
+  given object extends Summable[String] {
+    def <error> = null
+  }
+  @main def trySummables =
+    {
+      val si = Cons(10, Cons(20, Cons(30, Nil())))
+      println(sumAllInt(si))
+      println(sumAll(si))
+      val sd = Cons(10.0, Cons(20.0, Cons(30.0, Nil())))
+      println(sumAll(sd))
+      val ss = Cons("10", Cons("20", Cons("30", Nil())))
+      println(sumAll(ss))
+    }
+}
+error while checking module object Ex4Summables {
+  def sumAllInt(seq: Sequence[Int]): Int =
+    seq match
+      {
+        case Cons(h, t) =>
+          h + sumAllInt(t)
+        case _ =>
+          0
+      }
+  trait Summable[A] {
+    def sum(a1: A, a2: A): A
+    def zero: A
+  }
+  def sumAll[A =  : Summable](seq: Sequence[A]): A =
+    {
+      val summable = summon[Summable[A]]
+      seq match
+        {
+          case Cons(h, t) =>
+            summable.sum(h, sumAll(t))
+          case _ =>
+            summable.zero
+        }
+    }
+  given object extends Summable[Int] {
+    def sum(a1: Int, a2: Int): Int = a1 + a2
+    def zero: Int = 0
+  }
+  given object extends Summable[Double] {
+    def sum(a1: Double, a2: Double): Double = a1 + a2
+    def zero: Double = 0
+  }
+  given object extends Summable[String] {
+    def <error> = null
+  }
+  @main def trySummables =
+    {
+      val si = Cons(10, Cons(20, Cons(30, Nil())))
+      println(sumAllInt(si))
+      println(sumAll(si))
+      val sd = Cons(10.0, Cons(20.0, Cons(30.0, Nil())))
+      println(sumAll(sd))
+      val ss = Cons("10", Cons("20", Cons("30", Nil())))
+      println(sumAll(ss))
+    }
+}
+error while checking package u04lab {
+  import u03.Sequences.*
+  import Sequence.*
+  module object Ex4Summables {
+    def sumAllInt(seq: Sequence[Int]): Int =
+      seq match
+        {
+          case Cons(h, t) =>
+            h + sumAllInt(t)
+          case _ =>
+            0
+        }
+    trait Summable[A] {
+      def sum(a1: A, a2: A): A
+      def zero: A
+    }
+    def sumAll[A =  : Summable](seq: Sequence[A]): A =
+      {
+        val summable = summon[Summable[A]]
+        seq match
+          {
+            case Cons(h, t) =>
+              summable.sum(h, sumAll(t))
+            case _ =>
+              summable.zero
+          }
+      }
+    given object extends Summable[Int] {
+      def sum(a1: Int, a2: Int): Int = a1 + a2
+      def zero: Int = 0
+    }
+    given object extends Summable[Double] {
+      def sum(a1: Double, a2: Double): Double = a1 + a2
+      def zero: Double = 0
+    }
+    given object extends Summable[String] {
+      def <error> = null
+    }
+    @main def trySummables =
+      {
+        val si = Cons(10, Cons(20, Cons(30, Nil())))
+        println(sumAllInt(si))
+        println(sumAll(si))
+        val sd = Cons(10.0, Cons(20.0, Cons(30.0, Nil())))
+        println(sumAll(sd))
+        val ss = Cons("10", Cons("20", Cons("30", Nil())))
+        println(sumAll(ss))
+      }
+  }
+}
+mar 26, 2024 9:17:35 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: A severe compiler error occurred, full details of the error can be found in the error report /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/.reports/metals-full/2024-03-26/r_compiler-error_(root)_21-17-35-711.md
+2024.03.26 21:17:35 WARN  Could not find semantic tokens for: file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+2024.03.26 21:17:36 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+2024.03.26 21:17:38 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+2024.03.26 21:17:38 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+error while checking  extends Summable[String] {
+  def sum(a1: String, a2: String): String = null
+}
+error while checking given object extends Summable[String] {
+  def sum(a1: String, a2: String): String = null
+}
+error while checking  {
+  def sumAllInt(seq: Sequence[Int]): Int =
+    seq match
+      {
+        case Cons(h, t) =>
+          h + sumAllInt(t)
+        case _ =>
+          0
+      }
+  trait Summable[A] {
+    def sum(a1: A, a2: A): A
+    def zero: A
+  }
+  def sumAll[A =  : Summable](seq: Sequence[A]): A =
+    {
+      val summable = summon[Summable[A]]
+      seq match
+        {
+          case Cons(h, t) =>
+            summable.sum(h, sumAll(t))
+          case _ =>
+            summable.zero
+        }
+    }
+  given object extends Summable[Int] {
+    def sum(a1: Int, a2: Int): Int = a1 + a2
+    def zero: Int = 0
+  }
+  given object extends Summable[Double] {
+    def sum(a1: Double, a2: Double): Double = a1 + a2
+    def zero: Double = 0
+  }
+  given object extends Summable[String] {
+    def sum(a1: String, a2: String): String = null
+  }
+  @main def trySummables =
+    {
+      val si = Cons(10, Cons(20, Cons(30, Nil())))
+      println(sumAllInt(si))
+      println(sumAll(si))
+      val sd = Cons(10.0, Cons(20.0, Cons(30.0, Nil())))
+      println(sumAll(sd))
+      val ss = Cons("10", Cons("20", Cons("30", Nil())))
+      println(sumAll(ss))
+    }
+}
+error while checking module object Ex4Summables {
+  def sumAllInt(seq: Sequence[Int]): Int =
+    seq match
+      {
+        case Cons(h, t) =>
+          h + sumAllInt(t)
+        case _ =>
+          0
+      }
+  trait Summable[A] {
+    def sum(a1: A, a2: A): A
+    def zero: A
+  }
+  def sumAll[A =  : Summable](seq: Sequence[A]): A =
+    {
+      val summable = summon[Summable[A]]
+      seq match
+        {
+          case Cons(h, t) =>
+            summable.sum(h, sumAll(t))
+          case _ =>
+            summable.zero
+        }
+    }
+  given object extends Summable[Int] {
+    def sum(a1: Int, a2: Int): Int = a1 + a2
+    def zero: Int = 0
+  }
+  given object extends Summable[Double] {
+    def sum(a1: Double, a2: Double): Double = a1 + a2
+    def zero: Double = 0
+  }
+  given object extends Summable[String] {
+    def sum(a1: String, a2: String): String = null
+  }
+  @main def trySummables =
+    {
+      val si = Cons(10, Cons(20, Cons(30, Nil())))
+      println(sumAllInt(si))
+      println(sumAll(si))
+      val sd = Cons(10.0, Cons(20.0, Cons(30.0, Nil())))
+      println(sumAll(sd))
+      val ss = Cons("10", Cons("20", Cons("30", Nil())))
+      println(sumAll(ss))
+    }
+}
+error while checking package u04lab {
+  import u03.Sequences.*
+  import Sequence.*
+  module object Ex4Summables {
+    def sumAllInt(seq: Sequence[Int]): Int =
+      seq match
+        {
+          case Cons(h, t) =>
+            h + sumAllInt(t)
+          case _ =>
+            0
+        }
+    trait Summable[A] {
+      def sum(a1: A, a2: A): A
+      def zero: A
+    }
+    def sumAll[A =  : Summable](seq: Sequence[A]): A =
+      {
+        val summable = summon[Summable[A]]
+        seq match
+          {
+            case Cons(h, t) =>
+              summable.sum(h, sumAll(t))
+            case _ =>
+              summable.zero
+          }
+      }
+    given object extends Summable[Int] {
+      def sum(a1: Int, a2: Int): Int = a1 + a2
+      def zero: Int = 0
+    }
+    given object extends Summable[Double] {
+      def sum(a1: Double, a2: Double): Double = a1 + a2
+      def zero: Double = 0
+    }
+    given object extends Summable[String] {
+      def sum(a1: String, a2: String): String = null
+    }
+    @main def trySummables =
+      {
+        val si = Cons(10, Cons(20, Cons(30, Nil())))
+        println(sumAllInt(si))
+        println(sumAll(si))
+        val sd = Cons(10.0, Cons(20.0, Cons(30.0, Nil())))
+        println(sumAll(sd))
+        val ss = Cons("10", Cons("20", Cons("30", Nil())))
+        println(sumAll(ss))
+      }
+  }
+}
+mar 26, 2024 9:17:38 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: A severe compiler error occurred, full details of the error can be found in the error report /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/.reports/metals-full/2024-03-26/r_compiler-error_(root)_21-17-38-956.md
+2024.03.26 21:17:38 WARN  Could not find semantic tokens for: file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+2024.03.26 21:17:40 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+2024.03.26 21:17:41 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+error while checking  extends Summable[String] {
+  def sum(a1: String, a2: String): String = ???
+  def <error> = null
+}
+error while checking given object extends Summable[String] {
+  def sum(a1: String, a2: String): String = ???
+  def <error> = null
+}
+error while checking  {
+  def sumAllInt(seq: Sequence[Int]): Int =
+    seq match
+      {
+        case Cons(h, t) =>
+          h + sumAllInt(t)
+        case _ =>
+          0
+      }
+  trait Summable[A] {
+    def sum(a1: A, a2: A): A
+    def zero: A
+  }
+  def sumAll[A =  : Summable](seq: Sequence[A]): A =
+    {
+      val summable = summon[Summable[A]]
+      seq match
+        {
+          case Cons(h, t) =>
+            summable.sum(h, sumAll(t))
+          case _ =>
+            summable.zero
+        }
+    }
+  given object extends Summable[Int] {
+    def sum(a1: Int, a2: Int): Int = a1 + a2
+    def zero: Int = 0
+  }
+  given object extends Summable[Double] {
+    def sum(a1: Double, a2: Double): Double = a1 + a2
+    def zero: Double = 0
+  }
+  given object extends Summable[String] {
+    def sum(a1: String, a2: String): String = ???
+    def <error> = null
+  }
+  @main def trySummables =
+    {
+      val si = Cons(10, Cons(20, Cons(30, Nil())))
+      println(sumAllInt(si))
+      println(sumAll(si))
+      val sd = Cons(10.0, Cons(20.0, Cons(30.0, Nil())))
+      println(sumAll(sd))
+      val ss = Cons("10", Cons("20", Cons("30", Nil())))
+      println(sumAll(ss))
+    }
+}
+error while checking module object Ex4Summables {
+  def sumAllInt(seq: Sequence[Int]): Int =
+    seq match
+      {
+        case Cons(h, t) =>
+          h + sumAllInt(t)
+        case _ =>
+          0
+      }
+  trait Summable[A] {
+    def sum(a1: A, a2: A): A
+    def zero: A
+  }
+  def sumAll[A =  : Summable](seq: Sequence[A]): A =
+    {
+      val summable = summon[Summable[A]]
+      seq match
+        {
+          case Cons(h, t) =>
+            summable.sum(h, sumAll(t))
+          case _ =>
+            summable.zero
+        }
+    }
+  given object extends Summable[Int] {
+    def sum(a1: Int, a2: Int): Int = a1 + a2
+    def zero: Int = 0
+  }
+  given object extends Summable[Double] {
+    def sum(a1: Double, a2: Double): Double = a1 + a2
+    def zero: Double = 0
+  }
+  given object extends Summable[String] {
+    def sum(a1: String, a2: String): String = ???
+    def <error> = null
+  }
+  @main def trySummables =
+    {
+      val si = Cons(10, Cons(20, Cons(30, Nil())))
+      println(sumAllInt(si))
+      println(sumAll(si))
+      val sd = Cons(10.0, Cons(20.0, Cons(30.0, Nil())))
+      println(sumAll(sd))
+      val ss = Cons("10", Cons("20", Cons("30", Nil())))
+      println(sumAll(ss))
+    }
+}
+error while checking package u04lab {
+  import u03.Sequences.*
+  import Sequence.*
+  module object Ex4Summables {
+    def sumAllInt(seq: Sequence[Int]): Int =
+      seq match
+        {
+          case Cons(h, t) =>
+            h + sumAllInt(t)
+          case _ =>
+            0
+        }
+    trait Summable[A] {
+      def sum(a1: A, a2: A): A
+      def zero: A
+    }
+    def sumAll[A =  : Summable](seq: Sequence[A]): A =
+      {
+        val summable = summon[Summable[A]]
+        seq match
+          {
+            case Cons(h, t) =>
+              summable.sum(h, sumAll(t))
+            case _ =>
+              summable.zero
+          }
+      }
+    given object extends Summable[Int] {
+      def sum(a1: Int, a2: Int): Int = a1 + a2
+      def zero: Int = 0
+    }
+    given object extends Summable[Double] {
+      def sum(a1: Double, a2: Double): Double = a1 + a2
+      def zero: Double = 0
+    }
+    given object extends Summable[String] {
+      def sum(a1: String, a2: String): String = ???
+      def <error> = null
+    }
+    @main def trySummables =
+      {
+        val si = Cons(10, Cons(20, Cons(30, Nil())))
+        println(sumAllInt(si))
+        println(sumAll(si))
+        val sd = Cons(10.0, Cons(20.0, Cons(30.0, Nil())))
+        println(sumAll(sd))
+        val ss = Cons("10", Cons("20", Cons("30", Nil())))
+        println(sumAll(ss))
+      }
+  }
+}
+mar 26, 2024 9:17:41 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: A severe compiler error occurred, full details of the error can be found in the error report /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/.reports/metals-full/2024-03-26/r_compiler-error_(root)_21-17-41-978.md
+2024.03.26 21:17:41 WARN  Could not find semantic tokens for: file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+2024.03.26 21:17:42 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+2024.03.26 21:17:42 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+error while checking  extends Summable[String] {
+  def sum(a1: String, a2: String): String = null
+}
+error while checking given object extends Summable[String] {
+  def sum(a1: String, a2: String): String = null
+}
+error while checking  {
+  def sumAllInt(seq: Sequence[Int]): Int =
+    seq match
+      {
+        case Cons(h, t) =>
+          h + sumAllInt(t)
+        case _ =>
+          0
+      }
+  trait Summable[A] {
+    def sum(a1: A, a2: A): A
+    def zero: A
+  }
+  def sumAll[A =  : Summable](seq: Sequence[A]): A =
+    {
+      val summable = summon[Summable[A]]
+      seq match
+        {
+          case Cons(h, t) =>
+            summable.sum(h, sumAll(t))
+          case _ =>
+            summable.zero
+        }
+    }
+  given object extends Summable[Int] {
+    def sum(a1: Int, a2: Int): Int = a1 + a2
+    def zero: Int = 0
+  }
+  given object extends Summable[Double] {
+    def sum(a1: Double, a2: Double): Double = a1 + a2
+    def zero: Double = 0
+  }
+  given object extends Summable[String] {
+    def sum(a1: String, a2: String): String = null
+  }
+  @main def trySummables =
+    {
+      val si = Cons(10, Cons(20, Cons(30, Nil())))
+      println(sumAllInt(si))
+      println(sumAll(si))
+      val sd = Cons(10.0, Cons(20.0, Cons(30.0, Nil())))
+      println(sumAll(sd))
+      val ss = Cons("10", Cons("20", Cons("30", Nil())))
+      println(sumAll(ss))
+    }
+}
+error while checking module object Ex4Summables {
+  def sumAllInt(seq: Sequence[Int]): Int =
+    seq match
+      {
+        case Cons(h, t) =>
+          h + sumAllInt(t)
+        case _ =>
+          0
+      }
+  trait Summable[A] {
+    def sum(a1: A, a2: A): A
+    def zero: A
+  }
+  def sumAll[A =  : Summable](seq: Sequence[A]): A =
+    {
+      val summable = summon[Summable[A]]
+      seq match
+        {
+          case Cons(h, t) =>
+            summable.sum(h, sumAll(t))
+          case _ =>
+            summable.zero
+        }
+    }
+  given object extends Summable[Int] {
+    def sum(a1: Int, a2: Int): Int = a1 + a2
+    def zero: Int = 0
+  }
+  given object extends Summable[Double] {
+    def sum(a1: Double, a2: Double): Double = a1 + a2
+    def zero: Double = 0
+  }
+  given object extends Summable[String] {
+    def sum(a1: String, a2: String): String = null
+  }
+  @main def trySummables =
+    {
+      val si = Cons(10, Cons(20, Cons(30, Nil())))
+      println(sumAllInt(si))
+      println(sumAll(si))
+      val sd = Cons(10.0, Cons(20.0, Cons(30.0, Nil())))
+      println(sumAll(sd))
+      val ss = Cons("10", Cons("20", Cons("30", Nil())))
+      println(sumAll(ss))
+    }
+}
+error while checking package u04lab {
+  import u03.Sequences.*
+  import Sequence.*
+  module object Ex4Summables {
+    def sumAllInt(seq: Sequence[Int]): Int =
+      seq match
+        {
+          case Cons(h, t) =>
+            h + sumAllInt(t)
+          case _ =>
+            0
+        }
+    trait Summable[A] {
+      def sum(a1: A, a2: A): A
+      def zero: A
+    }
+    def sumAll[A =  : Summable](seq: Sequence[A]): A =
+      {
+        val summable = summon[Summable[A]]
+        seq match
+          {
+            case Cons(h, t) =>
+              summable.sum(h, sumAll(t))
+            case _ =>
+              summable.zero
+          }
+      }
+    given object extends Summable[Int] {
+      def sum(a1: Int, a2: Int): Int = a1 + a2
+      def zero: Int = 0
+    }
+    given object extends Summable[Double] {
+      def sum(a1: Double, a2: Double): Double = a1 + a2
+      def zero: Double = 0
+    }
+    given object extends Summable[String] {
+      def sum(a1: String, a2: String): String = null
+    }
+    @main def trySummables =
+      {
+        val si = Cons(10, Cons(20, Cons(30, Nil())))
+        println(sumAllInt(si))
+        println(sumAll(si))
+        val sd = Cons(10.0, Cons(20.0, Cons(30.0, Nil())))
+        println(sumAll(sd))
+        val ss = Cons("10", Cons("20", Cons("30", Nil())))
+        println(sumAll(ss))
+      }
+  }
+}
+mar 26, 2024 9:18:26 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: A severe compiler error occurred, full details of the error can be found in the error report /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/.reports/metals-full/2024-03-26/r_compiler-error_(root)_21-18-26-019.md
+2024.03.26 21:18:26 WARN  Could not find semantic tokens for: file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+2024.03.26 21:18:26 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+2024.03.26 21:18:27 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+2024.03.26 21:18:27 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+2024.03.26 21:18:29 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+2024.03.26 21:18:30 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+2024.03.26 21:18:31 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+2024.03.26 21:18:34 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+2024.03.26 21:18:35 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+error while checking  extends Summable[String] {
+  def sum(a1: String, a2: String): String = a1.concat(a2)
+  def zero: String = null
+}
+error while checking given object extends Summable[String] {
+  def sum(a1: String, a2: String): String = a1.concat(a2)
+  def zero: String = null
+}
+error while checking  {
+  def sumAllInt(seq: Sequence[Int]): Int =
+    seq match
+      {
+        case Cons(h, t) =>
+          h + sumAllInt(t)
+        case _ =>
+          0
+      }
+  trait Summable[A] {
+    def sum(a1: A, a2: A): A
+    def zero: A
+  }
+  def sumAll[A =  : Summable](seq: Sequence[A]): A =
+    {
+      val summable = summon[Summable[A]]
+      seq match
+        {
+          case Cons(h, t) =>
+            summable.sum(h, sumAll(t))
+          case _ =>
+            summable.zero
+        }
+    }
+  given object extends Summable[Int] {
+    def sum(a1: Int, a2: Int): Int = a1 + a2
+    def zero: Int = 0
+  }
+  given object extends Summable[Double] {
+    def sum(a1: Double, a2: Double): Double = a1 + a2
+    def zero: Double = 0
+  }
+  given object extends Summable[String] {
+    def sum(a1: String, a2: String): String = a1.concat(a2)
+    def zero: String = null
+  }
+  @main def trySummables =
+    {
+      val si = Cons(10, Cons(20, Cons(30, Nil())))
+      println(sumAllInt(si))
+      println(sumAll(si))
+      val sd = Cons(10.0, Cons(20.0, Cons(30.0, Nil())))
+      println(sumAll(sd))
+      val ss = Cons("10", Cons("20", Cons("30", Nil())))
+      println(sumAll(ss))
+    }
+}
+error while checking module object Ex4Summables {
+  def sumAllInt(seq: Sequence[Int]): Int =
+    seq match
+      {
+        case Cons(h, t) =>
+          h + sumAllInt(t)
+        case _ =>
+          0
+      }
+  trait Summable[A] {
+    def sum(a1: A, a2: A): A
+    def zero: A
+  }
+  def sumAll[A =  : Summable](seq: Sequence[A]): A =
+    {
+      val summable = summon[Summable[A]]
+      seq match
+        {
+          case Cons(h, t) =>
+            summable.sum(h, sumAll(t))
+          case _ =>
+            summable.zero
+        }
+    }
+  given object extends Summable[Int] {
+    def sum(a1: Int, a2: Int): Int = a1 + a2
+    def zero: Int = 0
+  }
+  given object extends Summable[Double] {
+    def sum(a1: Double, a2: Double): Double = a1 + a2
+    def zero: Double = 0
+  }
+  given object extends Summable[String] {
+    def sum(a1: String, a2: String): String = a1.concat(a2)
+    def zero: String = null
+  }
+  @main def trySummables =
+    {
+      val si = Cons(10, Cons(20, Cons(30, Nil())))
+      println(sumAllInt(si))
+      println(sumAll(si))
+      val sd = Cons(10.0, Cons(20.0, Cons(30.0, Nil())))
+      println(sumAll(sd))
+      val ss = Cons("10", Cons("20", Cons("30", Nil())))
+      println(sumAll(ss))
+    }
+}
+error while checking package u04lab {
+  import u03.Sequences.*
+  import Sequence.*
+  module object Ex4Summables {
+    def sumAllInt(seq: Sequence[Int]): Int =
+      seq match
+        {
+          case Cons(h, t) =>
+            h + sumAllInt(t)
+          case _ =>
+            0
+        }
+    trait Summable[A] {
+      def sum(a1: A, a2: A): A
+      def zero: A
+    }
+    def sumAll[A =  : Summable](seq: Sequence[A]): A =
+      {
+        val summable = summon[Summable[A]]
+        seq match
+          {
+            case Cons(h, t) =>
+              summable.sum(h, sumAll(t))
+            case _ =>
+              summable.zero
+          }
+      }
+    given object extends Summable[Int] {
+      def sum(a1: Int, a2: Int): Int = a1 + a2
+      def zero: Int = 0
+    }
+    given object extends Summable[Double] {
+      def sum(a1: Double, a2: Double): Double = a1 + a2
+      def zero: Double = 0
+    }
+    given object extends Summable[String] {
+      def sum(a1: String, a2: String): String = a1.concat(a2)
+      def zero: String = null
+    }
+    @main def trySummables =
+      {
+        val si = Cons(10, Cons(20, Cons(30, Nil())))
+        println(sumAllInt(si))
+        println(sumAll(si))
+        val sd = Cons(10.0, Cons(20.0, Cons(30.0, Nil())))
+        println(sumAll(sd))
+        val ss = Cons("10", Cons("20", Cons("30", Nil())))
+        println(sumAll(ss))
+      }
+  }
+}
+mar 26, 2024 9:18:45 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: A severe compiler error occurred, full details of the error can be found in the error report /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/.reports/metals-full/2024-03-26/r_compiler-error_(root)_21-18-45-797.md
+2024.03.26 21:18:45 WARN  Could not find semantic tokens for: file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+2024.03.26 21:18:46 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
+2024.03.26 21:18:47 INFO  compiling root (1 scala source)
+2024.03.26 21:18:47 INFO  time: compiled root in 0.34s
