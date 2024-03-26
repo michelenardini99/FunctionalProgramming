@@ -15,17 +15,35 @@ class SchoolTest:
     val schoolModel: SchoolModel = BasicSchoolModel
     import schoolModel.*
 
-    val school = School(Nil(), Nil())
-        val teacher = "Paola"
-        val course = "Matematica"
+    val school = School(
+        Cons(Teacher("Paola", Nil()),
+        Cons(Teacher("Michele", Nil()), Nil())),
+        Nil()
+    )
+    val teacher = "Giovanni"
+    val course = "Matematica"
 
     @Test def testAddTeacherAndCourse() = 
         assertEquals(School(
-            Cons(Teacher(teacher, Nil()), Nil()), Cons(Course(course), Nil())),
-            school addTeacher teacher addCourse course)
+                        Cons(Teacher(teacher, Nil()),
+                            Cons(Teacher("Paola", Nil()),
+                                Cons(Teacher("Michele", Nil()), Nil()))), 
+                        Cons(Course(course), Nil())),
+                        school.addTeacher(teacher).addCourse(course)
+                    )
 
     @Test def testFilterTeacherByName() =
         assertEquals(Teacher(teacher, Nil()),
             orElse(school.addTeacher(teacher).teacherByName(teacher), Empty()))
 
-    
+    @Test def testFilterCourseByName() =
+        assertEquals(Course(course),
+            orElse(school.addCourse(course).courseByName(course), Empty()))
+
+    @Test def testSetCourseToTeacher() =
+        assertEquals(School(
+                        Cons(Teacher(teacher, Cons(Course(course), Nil())),
+                            Cons(Teacher("Paola", Nil()),
+                                Cons(Teacher("Michele", Nil()), Nil()))), 
+                        Nil()),
+                        school.addTeacher(teacher).setTeacherToCourse(Teacher(teacher, Nil()), Course(course)))
