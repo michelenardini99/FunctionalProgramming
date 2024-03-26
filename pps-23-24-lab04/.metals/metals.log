@@ -3573,3 +3573,2525 @@ GRAVE: A severe compiler error occurred, full details of the error can be found 
 2024.03.26 21:18:46 WARN  Could not load snapshot text for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex4Summables.scala
 2024.03.26 21:18:47 INFO  compiling root (1 scala source)
 2024.03.26 21:18:47 INFO  time: compiled root in 0.34s
+mar 26, 2024 9:33:02 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: A severe compiler error occurred, full details of the error can be found in the error report /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/.reports/metals-full/2024-03-26/r_compiler-error_(root)_21-33-02-993.md
+2024.03.26 21:33:34 INFO  compiling root (1 scala source)
+2024.03.26 21:33:34 INFO  time: compiled root in 0.11s
+2024.03.26 21:33:51 INFO  compiling root (1 scala source)
+2024.03.26 21:33:51 INFO  time: compiled root in 0.28s
+2024.03.26 21:34:02 INFO  compiling root (1 scala source)
+2024.03.26 21:34:02 INFO  time: compiled root in 0.2s
+2024.03.26 21:35:28 INFO  compiling root (1 scala source)
+2024.03.26 21:35:28 INFO  time: compiled root in 0.1s
+2024.03.26 21:35:52 INFO  compiling root (1 scala source)
+2024.03.26 21:35:52 INFO  time: compiled root in 0.44s
+2024.03.26 21:35:54 WARN  Using indexes to guess the definition of Optional
+2024.03.26 21:36:00 INFO  compiling root (1 scala source)
+2024.03.26 21:36:00 INFO  time: compiled root in 70ms
+2024.03.26 21:36:10 INFO  compiling root (1 scala source)
+2024.03.26 21:36:10 INFO  time: compiled root in 0.25s
+error while checking  extends Traversable[Optional] {
+  def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit = null
+}
+error while checking given object extends Traversable[Optional] {
+  def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit = null
+}
+error while checking  {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit = null
+  }
+}
+error while checking module object Ex5Traversable {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit = null
+  }
+}
+error while checking package u04lab {
+  import u03.Sequences.*
+  import Sequence.*
+  import u03.Optionals.Optional.*
+  import u03.Optionals.*
+  module object Ex5Traversable {
+    def log[A](a: A): Unit = println("The next element is: " + a)
+    def logAll[A](seq: Sequence[A]): Unit =
+      seq match
+        {
+          case Cons(h, t) =>
+            log(h)
+            logAll(t)
+          case _ =>
+            ()
+        }
+    trait Traversable[T[_]] {
+      def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+    }
+    given object extends Traversable[Optional] {
+      def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit = null
+    }
+  }
+}
+mar 26, 2024 9:36:54 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: A severe compiler error occurred, full details of the error can be found in the error report /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/.reports/metals-full/2024-03-26/r_compiler-error_(root)_21-36-54-042.md
+2024.03.26 21:36:54 WARN  Could not find semantic tokens for: file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex5Traversable.scala
+error while checking  extends Traversable[Optional] {
+  def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+    container mCURSOR null
+}
+error while checking given object extends Traversable[Optional] {
+  def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+    container mCURSOR null
+}
+error while checking  {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container mCURSOR null
+  }
+}
+error while checking module object Ex5Traversable {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container mCURSOR null
+  }
+}
+error while checking package u04lab {
+  import u03.Sequences.*
+  import Sequence.*
+  import u03.Optionals.Optional.*
+  import u03.Optionals.*
+  module object Ex5Traversable {
+    def log[A](a: A): Unit = println("The next element is: " + a)
+    def logAll[A](seq: Sequence[A]): Unit =
+      seq match
+        {
+          case Cons(h, t) =>
+            log(h)
+            logAll(t)
+          case _ =>
+            ()
+        }
+    trait Traversable[T[_]] {
+      def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+    }
+    given object extends Traversable[Optional] {
+      def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+        container mCURSOR null
+    }
+  }
+}
+mar 26, 2024 9:36:58 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: A severe compiler error occurred, full details of the error can be found in the error report /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/.reports/metals-full/2024-03-26/r_compiler-error_(root)_21-36-58-815.md
+error while checking  extends Traversable[Optional] {
+  def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+    container mat null
+}
+error while checking given object extends Traversable[Optional] {
+  def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+    container mat null
+}
+error while checking  {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container mat null
+  }
+}
+error while checking module object Ex5Traversable {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container mat null
+  }
+}
+error while checking package u04lab {
+  import u03.Sequences.*
+  import Sequence.*
+  import u03.Optionals.Optional.*
+  import u03.Optionals.*
+  module object Ex5Traversable {
+    def log[A](a: A): Unit = println("The next element is: " + a)
+    def logAll[A](seq: Sequence[A]): Unit =
+      seq match
+        {
+          case Cons(h, t) =>
+            log(h)
+            logAll(t)
+          case _ =>
+            ()
+        }
+    trait Traversable[T[_]] {
+      def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+    }
+    given object extends Traversable[Optional] {
+      def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+        container mat null
+    }
+  }
+}
+mar 26, 2024 9:36:59 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: A severe compiler error occurred, full details of the error can be found in the error report /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/.reports/metals-full/2024-03-26/r_compiler-error_(root)_21-36-59-237.md
+2024.03.26 21:36:59 WARN  Could not find semantic tokens for: file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex5Traversable.scala
+error while checking  extends Traversable[Optional] {
+  def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+    container match
+      {
+        case null =>
+          <empty>
+      }
+}
+error while checking given object extends Traversable[Optional] {
+  def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+    container match
+      {
+        case null =>
+          <empty>
+      }
+}
+error while checking  {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case null =>
+            <empty>
+        }
+  }
+}
+error while checking module object Ex5Traversable {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case null =>
+            <empty>
+        }
+  }
+}
+error while checking package u04lab {
+  import u03.Sequences.*
+  import Sequence.*
+  import u03.Optionals.Optional.*
+  import u03.Optionals.*
+  module object Ex5Traversable {
+    def log[A](a: A): Unit = println("The next element is: " + a)
+    def logAll[A](seq: Sequence[A]): Unit =
+      seq match
+        {
+          case Cons(h, t) =>
+            log(h)
+            logAll(t)
+          case _ =>
+            ()
+        }
+    trait Traversable[T[_]] {
+      def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+    }
+    given object extends Traversable[Optional] {
+      def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+        container match
+          {
+            case null =>
+              <empty>
+          }
+    }
+  }
+}
+mar 26, 2024 9:36:59 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: A severe compiler error occurred, full details of the error can be found in the error report /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/.reports/metals-full/2024-03-26/r_compiler-error_(root)_21-36-59-951.md
+2024.03.26 21:36:59 WARN  Could not find semantic tokens for: file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex5Traversable.scala
+error while checking  extends Traversable[Optional] {
+  def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+    container match
+      {
+        case null =>
+          <empty>
+      }
+}
+error while checking given object extends Traversable[Optional] {
+  def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+    container match
+      {
+        case null =>
+          <empty>
+      }
+}
+error while checking  {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case null =>
+            <empty>
+        }
+  }
+}
+error while checking module object Ex5Traversable {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case null =>
+            <empty>
+        }
+  }
+}
+error while checking package u04lab {
+  import u03.Sequences.*
+  import Sequence.*
+  import u03.Optionals.Optional.*
+  import u03.Optionals.*
+  module object Ex5Traversable {
+    def log[A](a: A): Unit = println("The next element is: " + a)
+    def logAll[A](seq: Sequence[A]): Unit =
+      seq match
+        {
+          case Cons(h, t) =>
+            log(h)
+            logAll(t)
+          case _ =>
+            ()
+        }
+    trait Traversable[T[_]] {
+      def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+    }
+    given object extends Traversable[Optional] {
+      def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+        container match
+          {
+            case null =>
+              <empty>
+          }
+    }
+  }
+}
+mar 26, 2024 9:37:00 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: A severe compiler error occurred, full details of the error can be found in the error report /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/.reports/metals-full/2024-03-26/r_compiler-error_(root)_21-37-00-885.md
+2024.03.26 21:37:00 WARN  Could not find semantic tokens for: file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex5Traversable.scala
+error while checking  extends Traversable[Optional] {
+  def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+    container match
+      {
+        case null =>
+          <empty>
+      }
+}
+error while checking given object extends Traversable[Optional] {
+  def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+    container match
+      {
+        case null =>
+          <empty>
+      }
+}
+error while checking  {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case null =>
+            <empty>
+        }
+  }
+}
+error while checking module object Ex5Traversable {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case null =>
+            <empty>
+        }
+  }
+}
+error while checking package u04lab {
+  import u03.Sequences.*
+  import Sequence.*
+  import u03.Optionals.Optional.*
+  import u03.Optionals.*
+  module object Ex5Traversable {
+    def log[A](a: A): Unit = println("The next element is: " + a)
+    def logAll[A](seq: Sequence[A]): Unit =
+      seq match
+        {
+          case Cons(h, t) =>
+            log(h)
+            logAll(t)
+          case _ =>
+            ()
+        }
+    trait Traversable[T[_]] {
+      def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+    }
+    given object extends Traversable[Optional] {
+      def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+        container match
+          {
+            case null =>
+              <empty>
+          }
+    }
+  }
+}
+mar 26, 2024 9:37:01 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: A severe compiler error occurred, full details of the error can be found in the error report /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/.reports/metals-full/2024-03-26/r_compiler-error_(root)_21-37-01-364.md
+2024.03.26 21:37:01 WARN  Could not find semantic tokens for: file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex5Traversable.scala
+error while checking  extends Traversable[Optional] {
+  def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+    container match
+      {
+        case null =>
+          <empty>
+      }
+}
+error while checking given object extends Traversable[Optional] {
+  def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+    container match
+      {
+        case null =>
+          <empty>
+      }
+}
+error while checking  {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case null =>
+            <empty>
+        }
+  }
+}
+error while checking module object Ex5Traversable {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case null =>
+            <empty>
+        }
+  }
+}
+error while checking package u04lab {
+  import u03.Sequences.*
+  import Sequence.*
+  import u03.Optionals.Optional.*
+  import u03.Optionals.*
+  module object Ex5Traversable {
+    def log[A](a: A): Unit = println("The next element is: " + a)
+    def logAll[A](seq: Sequence[A]): Unit =
+      seq match
+        {
+          case Cons(h, t) =>
+            log(h)
+            logAll(t)
+          case _ =>
+            ()
+        }
+    trait Traversable[T[_]] {
+      def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+    }
+    given object extends Traversable[Optional] {
+      def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+        container match
+          {
+            case null =>
+              <empty>
+          }
+    }
+  }
+}
+mar 26, 2024 9:37:05 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: A severe compiler error occurred, full details of the error can be found in the error report /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/.reports/metals-full/2024-03-26/r_compiler-error_(root)_21-37-05-765.md
+error while checking  extends Traversable[Optional] {
+  def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+    container match
+      {
+        case null =>
+          <empty>
+      }
+}
+error while checking given object extends Traversable[Optional] {
+  def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+    container match
+      {
+        case null =>
+          <empty>
+      }
+}
+error while checking  {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case null =>
+            <empty>
+        }
+  }
+}
+error while checking module object Ex5Traversable {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case null =>
+            <empty>
+        }
+  }
+}
+error while checking package u04lab {
+  import u03.Sequences.*
+  import Sequence.*
+  import u03.Optionals.Optional.*
+  import u03.Optionals.*
+  module object Ex5Traversable {
+    def log[A](a: A): Unit = println("The next element is: " + a)
+    def logAll[A](seq: Sequence[A]): Unit =
+      seq match
+        {
+          case Cons(h, t) =>
+            log(h)
+            logAll(t)
+          case _ =>
+            ()
+        }
+    trait Traversable[T[_]] {
+      def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+    }
+    given object extends Traversable[Optional] {
+      def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+        container match
+          {
+            case null =>
+              <empty>
+          }
+    }
+  }
+}
+mar 26, 2024 9:37:06 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: A severe compiler error occurred, full details of the error can be found in the error report /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/.reports/metals-full/2024-03-26/r_compiler-error_(root)_21-37-06-203.md
+2024.03.26 21:37:06 WARN  Could not find semantic tokens for: file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex5Traversable.scala
+error while checking  extends Traversable[Optional] {
+  def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+    container match
+      {
+        case null =>
+          <empty>
+      }
+}
+error while checking given object extends Traversable[Optional] {
+  def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+    container match
+      {
+        case null =>
+          <empty>
+      }
+}
+error while checking  {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case null =>
+            <empty>
+        }
+  }
+}
+error while checking module object Ex5Traversable {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case null =>
+            <empty>
+        }
+  }
+}
+error while checking package u04lab {
+  import u03.Sequences.*
+  import Sequence.*
+  import u03.Optionals.Optional.*
+  import u03.Optionals.*
+  module object Ex5Traversable {
+    def log[A](a: A): Unit = println("The next element is: " + a)
+    def logAll[A](seq: Sequence[A]): Unit =
+      seq match
+        {
+          case Cons(h, t) =>
+            log(h)
+            logAll(t)
+          case _ =>
+            ()
+        }
+    trait Traversable[T[_]] {
+      def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+    }
+    given object extends Traversable[Optional] {
+      def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+        container match
+          {
+            case null =>
+              <empty>
+          }
+    }
+  }
+}
+mar 26, 2024 9:37:07 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: A severe compiler error occurred, full details of the error can be found in the error report /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/.reports/metals-full/2024-03-26/r_compiler-error_(root)_21-37-07-265.md
+2024.03.26 21:37:07 WARN  Could not find semantic tokens for: file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex5Traversable.scala
+error while checking  extends Traversable[Optional] {
+  def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+    container match
+      {
+        case null =>
+          <empty>
+      }
+}
+error while checking given object extends Traversable[Optional] {
+  def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+    container match
+      {
+        case null =>
+          <empty>
+      }
+}
+error while checking  {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case null =>
+            <empty>
+        }
+  }
+}
+error while checking module object Ex5Traversable {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case null =>
+            <empty>
+        }
+  }
+}
+error while checking package u04lab {
+  import u03.Sequences.*
+  import Sequence.*
+  import u03.Optionals.Optional.*
+  import u03.Optionals.*
+  module object Ex5Traversable {
+    def log[A](a: A): Unit = println("The next element is: " + a)
+    def logAll[A](seq: Sequence[A]): Unit =
+      seq match
+        {
+          case Cons(h, t) =>
+            log(h)
+            logAll(t)
+          case _ =>
+            ()
+        }
+    trait Traversable[T[_]] {
+      def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+    }
+    given object extends Traversable[Optional] {
+      def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+        container match
+          {
+            case null =>
+              <empty>
+          }
+    }
+  }
+}
+mar 26, 2024 9:37:07 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: A severe compiler error occurred, full details of the error can be found in the error report /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/.reports/metals-full/2024-03-26/r_compiler-error_(root)_21-37-07-850.md
+2024.03.26 21:37:07 WARN  Could not find semantic tokens for: file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex5Traversable.scala
+mar 26, 2024 9:38:07 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 3203
+error while checking  extends Traversable[Optional] {
+  def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+    container match
+      {
+        case Just(v) =>
+          consumer(v)
+        case null =>
+          <empty>
+      }
+}
+error while checking given object extends Traversable[Optional] {
+  def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+    container match
+      {
+        case Just(v) =>
+          consumer(v)
+        case null =>
+          <empty>
+      }
+}
+error while checking  {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case Just(v) =>
+            consumer(v)
+          case null =>
+            <empty>
+        }
+  }
+}
+error while checking module object Ex5Traversable {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case Just(v) =>
+            consumer(v)
+          case null =>
+            <empty>
+        }
+  }
+}
+error while checking package u04lab {
+  import u03.Sequences.*
+  import Sequence.*
+  import u03.Optionals.Optional.*
+  import u03.Optionals.*
+  module object Ex5Traversable {
+    def log[A](a: A): Unit = println("The next element is: " + a)
+    def logAll[A](seq: Sequence[A]): Unit =
+      seq match
+        {
+          case Cons(h, t) =>
+            log(h)
+            logAll(t)
+          case _ =>
+            ()
+        }
+    trait Traversable[T[_]] {
+      def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+    }
+    given object extends Traversable[Optional] {
+      def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+        container match
+          {
+            case Just(v) =>
+              consumer(v)
+            case null =>
+              <empty>
+          }
+    }
+  }
+}
+mar 26, 2024 9:38:20 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: A severe compiler error occurred, full details of the error can be found in the error report /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/.reports/metals-full/2024-03-26/r_compiler-error_(root)_21-38-20-196.md
+2024.03.26 21:38:20 WARN  Could not find semantic tokens for: file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex5Traversable.scala
+2024.03.26 21:38:23 INFO  compiling root (1 scala source)
+2024.03.26 21:38:23 INFO  time: compiled root in 0.24s
+error while checking  extends Traversable[Sequence] {
+  def <error> = null
+}
+error while checking given object extends Traversable[Sequence] {
+  def <error> = null
+}
+error while checking  {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case Just(v) =>
+            consumer(v)
+          case _ =>
+            ()
+        }
+  }
+  given object extends Traversable[Sequence] {
+    def <error> = null
+  }
+}
+error while checking module object Ex5Traversable {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case Just(v) =>
+            consumer(v)
+          case _ =>
+            ()
+        }
+  }
+  given object extends Traversable[Sequence] {
+    def <error> = null
+  }
+}
+error while checking package u04lab {
+  import u03.Sequences.*
+  import Sequence.*
+  import u03.Optionals.Optional.*
+  import u03.Optionals.*
+  module object Ex5Traversable {
+    def log[A](a: A): Unit = println("The next element is: " + a)
+    def logAll[A](seq: Sequence[A]): Unit =
+      seq match
+        {
+          case Cons(h, t) =>
+            log(h)
+            logAll(t)
+          case _ =>
+            ()
+        }
+    trait Traversable[T[_]] {
+      def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+    }
+    given object extends Traversable[Optional] {
+      def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+        container match
+          {
+            case Just(v) =>
+              consumer(v)
+            case _ =>
+              ()
+          }
+    }
+    given object extends Traversable[Sequence] {
+      def <error> = null
+    }
+  }
+}
+mar 26, 2024 9:38:44 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: A severe compiler error occurred, full details of the error can be found in the error report /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/.reports/metals-full/2024-03-26/r_compiler-error_(root)_21-38-44-970.md
+2024.03.26 21:38:44 WARN  Could not find semantic tokens for: file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex5Traversable.scala
+error while checking  extends Traversable[Sequence] {
+  def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit = null
+}
+error while checking given object extends Traversable[Sequence] {
+  def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit = null
+}
+error while checking  {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case Just(v) =>
+            consumer(v)
+          case _ =>
+            ()
+        }
+  }
+  given object extends Traversable[Sequence] {
+    def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit = null
+  }
+}
+error while checking module object Ex5Traversable {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case Just(v) =>
+            consumer(v)
+          case _ =>
+            ()
+        }
+  }
+  given object extends Traversable[Sequence] {
+    def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit = null
+  }
+}
+error while checking package u04lab {
+  import u03.Sequences.*
+  import Sequence.*
+  import u03.Optionals.Optional.*
+  import u03.Optionals.*
+  module object Ex5Traversable {
+    def log[A](a: A): Unit = println("The next element is: " + a)
+    def logAll[A](seq: Sequence[A]): Unit =
+      seq match
+        {
+          case Cons(h, t) =>
+            log(h)
+            logAll(t)
+          case _ =>
+            ()
+        }
+    trait Traversable[T[_]] {
+      def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+    }
+    given object extends Traversable[Optional] {
+      def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+        container match
+          {
+            case Just(v) =>
+              consumer(v)
+            case _ =>
+              ()
+          }
+    }
+    given object extends Traversable[Sequence] {
+      def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit = null
+    }
+  }
+}
+mar 26, 2024 9:38:50 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: A severe compiler error occurred, full details of the error can be found in the error report /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/.reports/metals-full/2024-03-26/r_compiler-error_(root)_21-38-50-953.md
+2024.03.26 21:38:50 WARN  Could not find semantic tokens for: file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex5Traversable.scala
+error while checking  extends Traversable[Sequence] {
+  def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+    container mCURSOR null
+}
+error while checking given object extends Traversable[Sequence] {
+  def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+    container mCURSOR null
+}
+error while checking  {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case Just(v) =>
+            consumer(v)
+          case _ =>
+            ()
+        }
+  }
+  given object extends Traversable[Sequence] {
+    def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+      container mCURSOR null
+  }
+}
+error while checking module object Ex5Traversable {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case Just(v) =>
+            consumer(v)
+          case _ =>
+            ()
+        }
+  }
+  given object extends Traversable[Sequence] {
+    def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+      container mCURSOR null
+  }
+}
+error while checking package u04lab {
+  import u03.Sequences.*
+  import Sequence.*
+  import u03.Optionals.Optional.*
+  import u03.Optionals.*
+  module object Ex5Traversable {
+    def log[A](a: A): Unit = println("The next element is: " + a)
+    def logAll[A](seq: Sequence[A]): Unit =
+      seq match
+        {
+          case Cons(h, t) =>
+            log(h)
+            logAll(t)
+          case _ =>
+            ()
+        }
+    trait Traversable[T[_]] {
+      def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+    }
+    given object extends Traversable[Optional] {
+      def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+        container match
+          {
+            case Just(v) =>
+              consumer(v)
+            case _ =>
+              ()
+          }
+    }
+    given object extends Traversable[Sequence] {
+      def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+        container mCURSOR null
+    }
+  }
+}
+mar 26, 2024 9:38:53 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: A severe compiler error occurred, full details of the error can be found in the error report /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/.reports/metals-full/2024-03-26/r_compiler-error_(root)_21-38-53-770.md
+error while checking  extends Traversable[Sequence] {
+  def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+    container m null
+}
+error while checking given object extends Traversable[Sequence] {
+  def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+    container m null
+}
+error while checking  {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case Just(v) =>
+            consumer(v)
+          case _ =>
+            ()
+        }
+  }
+  given object extends Traversable[Sequence] {
+    def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+      container m null
+  }
+}
+error while checking module object Ex5Traversable {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case Just(v) =>
+            consumer(v)
+          case _ =>
+            ()
+        }
+  }
+  given object extends Traversable[Sequence] {
+    def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+      container m null
+  }
+}
+error while checking package u04lab {
+  import u03.Sequences.*
+  import Sequence.*
+  import u03.Optionals.Optional.*
+  import u03.Optionals.*
+  module object Ex5Traversable {
+    def log[A](a: A): Unit = println("The next element is: " + a)
+    def logAll[A](seq: Sequence[A]): Unit =
+      seq match
+        {
+          case Cons(h, t) =>
+            log(h)
+            logAll(t)
+          case _ =>
+            ()
+        }
+    trait Traversable[T[_]] {
+      def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+    }
+    given object extends Traversable[Optional] {
+      def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+        container match
+          {
+            case Just(v) =>
+              consumer(v)
+            case _ =>
+              ()
+          }
+    }
+    given object extends Traversable[Sequence] {
+      def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+        container m null
+    }
+  }
+}
+mar 26, 2024 9:38:54 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: A severe compiler error occurred, full details of the error can be found in the error report /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/.reports/metals-full/2024-03-26/r_compiler-error_(root)_21-38-54-000.md
+2024.03.26 21:38:54 WARN  Could not find semantic tokens for: file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex5Traversable.scala
+error while checking  extends Traversable[Sequence] {
+  def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+    container mat null
+}
+error while checking given object extends Traversable[Sequence] {
+  def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+    container mat null
+}
+error while checking  {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case Just(v) =>
+            consumer(v)
+          case _ =>
+            ()
+        }
+  }
+  given object extends Traversable[Sequence] {
+    def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+      container mat null
+  }
+}
+error while checking module object Ex5Traversable {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case Just(v) =>
+            consumer(v)
+          case _ =>
+            ()
+        }
+  }
+  given object extends Traversable[Sequence] {
+    def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+      container mat null
+  }
+}
+error while checking package u04lab {
+  import u03.Sequences.*
+  import Sequence.*
+  import u03.Optionals.Optional.*
+  import u03.Optionals.*
+  module object Ex5Traversable {
+    def log[A](a: A): Unit = println("The next element is: " + a)
+    def logAll[A](seq: Sequence[A]): Unit =
+      seq match
+        {
+          case Cons(h, t) =>
+            log(h)
+            logAll(t)
+          case _ =>
+            ()
+        }
+    trait Traversable[T[_]] {
+      def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+    }
+    given object extends Traversable[Optional] {
+      def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+        container match
+          {
+            case Just(v) =>
+              consumer(v)
+            case _ =>
+              ()
+          }
+    }
+    given object extends Traversable[Sequence] {
+      def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+        container mat null
+    }
+  }
+}
+mar 26, 2024 9:38:54 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: A severe compiler error occurred, full details of the error can be found in the error report /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/.reports/metals-full/2024-03-26/r_compiler-error_(root)_21-38-54-817.md
+2024.03.26 21:38:54 WARN  Could not find semantic tokens for: file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex5Traversable.scala
+error while checking  extends Traversable[Sequence] {
+  def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+    container match
+      {
+        case null =>
+          <empty>
+      }
+}
+error while checking given object extends Traversable[Sequence] {
+  def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+    container match
+      {
+        case null =>
+          <empty>
+      }
+}
+error while checking  {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case Just(v) =>
+            consumer(v)
+          case _ =>
+            ()
+        }
+  }
+  given object extends Traversable[Sequence] {
+    def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case null =>
+            <empty>
+        }
+  }
+}
+error while checking module object Ex5Traversable {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case Just(v) =>
+            consumer(v)
+          case _ =>
+            ()
+        }
+  }
+  given object extends Traversable[Sequence] {
+    def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case null =>
+            <empty>
+        }
+  }
+}
+error while checking package u04lab {
+  import u03.Sequences.*
+  import Sequence.*
+  import u03.Optionals.Optional.*
+  import u03.Optionals.*
+  module object Ex5Traversable {
+    def log[A](a: A): Unit = println("The next element is: " + a)
+    def logAll[A](seq: Sequence[A]): Unit =
+      seq match
+        {
+          case Cons(h, t) =>
+            log(h)
+            logAll(t)
+          case _ =>
+            ()
+        }
+    trait Traversable[T[_]] {
+      def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+    }
+    given object extends Traversable[Optional] {
+      def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+        container match
+          {
+            case Just(v) =>
+              consumer(v)
+            case _ =>
+              ()
+          }
+    }
+    given object extends Traversable[Sequence] {
+      def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+        container match
+          {
+            case null =>
+              <empty>
+          }
+    }
+  }
+}
+mar 26, 2024 9:38:55 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: A severe compiler error occurred, full details of the error can be found in the error report /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/.reports/metals-full/2024-03-26/r_compiler-error_(root)_21-38-55-458.md
+2024.03.26 21:38:55 WARN  Could not find semantic tokens for: file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex5Traversable.scala
+error while checking  extends Traversable[Sequence] {
+  def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+    container match
+      {
+        case null =>
+          <empty>
+      }
+}
+error while checking given object extends Traversable[Sequence] {
+  def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+    container match
+      {
+        case null =>
+          <empty>
+      }
+}
+error while checking  {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case Just(v) =>
+            consumer(v)
+          case _ =>
+            ()
+        }
+  }
+  given object extends Traversable[Sequence] {
+    def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case null =>
+            <empty>
+        }
+  }
+}
+error while checking module object Ex5Traversable {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case Just(v) =>
+            consumer(v)
+          case _ =>
+            ()
+        }
+  }
+  given object extends Traversable[Sequence] {
+    def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case null =>
+            <empty>
+        }
+  }
+}
+error while checking package u04lab {
+  import u03.Sequences.*
+  import Sequence.*
+  import u03.Optionals.Optional.*
+  import u03.Optionals.*
+  module object Ex5Traversable {
+    def log[A](a: A): Unit = println("The next element is: " + a)
+    def logAll[A](seq: Sequence[A]): Unit =
+      seq match
+        {
+          case Cons(h, t) =>
+            log(h)
+            logAll(t)
+          case _ =>
+            ()
+        }
+    trait Traversable[T[_]] {
+      def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+    }
+    given object extends Traversable[Optional] {
+      def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+        container match
+          {
+            case Just(v) =>
+              consumer(v)
+            case _ =>
+              ()
+          }
+    }
+    given object extends Traversable[Sequence] {
+      def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+        container match
+          {
+            case null =>
+              <empty>
+          }
+    }
+  }
+}
+mar 26, 2024 9:38:56 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: A severe compiler error occurred, full details of the error can be found in the error report /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/.reports/metals-full/2024-03-26/r_compiler-error_(root)_21-38-56-403.md
+2024.03.26 21:38:56 WARN  Could not find semantic tokens for: file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex5Traversable.scala
+error while checking  extends Traversable[Sequence] {
+  def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+    container match
+      {
+        case null =>
+          <empty>
+      }
+}
+error while checking given object extends Traversable[Sequence] {
+  def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+    container match
+      {
+        case null =>
+          <empty>
+      }
+}
+error while checking  {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case Just(v) =>
+            consumer(v)
+          case _ =>
+            ()
+        }
+  }
+  given object extends Traversable[Sequence] {
+    def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case null =>
+            <empty>
+        }
+  }
+}
+error while checking module object Ex5Traversable {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case Just(v) =>
+            consumer(v)
+          case _ =>
+            ()
+        }
+  }
+  given object extends Traversable[Sequence] {
+    def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case null =>
+            <empty>
+        }
+  }
+}
+error while checking package u04lab {
+  import u03.Sequences.*
+  import Sequence.*
+  import u03.Optionals.Optional.*
+  import u03.Optionals.*
+  module object Ex5Traversable {
+    def log[A](a: A): Unit = println("The next element is: " + a)
+    def logAll[A](seq: Sequence[A]): Unit =
+      seq match
+        {
+          case Cons(h, t) =>
+            log(h)
+            logAll(t)
+          case _ =>
+            ()
+        }
+    trait Traversable[T[_]] {
+      def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+    }
+    given object extends Traversable[Optional] {
+      def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+        container match
+          {
+            case Just(v) =>
+              consumer(v)
+            case _ =>
+              ()
+          }
+    }
+    given object extends Traversable[Sequence] {
+      def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+        container match
+          {
+            case null =>
+              <empty>
+          }
+    }
+  }
+}
+mar 26, 2024 9:38:56 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: A severe compiler error occurred, full details of the error can be found in the error report /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/.reports/metals-full/2024-03-26/r_compiler-error_(root)_21-38-56-903.md
+2024.03.26 21:38:56 WARN  Could not find semantic tokens for: file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex5Traversable.scala
+error while checking  extends Traversable[Sequence] {
+  def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+    container match
+      {
+        case null =>
+          <empty>
+      }
+}
+error while checking given object extends Traversable[Sequence] {
+  def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+    container match
+      {
+        case null =>
+          <empty>
+      }
+}
+error while checking  {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case Just(v) =>
+            consumer(v)
+          case _ =>
+            ()
+        }
+  }
+  given object extends Traversable[Sequence] {
+    def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case null =>
+            <empty>
+        }
+  }
+}
+error while checking module object Ex5Traversable {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case Just(v) =>
+            consumer(v)
+          case _ =>
+            ()
+        }
+  }
+  given object extends Traversable[Sequence] {
+    def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case null =>
+            <empty>
+        }
+  }
+}
+error while checking package u04lab {
+  import u03.Sequences.*
+  import Sequence.*
+  import u03.Optionals.Optional.*
+  import u03.Optionals.*
+  module object Ex5Traversable {
+    def log[A](a: A): Unit = println("The next element is: " + a)
+    def logAll[A](seq: Sequence[A]): Unit =
+      seq match
+        {
+          case Cons(h, t) =>
+            log(h)
+            logAll(t)
+          case _ =>
+            ()
+        }
+    trait Traversable[T[_]] {
+      def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+    }
+    given object extends Traversable[Optional] {
+      def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+        container match
+          {
+            case Just(v) =>
+              consumer(v)
+            case _ =>
+              ()
+          }
+    }
+    given object extends Traversable[Sequence] {
+      def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+        container match
+          {
+            case null =>
+              <empty>
+          }
+    }
+  }
+}
+mar 26, 2024 9:38:57 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: A severe compiler error occurred, full details of the error can be found in the error report /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/.reports/metals-full/2024-03-26/r_compiler-error_(root)_21-38-57-229.md
+error while checking  extends Traversable[Sequence] {
+  def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+    container match
+      {
+        case null =>
+          <empty>
+      }
+}
+error while checking given object extends Traversable[Sequence] {
+  def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+    container match
+      {
+        case null =>
+          <empty>
+      }
+}
+error while checking  {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case Just(v) =>
+            consumer(v)
+          case _ =>
+            ()
+        }
+  }
+  given object extends Traversable[Sequence] {
+    def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case null =>
+            <empty>
+        }
+  }
+}
+error while checking module object Ex5Traversable {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case Just(v) =>
+            consumer(v)
+          case _ =>
+            ()
+        }
+  }
+  given object extends Traversable[Sequence] {
+    def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case null =>
+            <empty>
+        }
+  }
+}
+error while checking package u04lab {
+  import u03.Sequences.*
+  import Sequence.*
+  import u03.Optionals.Optional.*
+  import u03.Optionals.*
+  module object Ex5Traversable {
+    def log[A](a: A): Unit = println("The next element is: " + a)
+    def logAll[A](seq: Sequence[A]): Unit =
+      seq match
+        {
+          case Cons(h, t) =>
+            log(h)
+            logAll(t)
+          case _ =>
+            ()
+        }
+    trait Traversable[T[_]] {
+      def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+    }
+    given object extends Traversable[Optional] {
+      def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+        container match
+          {
+            case Just(v) =>
+              consumer(v)
+            case _ =>
+              ()
+          }
+    }
+    given object extends Traversable[Sequence] {
+      def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+        container match
+          {
+            case null =>
+              <empty>
+          }
+    }
+  }
+}
+mar 26, 2024 9:38:57 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: A severe compiler error occurred, full details of the error can be found in the error report /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/.reports/metals-full/2024-03-26/r_compiler-error_(root)_21-38-57-678.md
+2024.03.26 21:38:57 WARN  Could not find semantic tokens for: file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex5Traversable.scala
+error while checking  extends Traversable[Sequence] {
+  def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+    container match
+      {
+        case null =>
+          <empty>
+      }
+}
+error while checking given object extends Traversable[Sequence] {
+  def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+    container match
+      {
+        case null =>
+          <empty>
+      }
+}
+error while checking  {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case Just(v) =>
+            consumer(v)
+          case _ =>
+            ()
+        }
+  }
+  given object extends Traversable[Sequence] {
+    def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case null =>
+            <empty>
+        }
+  }
+}
+error while checking module object Ex5Traversable {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case Just(v) =>
+            consumer(v)
+          case _ =>
+            ()
+        }
+  }
+  given object extends Traversable[Sequence] {
+    def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case null =>
+            <empty>
+        }
+  }
+}
+error while checking package u04lab {
+  import u03.Sequences.*
+  import Sequence.*
+  import u03.Optionals.Optional.*
+  import u03.Optionals.*
+  module object Ex5Traversable {
+    def log[A](a: A): Unit = println("The next element is: " + a)
+    def logAll[A](seq: Sequence[A]): Unit =
+      seq match
+        {
+          case Cons(h, t) =>
+            log(h)
+            logAll(t)
+          case _ =>
+            ()
+        }
+    trait Traversable[T[_]] {
+      def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+    }
+    given object extends Traversable[Optional] {
+      def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+        container match
+          {
+            case Just(v) =>
+              consumer(v)
+            case _ =>
+              ()
+          }
+    }
+    given object extends Traversable[Sequence] {
+      def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+        container match
+          {
+            case null =>
+              <empty>
+          }
+    }
+  }
+}
+mar 26, 2024 9:38:58 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: A severe compiler error occurred, full details of the error can be found in the error report /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/.reports/metals-full/2024-03-26/r_compiler-error_(root)_21-38-58-143.md
+2024.03.26 21:38:58 WARN  Could not find semantic tokens for: file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex5Traversable.scala
+2024.03.26 21:40:03 INFO  compiling root (1 scala source)
+2024.03.26 21:40:03 INFO  time: compiled root in 0.15s
+2024.03.26 21:40:21 INFO  compiling root (1 scala source)
+2024.03.26 21:40:21 INFO  time: compiled root in 0.29s
+error while checking  extends Traversable[Sequence] {
+  def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+    container match
+      {
+        case Cons(h, t) =>
+          consumer(h)
+          logAll(t)(consumer)
+        case null =>
+          <empty>
+      }
+}
+error while checking given object extends Traversable[Sequence] {
+  def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+    container match
+      {
+        case Cons(h, t) =>
+          consumer(h)
+          logAll(t)(consumer)
+        case null =>
+          <empty>
+      }
+}
+error while checking  {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case Just(v) =>
+            consumer(v)
+          case _ =>
+            ()
+        }
+  }
+  given object extends Traversable[Sequence] {
+    def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case Cons(h, t) =>
+            consumer(h)
+            logAll(t)(consumer)
+          case null =>
+            <empty>
+        }
+  }
+}
+error while checking module object Ex5Traversable {
+  def log[A](a: A): Unit = println("The next element is: " + a)
+  def logAll[A](seq: Sequence[A]): Unit =
+    seq match
+      {
+        case Cons(h, t) =>
+          log(h)
+          logAll(t)
+        case _ =>
+          ()
+      }
+  trait Traversable[T[_]] {
+    def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+  }
+  given object extends Traversable[Optional] {
+    def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case Just(v) =>
+            consumer(v)
+          case _ =>
+            ()
+        }
+  }
+  given object extends Traversable[Sequence] {
+    def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+      container match
+        {
+          case Cons(h, t) =>
+            consumer(h)
+            logAll(t)(consumer)
+          case null =>
+            <empty>
+        }
+  }
+}
+error while checking package u04lab {
+  import u03.Sequences.*
+  import Sequence.*
+  import u03.Optionals.Optional.*
+  import u03.Optionals.*
+  module object Ex5Traversable {
+    def log[A](a: A): Unit = println("The next element is: " + a)
+    def logAll[A](seq: Sequence[A]): Unit =
+      seq match
+        {
+          case Cons(h, t) =>
+            log(h)
+            logAll(t)
+          case _ =>
+            ()
+        }
+    trait Traversable[T[_]] {
+      def logAll[A](container: T[A])(consumer: (A) => Unit): Unit
+    }
+    given object extends Traversable[Optional] {
+      def logAll[A](container: Optional[A])(consumer: (A) => Unit): Unit =
+        container match
+          {
+            case Just(v) =>
+              consumer(v)
+            case _ =>
+              ()
+          }
+    }
+    given object extends Traversable[Sequence] {
+      def logAll[A](container: Sequence[A])(consumer: (A) => Unit): Unit =
+        container match
+          {
+            case Cons(h, t) =>
+              consumer(h)
+              logAll(t)(consumer)
+            case null =>
+              <empty>
+          }
+    }
+  }
+}
+mar 26, 2024 9:40:35 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: A severe compiler error occurred, full details of the error can be found in the error report /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/.reports/metals-full/2024-03-26/r_compiler-error_(root)_21-40-35-427.md
+2024.03.26 21:40:35 WARN  Could not find semantic tokens for: file:///home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex5Traversable.scala
+2024.03.26 21:40:41 INFO  compiling root (1 scala source)
+2024.03.26 21:40:41 INFO  time: compiled root in 0.32s
+mar 26, 2024 9:42:38 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 3790
+2024.03.26 21:47:44 INFO  compiling root (1 scala source)
+2024.03.26 21:47:44 WARN  there was 1 deprecation warning; re-run with -deprecation for details
+2024.03.26 21:47:44 INFO  time: compiled root in 0.3s
+2024.03.26 21:48:01 INFO  compiling root (1 scala source)
+2024.03.26 21:48:01 WARN  there was 1 deprecation warning; re-run with -deprecation for details
+2024.03.26 21:48:01 INFO  time: compiled root in 0.18s
+2024.03.26 21:48:07 INFO  compiling root (1 scala source)
+2024.03.26 21:48:07 WARN  there was 1 deprecation warning; re-run with -deprecation for details
+2024.03.26 21:48:07 INFO  time: compiled root in 0.31s
+2024.03.26 21:49:06 INFO  compiling root (1 scala source)
+2024.03.26 21:49:06 INFO  time: compiled root in 0.29s
+2024.03.26 21:51:01 INFO  compiling root (1 scala source)
+2024.03.26 21:51:01 INFO  time: compiled root in 0.11s
+2024.03.26 21:51:33 INFO  compiling root (1 scala source)
+2024.03.26 21:51:33 INFO  time: compiled root in 0.27s
+mar 26, 2024 9:54:01 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: A severe compiler error occurred, full details of the error can be found in the error report /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/.reports/metals-full/2024-03-26/r_compiler-error_(root)_21-54-01-128.md
+2024.03.26 21:54:24 INFO  compiling root (1 scala source)
+2024.03.26 21:54:24 INFO  time: compiled root in 0.34s
+2024.03.26 22:00:09 INFO  compiling root (1 scala source)
+2024.03.26 22:00:09 INFO  time: compiled root in 0.13s
+2024.03.26 22:02:11 INFO  compiling root (1 scala source)
+2024.03.26 22:02:11 INFO  time: compiled root in 0.29s
+2024.03.26 22:02:32 INFO  compiling root (1 scala source)
+2024.03.26 22:02:32 INFO  time: compiled root in 0.28s
+mar 26, 2024 10:04:11 PM scala.meta.internal.pc.CompilerAccess handleError
+GRAVE: A severe compiler error occurred, full details of the error can be found in the error report /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/.metals/.reports/metals-full/2024-03-26/r_compiler-error_(root)_22-04-11-488.md
+2024.03.26 22:04:12 INFO  compiling root (1 scala source)
+2024.03.26 22:04:12 INFO  time: compiled root in 0.14s
+2024.03.26 22:04:14 INFO  compiling root (1 scala source)
+2024.03.26 22:04:14 INFO  time: compiled root in 0.11s
+2024.03.26 22:04:27 INFO  compiling root (1 scala source)
+2024.03.26 22:04:27 INFO  time: compiled root in 0.15s
+2024.03.26 22:04:43 INFO  compiling root (1 scala source)
+2024.03.26 22:04:43 INFO  time: compiled root in 0.14s
+2024.03.26 22:04:55 INFO  compiling root (1 scala source)
+2024.03.26 22:04:55 INFO  time: compiled root in 0.12s
+2024.03.26 22:04:58 INFO  compiling root (1 scala source)
+2024.03.26 22:04:58 INFO  time: compiled root in 94ms
+2024.03.26 22:05:01 INFO  compiling root (1 scala source)
+2024.03.26 22:05:01 INFO  time: compiled root in 0.12s
+2024.03.26 22:05:11 INFO  compiling root (1 scala source)
+2024.03.26 22:05:11 INFO  time: compiled root in 0.12s
+2024.03.26 22:06:29 INFO  compiling root (1 scala source)
+2024.03.26 22:06:29 INFO  time: compiled root in 0.26s
+2024.03.26 22:06:48 INFO  compiling root (1 scala source)
+2024.03.26 22:06:48 INFO  time: compiled root in 0.3s
+2024.03.26 22:07:00 INFO  compiling root (1 scala source)
+2024.03.26 22:07:00 INFO  time: compiled root in 0.27s
+2024.03.26 22:07:25 INFO  compiling root (1 scala source)
+2024.03.26 22:07:25 INFO  time: compiled root in 0.29s
+2024.03.26 22:08:04 INFO  compiling root (1 scala source)
+2024.03.26 22:08:04 INFO  time: compiled root in 0.12s
+2024.03.26 22:08:23 INFO  compiling root (1 scala source)
+2024.03.26 22:08:23 INFO  time: compiled root in 0.14s
+2024.03.26 22:09:12 INFO  compiling root (1 scala source)
+2024.03.26 22:09:12 INFO  time: compiled root in 86ms
+2024.03.26 22:10:25 INFO  compiling root (1 scala source)
+2024.03.26 22:10:25 INFO  time: compiled root in 0.41s
+2024.03.26 22:10:54 INFO  compiling root (1 scala source)
+2024.03.26 22:10:54 INFO  time: compiled root in 95ms
+2024.03.26 22:11:20 INFO  compiling root (1 scala source)
+2024.03.26 22:11:20 INFO  time: compiled root in 86ms
+2024.03.26 22:12:00 INFO  compiling root (1 scala source)
+2024.03.26 22:12:00 INFO  time: compiled root in 0.27s
+2024.03.26 22:12:06 ERROR Failed to tokenize input for semantic tokens for /home/michelenardini/Scrivania/FunctionalProgramming/pps-23-24-lab04/src/main/scala/tasks/typeclasses/Ex5Traversable.scala
+scala.meta.tokenizers.TokenizeException: <input>:45: error: unclosed comment
+    /* val sequence: Sequence[Int] = Cons(10, Cons(20, Cons(30, Nil())))
+    ^
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError(Reporter.scala:27)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError$(Reporter.scala:26)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.incompleteInputError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError(Reporter.scala:29)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError$(Reporter.scala:29)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.incompleteInputError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.skipNestedComments(LegacyScanner.scala:52)
+	at scala.meta.internal.tokenizers.LegacyScanner.skipToCommentEnd(LegacyScanner.scala:71)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:313)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:211)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1011)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:28)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:541)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:840)
+
+2024.03.26 22:12:10 INFO  compiling root (1 scala source)
+2024.03.26 22:12:10 INFO  time: compiled root in 93ms
+2024.03.26 22:12:40 INFO  compiling root (1 scala source)
+2024.03.26 22:12:40 INFO  time: compiled root in 0.12s
+2024.03.26 22:14:04 INFO  compiling root (1 scala source)
+2024.03.26 22:14:04 INFO  time: compiled root in 0.1s
+mar 26, 2024 10:14:12 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 7091
+mar 26, 2024 10:14:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 7112
+2024.03.26 22:14:41 INFO  compiling root (1 scala source)
+2024.03.26 22:14:41 INFO  time: compiled root in 0.1s
+2024.03.26 22:14:55 INFO  compiling root (1 scala source)
+2024.03.26 22:14:55 INFO  time: compiled root in 0.13s
+2024.03.26 22:15:01 INFO  compiling root (1 scala source)
+2024.03.26 22:15:01 INFO  time: compiled root in 0.12s
+2024.03.26 22:15:08 INFO  compiling root (1 scala source)
+2024.03.26 22:15:08 INFO  time: compiled root in 0.13s
+2024.03.26 22:15:18 INFO  compiling root (1 scala source)
+2024.03.26 22:15:18 INFO  time: compiled root in 85ms
+mar 26, 2024 10:15:45 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+AVVERTENZA: Unmatched cancel notification for request id 7244
+2024.03.26 22:16:10 INFO  compiling root (1 scala source)
+2024.03.26 22:16:10 INFO  time: compiled root in 86ms
+2024.03.26 22:16:29 INFO  compiling root (1 scala source)
+2024.03.26 22:16:29 INFO  time: compiled root in 0.24s
+2024.03.26 22:16:39 INFO  compiling root (1 scala source)
+2024.03.26 22:16:39 INFO  time: compiled root in 91ms
+2024.03.26 22:16:43 INFO  compiling root (1 scala source)
+2024.03.26 22:16:43 INFO  time: compiled root in 0.41s

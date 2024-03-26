@@ -1,6 +1,9 @@
 package u04lab
 import u03.Sequences.* 
-import Sequence.*
+import u03.Sequences.Sequence.*
+import u03.Optionals.Optional.*
+import u03.Optionals.*
+import u03.Sequences
 
 /*  Exercise 5: 
  *  - Generalise by ad-hoc polymorphism logAll, such that:
@@ -19,8 +22,29 @@ object Ex5Traversable:
 
   def log[A](a: A): Unit = println("The next element is: "+a)
 
-  def logAll[A](seq: Sequence[A]): Unit = seq match
-    case Cons(h, t) => log(h); logAll(t)
-    case _ => ()
+  def logAll[T[_], A](container: T[A])(consumer: A => Unit)(using traversable: Traversable[T]): Unit = 
+    traversable.traverse(container)(consumer)
 
+  trait Traversable[T[_]]:
+    def traverse[A](container: T[A])(consumer: A => Unit): Unit
   
+  given Traversable[Optional] with
+    def traverse[A](container: Optional[A])(consumer: A => Unit): Unit = container match
+      case Just(v) => consumer(v)
+      case _ => ()
+
+  given Traversable[Sequence] with
+    def traverse[A](container: Sequence[A])(consumer: A => Unit): Unit = container match
+      case Cons(h, t) => consumer(h); traverse(t)(consumer)
+      case Nil() => ()
+
+  @main def tryTraversable =
+    val sequence = Cons(10, Cons(20, Cons(30, Nil())))
+    logAll(sequence)(log)
+
+    val optional: Optional[String] = Optional.Just("Hello, world!")
+    logAll(optional)(log)
+
+
+
+
