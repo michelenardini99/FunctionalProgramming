@@ -7297,3 +7297,8 @@ mar 26, 2024 10:36:57 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancella
 AVVERTENZA: Unmatched cancel notification for request id 8378
 2024.03.26 22:36:57 INFO  compiling root (1 scala source)
 2024.03.26 22:36:57 INFO  time: compiled root in 0.35s
+2024.03.26 22:39:41 INFO  Shutting down server
+2024.03.26 22:39:41 INFO  shutting down Metals
+2024.03.26 22:39:41 INFO  Shut down connection with build server.
+2024.03.26 22:39:41 INFO  Shut down connection with build server.
+2024.03.26 22:39:41 INFO  Exiting server
