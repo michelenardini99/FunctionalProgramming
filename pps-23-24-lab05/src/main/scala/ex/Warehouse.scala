@@ -1,14 +1,20 @@
 package ex
 
 import util.Optionals.Optional
-import util.Sequences.*
+import util.Sequences.Sequence
+
 trait Item:
   def code: Int
   def name: String
   def tags: Sequence[String]
 
+case class ItemImpl(private val _code: Int, private val _name: String, private val _tags: Sequence[String]) extends Item:
+  def code: Int = _code
+  def name: String = _name
+  def tags: Sequence[String] = _tags
+
 object Item:
-  def apply(code: Int, name: String, tags: Sequence[String] = Sequence.empty): Item = ???
+  def apply(code: Int, name: String, tags: Sequence[String] = Sequence.empty): Item = ItemImpl(code, name, tags)
 
 /**
  * A warehouse is a place where items are stored.
@@ -45,7 +51,26 @@ trait Warehouse:
 end Warehouse
 
 object Warehouse:
-  def apply(): Warehouse = ???
+  def apply(): Warehouse = WarehouseImpl()
+
+class WarehouseImpl extends Warehouse:
+
+  private var _store: Sequence[Item] = Sequence.Nil()
+
+  def store(item: Item): Unit = _store = _store.concat(Sequence.Cons(item, Sequence.Nil()))
+
+  override def remove(item: Item): Unit = _store = _store.filter(_ != item)
+  
+
+  override def searchItems(tag: String): Sequence[Item] = _store.filter(_.tags.contains(tag))
+  
+
+  override def retrieve(code: Int): Optional[Item] = _store.find(_.code == code)
+
+  override def contains(itemCode: Int): Boolean = retrieve(itemCode) match
+    case Optional.Empty() => false
+    case _ => true
+  
 
 @main def mainWarehouse(): Unit =
   val warehouse = Warehouse()
